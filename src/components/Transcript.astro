@@ -1,0 +1,114 @@
+---
+import type { TranscriptSegment } from '../data/episode-182';
+
+interface Props {
+  segments: TranscriptSegment[];
+  status: string;
+}
+const { segments, status } = Astro.props;
+---
+
+<div class="ep-section" id="transcript">
+  <div class="ep-section-eyebrow">Word for word</div>
+  <h2 class="ep-section-title">Transcript</h2>
+  <div class="ep-transcript">
+    <div class="transcript-toolbar">
+      <div class="transcript-search">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" placeholder="Search this episode..." />
+      </div>
+      <div class="transcript-toolbar-meta">
+        <label class="transcript-tog"><input type="checkbox" checked /> Highlight in-character</label>
+        <span class="transcript-status">{status}</span>
+      </div>
+    </div>
+    <div class="transcript-body">
+      {segments.map((seg) => (
+        <div class={`t-segment ${seg.inCharacter ? 't-incharacter' : ''}`}>
+          <div class="t-time">{seg.time}</div>
+          <div class="t-line">
+            <span class={`t-speaker ${seg.speakerClass}`}>{seg.speaker}</span>
+            <span class="t-text">{seg.text}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+    <div class="transcript-fade" id="transcript-fade">
+      <button class="transcript-fade-btn" id="transcript-expand-btn">Show full transcript ↓</button>
+    </div>
+  </div>
+</div>
+
+<style>
+  .ep-section { margin-bottom: 50px; }
+  .ep-section-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 12px; }
+  .ep-section-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 700; line-height: 1.1; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 22px; }
+
+  #transcript { scroll-margin-top: 140px; }
+
+  .ep-transcript { background: var(--surface); border-radius: 12px; border: 0.5px solid var(--border); overflow: hidden; }
+  .transcript-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 0.5px solid var(--border); gap: 16px; flex-wrap: wrap; }
+  .transcript-search { display: flex; align-items: center; gap: 10px; background: var(--bg-2); border: 0.5px solid var(--border); border-radius: 7px; padding: 8px 14px; flex: 1; min-width: 200px; max-width: 360px; }
+  .transcript-search svg { color: var(--text-4); flex-shrink: 0; }
+  .transcript-search input { background: transparent; border: none; outline: none; color: var(--text); font-size: 14px; flex: 1; font-family: inherit; }
+  .transcript-search input::placeholder { color: var(--text-4); }
+  .transcript-toolbar-meta { font-size: 12px; color: var(--text-3); display: flex; gap: 14px; align-items: center; }
+  .transcript-tog { display: flex; align-items: center; gap: 6px; cursor: pointer; }
+  .transcript-tog input { accent-color: var(--green); }
+  .transcript-status { font-size: 11px; letter-spacing: 0.2em; color: var(--gold); font-weight: 600; padding: 4px 10px; border-radius: 999px; background: rgba(212,175,55,0.1); border: 0.5px solid rgba(212,175,55,0.3); }
+  .transcript-body { padding: 8px 22px 24px; max-height: 600px; overflow-y: auto; }
+  .transcript-body::-webkit-scrollbar { width: 8px; }
+  .transcript-body::-webkit-scrollbar-track { background: transparent; }
+  .transcript-body::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+  .t-segment { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 0.5px solid rgba(255,255,255,0.04); }
+  .t-segment:first-child { border-top: none; }
+  .t-segment.t-incharacter { background: linear-gradient(90deg, rgba(212,175,55,0.04), transparent 60%); border-left: 2px solid rgba(212,175,55,0.4); padding-left: 14px; margin-left: -14px; border-radius: 0 6px 6px 0; }
+  .t-time { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace; font-size: 11.5px; color: var(--text-4); padding-top: 2px; letter-spacing: 0.02em; }
+  .t-line { font-size: 14.5px; line-height: 1.65; color: var(--text-2); }
+  .t-speaker { font-weight: 700; margin-right: 6px; font-size: 13px; }
+  .speaker-michael { color: #c9d4a8; }
+  .speaker-tim { color: #c4a8d4; }
+  .speaker-jen { color: #d4c0a8; }
+  .speaker-bach { color: #a8d4c5; }
+  .speaker-nika { color: #d4a8a8; }
+  .speaker-screech { color: #d4af37; font-style: italic; }
+  .speaker-selene { color: #d4af37; font-style: italic; }
+  .t-text { color: var(--text-2); }
+  .t-text em { color: var(--text); font-style: italic; }
+  .transcript-fade { background: linear-gradient(180deg, transparent, var(--surface) 90%); padding: 32px 22px 18px; text-align: center; margin-top: -50px; position: relative; }
+  .transcript-fade-btn { background: var(--surface-2); color: var(--text); padding: 9px 22px; border-radius: 7px; font-size: 13px; font-weight: 500; border: 0.5px solid var(--border-2); cursor: pointer; transition: background 0.2s; }
+  .transcript-fade-btn:hover { background: rgba(255,255,255,0.06); }
+</style>
+
+<script is:inline>
+  (function() {
+    var btn = document.getElementById('transcript-expand-btn');
+    var body = document.querySelector('.transcript-body');
+    var fade = document.getElementById('transcript-fade');
+    if (!btn || !body) return;
+    btn.addEventListener('click', function() {
+      body.style.maxHeight = 'none';
+      if (fade) fade.style.display = 'none';
+    });
+
+    var search = document.querySelector('.transcript-search input');
+    if (search) {
+      var segments = body.querySelectorAll('.t-segment');
+      search.addEventListener('input', function() {
+        var q = search.value.toLowerCase().trim();
+        segments.forEach(function(seg) {
+          if (!q) {
+            seg.style.display = '';
+            return;
+          }
+          var txt = seg.textContent.toLowerCase();
+          seg.style.display = txt.indexOf(q) >= 0 ? '' : 'none';
+        });
+        if (q) {
+          body.style.maxHeight = 'none';
+          if (fade) fade.style.display = 'none';
+        }
+      });
+    }
+  })();
+</script>

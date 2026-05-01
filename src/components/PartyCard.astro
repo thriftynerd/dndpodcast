@@ -1,0 +1,60 @@
+---
+interface Props {
+  id: string;
+  player: string;
+  name: string;
+  title: string;
+  tagline: string;
+  bullets: string[];
+  image: string;
+  alt: string;
+  accentColor: string;  // hex like '#d35a8f'
+}
+
+const { id, player, name, title, tagline, bullets, image, alt, accentColor } = Astro.props;
+---
+
+<article class="party-card" id={id}>
+  <div class="party-art-wrap">
+    <img class="party-art" src={image} alt={alt} />
+    <div class="party-glow" style={`--glow: ${accentColor};`}></div>
+  </div>
+  <div class="party-meta">
+    <div class="party-player">Played by {player}</div>
+    <h3 class="party-name" style={`--accent: ${accentColor};`}>{name}</h3>
+    <div class="party-title">{title}</div>
+    <div class="party-tagline" style={`--accent: ${accentColor};`}>{tagline}</div>
+    <ul class="party-bullets">
+      {bullets.map((b) => <li>{b}</li>)}
+    </ul>
+  </div>
+</article>
+
+<style>
+  .party-card { position: relative; border-radius: 16px; overflow: hidden; background: linear-gradient(160deg, #0d0a14, #0a0a0e); border: 0.5px solid var(--border); display: grid; grid-template-rows: minmax(0, 1fr) auto; min-height: 700px; transition: transform 0.3s ease, border-color 0.3s; isolation: isolate; }
+  .party-card:hover { transform: translateY(-4px); border-color: rgba(255,255,255,0.18); }
+  .party-card:hover .party-art { transform: scale(1.03); }
+  .party-card:hover .party-glow { opacity: 0.6; }
+  .party-art-wrap { position: relative; overflow: hidden; min-height: 460px; display: flex; align-items: center; justify-content: center; }
+  .party-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at center, var(--glow) 0%, transparent 65%); opacity: 0.35; mix-blend-mode: screen; transition: opacity 0.4s; pointer-events: none; }
+  .party-art { position: relative; z-index: 2; width: 100%; height: 100%; max-width: 480px; object-fit: contain; padding: 30px 20px 0; transition: transform 0.5s ease; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); }
+  .party-meta { padding: 28px 32px 32px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4) 30%); position: relative; z-index: 3; }
+  .party-player { font-size: 11px; letter-spacing: 0.26em; color: var(--text-3); font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
+  .party-name { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.6rem, 2.4vw, 2.2rem); font-weight: 700; color: #f8f3e3; line-height: 1.05; margin-bottom: 10px; letter-spacing: 0.005em; text-shadow: 0 0 30px var(--accent); }
+  .party-title { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 16px; color: var(--text-2); line-height: 1.4; margin-bottom: 14px; }
+  .party-tagline { font-family: "Cormorant Garamond", Georgia, serif; font-size: 18px; font-weight: 600; color: var(--accent); margin-bottom: 18px; padding-bottom: 16px; border-bottom: 0.5px solid var(--border-2); }
+  .party-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
+  .party-bullets li { position: relative; padding-left: 16px; font-size: 14px; color: var(--text-2); line-height: 1.5; }
+  .party-bullets li::before { content: '·'; position: absolute; left: 4px; top: 0; color: var(--gold); font-weight: 700; font-size: 18px; line-height: 1.2; }
+
+  /* Readability pass override from mockup */
+  .party-title { font-style: normal; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+
+  @media (max-width: 1024px) {
+    .party-card { min-height: auto; }
+    .party-art-wrap { min-height: 380px; }
+  }
+  @media (max-width: 900px) {
+    .party-art-wrap { min-height: 320px; }
+  }
+</style>

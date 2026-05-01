@@ -1,0 +1,46 @@
+---
+import Layout from '../layouts/Layout.astro';
+import ArchivePageHero from '../components/ArchivePageHero.astro';
+import EpisodeSearchBand from '../components/EpisodeSearchBand.astro';
+import CuratedRails from '../components/CuratedRails.astro';
+import EpisodeList from '../components/EpisodeList.astro';
+import { episodes } from '../data/episodes-archive';
+
+// Stats for the hero
+const episodeCount = episodes.length;
+const totalHours = '~700';  // TODO: compute from real durations once RSS is wired
+const campaignCount = 2;
+const yearStarted = 2012;
+
+// Recent rail: 8 most recent episodes
+const recent = [...episodes]
+  .sort((a, b) => b.date.localeCompare(a.date))
+  .slice(0, 8);
+
+// Editorial picks. These are placeholders per the BUILD_BRIEF — fill in real picks before launch.
+const startHere = [
+  { href: '/episodes/campaign-2-episode-1', label: 'Campaign 2 Episode 1', note: 'The cleanest entry point' },
+  { href: '/episodes/campaign-1-episode-1', label: 'The very beginning', note: 'When it was Drunks and Dragons' },
+  { href: '/episodes/campaign-1-episode-1', label: 'Lord Titus Harper finds out', note: '[Pick your favorite C1 entry-point arc]' },
+  { href: '/episodes/campaign-2-episode-1', label: 'After Steve died', note: '[The episode after Thom died, where Steve emerged]' },
+];
+
+const loreLandmarks = [
+  { href: '/episodes/campaign-1-episode-1', label: 'Steve the Gnoll is born', note: '[The side mission episode]' },
+  { href: '/episodes/campaign-1-episode-1', label: 'Thom dies, Steve emerges', note: '[Pick the right episode]' },
+  { href: '/episodes/campaign-2-episode-1', label: 'Welcome to Farholde', note: '[First episode of C2]' },
+  { href: '/episodes/campaign-1-episode-1', label: 'The Campaign 1 finale', note: '[End of the original saga]' },
+];
+---
+
+<Layout title="The Archive · Greetings, Adventurers!">
+  <ArchivePageHero
+    episodeCount={episodeCount}
+    totalHours={totalHours}
+    campaignCount={campaignCount}
+    yearStarted={yearStarted}
+  />
+  <EpisodeSearchBand />
+  <CuratedRails recent={recent} startHere={startHere} loreLandmarks={loreLandmarks} />
+  <EpisodeList episodes={episodes} />
+</Layout>

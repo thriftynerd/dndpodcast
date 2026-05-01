@@ -1,0 +1,36 @@
+<section class="ot">
+  <div class="ot-inner">
+    <div class="ot-side">
+      <div class="ot-symbol">
+        <span class="ot-symbol-letters">OT</span>
+      </div>
+      <div class="sec-eyebrow">The Antagonists</div>
+    </div>
+    <div class="ot-content">
+      <h3>The OT</h3>
+      <div class="ot-tagline">Anti-magic police. Who use magic.</div>
+      <p>The OT are Farholde's enforcement arm against magical practice. They detain. They surveil. They patrol the checkpoints with magical instruments and robotic backup. The system is, by all official accounts, working as intended.</p>
+      <p>The OT use magic, of course. Their tools are magical. Their methods are magical. Their enforcement is magical. The official position on this is that it is fine, actually, and you should not think about it too hard.</p>
+      <p>Selene Von Esper used to be one of them. That tells you about as much as you need to know.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .ot { padding: 80px 40px; background: var(--bg); border-top: 0.5px solid var(--border); position: relative; overflow: hidden; }
+  .ot::before { content: ''; position: absolute; right: -10%; top: -20%; width: 50%; height: 80%; background: radial-gradient(ellipse, rgba(197,64,138,0.05) 0%, transparent 70%); pointer-events: none; }
+  .ot-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); gap: 60px; align-items: start; }
+  .ot-side { display: flex; flex-direction: column; align-items: flex-start; }
+  .ot-symbol { width: 110px; height: 110px; border-radius: 50%; background: rgba(197,64,138,0.08); border: 1px solid rgba(197,64,138,0.4); display: flex; align-items: center; justify-content: center; margin-bottom: 20px; position: relative; }
+  .ot-symbol::after { content: ''; position: absolute; inset: -8px; border: 0.5px solid rgba(197,64,138,0.2); border-radius: 50%; }
+  .ot-symbol-letters { font-family: "Cinzel", Georgia, serif; font-size: 32px; font-weight: 700; color: var(--c2-magenta); letter-spacing: 0.08em; }
+  .sec-eyebrow { font-size: 13px; letter-spacing: 0.3em; color: var(--c2-magenta); font-weight: 600; margin-bottom: 14px; }
+  .ot-content h3 { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.75rem, 3vw, 2.4rem); font-weight: 700; line-height: 1.05; color: #f5f0e0; margin-bottom: 8px; }
+  .ot-content .ot-tagline { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 19px; color: var(--c2-magenta); margin-bottom: 22px; }
+  .ot-content p { font-size: 16px; color: var(--text-2); line-height: 1.65; margin-bottom: 16px; }
+
+  @media (max-width: 900px) {
+    .ot { padding: 50px 24px; }
+    .ot-inner { grid-template-columns: 1fr; gap: 30px; }
+  }
+</style>

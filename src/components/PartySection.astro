@@ -1,0 +1,109 @@
+---
+import PartyCard from './PartyCard.astro';
+
+const party = [
+  {
+    id: 'party-screetch',
+    player: 'Mike Bachmann',
+    name: 'Screetch Echo',
+    title: 'Masked vigilante. Mining magnate. Romantic catastrophe.',
+    tagline: 'Rich. Divorced. Nocturnal.',
+    bullets: [
+      'Once Squirrel Man, vigilante of Farholde',
+      'Wealthy from mining, emotionally bankrupt from approximately twenty-four ex-wives',
+      "Says 'I work alone'. Travels with a full party",
+      'Now opposes the OT, despite once benefiting from the systems around them',
+      'High ward turnover rate',
+    ],
+    image: '/images/c2/screetch.webp',
+    alt: 'Screetch Echo, played by Mike Bachmann',
+    accentColor: '#d35a8f',
+  },
+  {
+    id: 'party-selene',
+    player: 'Jennifer Cheek',
+    name: 'Selene Von Esper',
+    title: 'Noble sorcerer. Ex-OT. Family disappointment, heroically.',
+    tagline: 'Former cop, current problem.',
+    bullets: [
+      'From the wealthy and powerful Von Esper family',
+      'Former member of the OT, now actively working against them',
+      'Enjoys a fireball or telekinetic push',
+      'Currently navigating family drama at catastrophic levels',
+      'Recently has been breaking rules',
+    ],
+    image: '/images/c2/selene.webp',
+    alt: 'Selene Von Esper, played by Jennifer Cheek',
+    accentColor: '#a87fc7',
+  },
+  {
+    id: 'party-tchuck',
+    player: 'Tim Lanning',
+    name: "T'chuck",
+    title: 'Hobgoblin cleric. Forbidden nature dad.',
+    tagline: 'The dad friend, but with divine spells.',
+    bullets: [
+      'Hobgoblin cleric devoted to Regnir, a forbidden nature god',
+      'Gave most of Rimeford the Clap',
+      'Actually knows what is happening',
+      "Adopted R'oarc after her father died",
+    ],
+    image: '/images/c2/tchuck.webp',
+    alt: "T'chuck, played by Tim Lanning",
+    accentColor: '#e6c052',
+  },
+  {
+    id: 'party-roarc',
+    player: 'Nika Howard',
+    name: "R'oarc",
+    title: 'Half-orc artificer. Necromantic problem solver.',
+    tagline: 'Science, but make it unsettling.',
+    bullets: [
+      'Half-orc artificer who recently went through a bard phase',
+      'Side interest in necromancy. For friendship',
+      "Screetch's secret wife",
+      'Loves to share a sausage roll',
+    ],
+    image: '/images/c2/roarc.webp',
+    alt: "R'oarc, played by Nika Howard",
+    accentColor: '#5fb8d6',
+  },
+];
+---
+
+<section class="party">
+  <div class="party-inner">
+    <div class="party-header">
+      <div class="sec-eyebrow">The Resistance</div>
+      <h2>The Party</h2>
+      <p>They were just trying to live a quiet life in a remote mining village.</p>
+      <div class="party-credit">Character art by <a href="#">Oh No Justin</a></div>
+    </div>
+    <div class="party-grid">
+      {party.map((p) => <PartyCard {...p} />)}
+    </div>
+  </div>
+</section>
+
+<style>
+  .party { padding: 90px 40px 100px; background: var(--bg-2); position: relative; }
+  .party-inner { max-width: 1320px; margin: 0 auto; }
+  .party-header { text-align: center; margin-bottom: 60px; }
+  .party-header h2 { font-family: "Cinzel", Georgia, serif; font-size: clamp(2.2rem, 4vw, 3.4rem); font-weight: 700; color: #f5f0e0; line-height: 1.05; margin-bottom: 14px; letter-spacing: 0.005em; }
+  .party-header p { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 18px; color: var(--text-2); max-width: 600px; margin: 0 auto; line-height: 1.55; }
+  .party-credit { margin-top: 18px; font-size: 11px; letter-spacing: 0.22em; color: var(--text-4); font-weight: 500; text-transform: uppercase; }
+  .party-credit a { color: var(--gold); text-decoration: none; border-bottom: 0.5px solid rgba(212,175,55,0.4); transition: color 0.2s; }
+  .party-credit a:hover { color: #e8c875; }
+  .party-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .sec-eyebrow { font-size: 13px; letter-spacing: 0.3em; color: var(--green); font-weight: 600; margin-bottom: 14px; }
+
+  /* Readability pass override from mockup */
+  .party-header p { font-style: normal; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+
+  @media (max-width: 1024px) {
+    .party-grid { grid-template-columns: 1fr; }
+  }
+  @media (max-width: 900px) {
+    .party { padding: 60px 24px; }
+  }
+</style>

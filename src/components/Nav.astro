@@ -1,0 +1,105 @@
+---
+const path = Astro.url.pathname;
+
+const isActive = (matchers: string[]) =>
+  matchers.some((m) => path === m || path.startsWith(m + '/'));
+---
+
+<nav class="nav">
+  <a class="brand-mark" href="/">
+    <img class="brand-mark-img" src="/images/logo-white.png" alt="Greetings, Adventurers!" />
+  </a>
+  <div class="nav-items">
+    <a href="/#livestream" class="nav-link">Watch</a>
+
+    {isActive(['/cast'])
+      ? <span class="active">Cast</span>
+      : <a href="/cast" class="nav-link">Cast</a>}
+
+    {isActive(['/campaign-2', '/campaign-1'])
+      ? <span class="active">The world</span>
+      : <a href="/campaign-2" class="nav-link">The world</a>}
+
+    <a href="https://dndpodcast.fandom.com/" target="_blank" rel="noopener" class="nav-link">Wiki</a>
+    <a href="https://shows.acast.com/greetings-adventurers" target="_blank" rel="noopener" class="nav-cta">▶ Listen latest</a>
+  </div>
+</nav>
+
+<style>
+  .nav {
+    padding: 18px 40px;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 0.5px solid var(--border);
+    background: rgba(0, 0, 0, 0.55);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    backdrop-filter: blur(12px);
+  }
+
+  .brand-mark {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+  }
+
+  .brand-mark-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+  .brand-mark:hover .nav-wordmark-img {
+    opacity: 0.85;
+  }
+
+  .nav-items {
+    display: flex;
+    gap: 26px;
+    font-size: 14px;
+    color: var(--text-3);
+    margin-left: auto;
+    align-items: center;
+  }
+
+  .nav-link {
+    color: var(--text-3);
+    text-decoration: none;
+    transition: color 0.2s;
+    font-size: inherit;
+  }
+
+  .nav-link:hover {
+    color: var(--text);
+  }
+
+  .active {
+  color: var(--text);
+  border-bottom: 1.5px solid var(--green);
+  padding-bottom: 4px;
+}
+
+  .nav-cta {
+    background: var(--green);
+    color: #0a0f0c;
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  @media (max-width: 720px) {
+    .nav {
+      padding: 14px 20px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .nav-items {
+      font-size: 13px;
+      gap: 16px;
+    }
+  }
+</style>

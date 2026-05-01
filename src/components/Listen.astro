@@ -1,0 +1,35 @@
+<section class="listen">
+  <div class="listen-deco"><img src="/images/logo-white.png" alt="" /></div>
+  <div class="listen-inner">
+    <div>
+      <div class="listen-eyebrow">Now hear them in action</div>
+      <h2 class="listen-title">All right. Go listen.</h2>
+      <p class="listen-sub">New episodes every Monday on every podcast app.</p>
+    </div>
+    <span class="listen-cta">▶ Latest episode</span>
+  </div>
+  <!-- TODO: Replace listen-cta with actual Acast embed iframe.
+       Embed snippet from Acast dashboard goes here, e.g.:
+       <iframe src="https://embed.acast.com/{showId}/{episodeId}" frameborder="0" width="100%" height="190px"></iframe>
+  -->
+</section>
+
+<style>
+  .listen { padding: 80px 40px; background: var(--bg-2); border-top: 0.5px solid var(--border); position: relative; overflow: hidden; }
+  .listen-deco { position: absolute; right: -100px; top: 50%; transform: translateY(-50%); width: 480px; height: 480px; opacity: 0.05; pointer-events: none; }
+  .listen-deco img { width: 100%; height: 100%; object-fit: contain; }
+  .listen-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; position: relative; z-index: 2; }
+  .listen-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 12px; }
+  .listen-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.75rem, 2.6vw, 2.4rem); font-weight: 700; color: #f5f0e0; line-height: 1.15; margin-bottom: 10px; }
+  .listen-sub { font-size: 16px; color: var(--text-2); line-height: 1.55; max-width: 600px; }
+  .listen-cta { background: var(--green); color: #0a0f0c; padding: 16px 30px; border-radius: 8px; font-size: 15px; font-weight: 700; white-space: nowrap; cursor: pointer; display: inline-flex; align-items: center; gap: 10px; transition: transform 0.15s; }
+  .listen-cta:hover { transform: translateY(-2px); }
+
+  /* Font System override from mockup */
+  .listen-title { font-weight: 600; }
+
+  @media (max-width: 900px) {
+    .listen { padding: 50px 24px; }
+    .listen-inner { grid-template-columns: 1fr; gap: 24px; }
+  }
+</style>

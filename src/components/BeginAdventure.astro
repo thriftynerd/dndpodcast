@@ -1,0 +1,27 @@
+<section class="start">
+  <div class="start-inner">
+    <div>
+      <div class="start-eyebrow">For new adventurers</div>
+      <div class="start-title">Six hundred episodes is a lot.<br/>Let us show you the way.</div>
+      <div class="start-sub">Hand-curated arcs, character primers, and "story so far" recaps to drop you right into the action. No homework required.</div>
+    </div>
+    <div class="start-cta">Begin your adventure →</div>
+  </div>
+</section>
+
+<style>
+  .start { padding: 60px 40px; background: linear-gradient(135deg, #0e1d12, #1a2818); border-top: 0.5px solid rgba(151,196,89,0.25); border-bottom: 0.5px solid rgba(151,196,89,0.25); }
+  .start-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .start-eyebrow { font-size: 13px; letter-spacing: 0.28em; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
+  .start-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.75rem, 2.75vw, 2.5rem); font-weight: 700; color: #f5f0e0; line-height: 1.15; margin-bottom: 12px; }
+  .start-sub { font-size: 16px; color: var(--text-2); line-height: 1.55; max-width: 720px; }
+  .start-cta { background: var(--gold); color: #1a1410; padding: 16px 28px; border-radius: 8px; font-size: 15px; font-weight: 700; white-space: nowrap; cursor: pointer; }
+
+  /* Font system override from mockup */
+  .start-title { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; font-weight: 600; }
+
+  @media (max-width: 900px) {
+    .start { padding: 50px 24px; }
+    .start-inner { grid-template-columns: 1fr; gap: 24px; }
+  }
+</style>

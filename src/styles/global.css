@@ -1,0 +1,33 @@
+/* Reset */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* Design tokens. Change values here to retheme the whole site. */
+:root {
+  --bg: #0a0f0c;
+  --bg-2: #050805;
+  --surface: #141a16;
+  --surface-2: #1d2520;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-2: rgba(255, 255, 255, 0.18);
+  --text: #f0ebe0;
+  --text-2: #c5c1b3;
+  --text-3: #a8a59c;
+  --text-4: #6b6b65;
+  --green: #97C459;
+  --green-d: #639922;
+  --gold: #d4af37;
+  --gold-d: #a88828;
+  --twitch: #9146FF;
+  --c2-purple: #6b3aa8;
+--c2-magenta: #c5408a;
+--c2-cyan: #5fb8d6;
+--c2-gold: #e6c052;
+}
+
+/* Base */
+html, body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}

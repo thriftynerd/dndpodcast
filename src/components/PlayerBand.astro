@@ -1,0 +1,35 @@
+---
+interface Props {
+  showId: string;
+  episodeId: string;
+}
+const { showId, episodeId } = Astro.props;
+---
+
+<section class="player-band" id="player">
+  <div class="player-inner">
+    <iframe
+      src={`https://embed.acast.com/${showId}/${episodeId}`}
+      frameborder="0"
+      width="100%"
+      height="80px"
+      title="Episode player"
+    ></iframe>
+  </div>
+</section>
+
+<style>
+  .player-band { background: var(--surface); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); padding: 24px 40px; position: sticky; top: 64px; z-index: 50; backdrop-filter: blur(8px); }
+  .player-inner { max-width: 1280px; margin: 0 auto; }
+
+  /* Sticky-nav offset for in-page anchor */
+  :global(html) { scroll-behavior: smooth; }
+  #player { scroll-margin-top: 76px; }
+
+  @media (max-width: 1024px) {
+    .player-band { position: static; top: auto; }
+  }
+  @media (max-width: 900px) {
+    .player-band { padding: 18px 24px; }
+  }
+</style>

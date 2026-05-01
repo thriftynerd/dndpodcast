@@ -1,0 +1,226 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Nav from '../components/Nav.astro';
+import PageHero from '../components/PageHero.astro';
+import CrewPhoto from '../components/CrewPhoto.astro';
+import CastSectionMichael from '../components/CastSectionMichael.astro';
+import CastSection from '../components/CastSection.astro';
+import Listen from '../components/Listen.astro';
+import Footer from '../components/Footer.astro';
+
+// Other cast members. Michael is hardcoded as his own component because he has the NPC poster.
+const tim = {
+  id: 'tim',
+  alt: true,
+  roman: 'II',
+  rolePill: 'Player · Heart of the Party',
+  name: 'Tim Lanning',
+  currently: "Plays T'chuck.",
+  bio: 'Co-founder of GeeklyInc. Co-host of Dear Internet.',
+  quote: '"Ouch my head. RT if Ouch my head."',
+  image: '/images/cast/tim.jpg',
+  quickFacts: [
+    { num: 'Episode 1', label: 'Joined' },
+    { num: 'Many', label: 'Player characters' },
+    { num: '2', label: 'Campaigns' },
+  ],
+  characterCount: 4,
+  characterCountNote: 'may contain spoilers',
+  characterGroups: [
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Tum Darkblade', status: 'concluded' as const, campaign: 'Campaign One · 2012-2022', description: 'Sly Flourish! We loved Tum for a good time not a long time.' },
+        { name: 'Titus Harper', status: 'concluded' as const, campaign: 'Campaign One · 2012-2022', description: 'He had a dark past. He was crowned king. Had even more adventurers.' },
+        { name: 'Toby Treckletart', status: 'concluded' as const, campaign: 'Campaign One · 2012-2022', description: 'Another little guy. He was so cute he could never be evil.' },
+      ],
+    },
+    {
+      status: 'current' as const,
+      characters: [
+        { name: "T'chuck", status: 'current' as const, campaign: 'Campaign Two · ongoing', description: 'Hobgoblin cleric devoted to Regnir, a forbidden nature god in a world where magic is illegal. Daddy.' },
+      ],
+    },
+  ],
+  extra: {
+    label: 'Also makes',
+    title: 'Content Hole & Tribulation Farce',
+    description: 'A Patreon (<em>Content Hole</em>) and a podcast (<em>Tribulation Farce</em>), both alongside Jennifer Cheek.',
+  },
+};
+
+const jennifer = {
+  id: 'jennifer',
+  alt: false,
+  roman: 'III',
+  rolePill: 'Player · Ex-Cop',
+  name: 'Jennifer Cheek',
+  currently: 'Plays Selene Von Esper.',
+  bio: 'Original cast member. Is good at dice.',
+  quote: '"[Real Jennifer quote goes here.]"',
+  image: '/images/cast/jennifer.jpg',
+  quickFacts: [
+    { num: 'Episode 1', label: 'Joined' },
+    { num: 'Many', label: 'Player characters' },
+    { num: '2', label: 'Campaigns' },
+  ],
+  characterCount: 3,
+  characterCountNote: 'may contain spoilers',
+  characterGroups: [
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Aludra Wyrmsbane', status: 'concluded' as const, campaign: 'Campaign One · 2012-2022', description: '[Aludra description from Jennifer goes here. Wiki version is fine but she should get to write the headline.]' },
+        { name: 'Rowan', status: 'concluded' as const, campaign: 'Campaign One · 2012-2022', description: '[Rowan description from Jennifer goes here. Wiki version is fine but she should get to write the headline.]' },
+      ],
+    },
+    {
+      status: 'current' as const,
+      characters: [
+        { name: 'Selene Von Esper', status: 'current' as const, campaign: 'Campaign Two · ongoing', description: "From the wealthy and powerful Von Esper family. Former member of the OT (Farholde's anti-magic police force)." },
+      ],
+    },
+  ],
+  extra: {
+    label: 'Also makes',
+    title: 'Content Hole & Tribulation Farce',
+    description: 'A Patreon (<em>Content Hole</em>) and a podcast (<em>Tribulation Farce</em>), both alongside Tim Lanning.',
+  },
+};
+
+const bachmann = {
+  id: 'bachmann',
+  alt: true,
+  roman: 'IV',
+  rolePill: 'Player · Agent of Maximum Nonsense',
+  name: 'Mike Bachmann',
+  currently: 'Plays Screetch Echo. For now.',
+  bio: 'Has played a lot of characters because Michael keep killing them.',
+  quote: '"Do you smell that?"',
+  image: '/images/cast/bachmann.jpg',
+  quickFacts: [
+    { num: 'Episode 1', label: 'Joined' },
+    { num: '7', label: 'Player characters' },
+    { num: '777', label: 'Bodyparts for Steve' },
+  ],
+  characterCount: 7,
+  characterCountNote: 'contains spoilers',
+  characterGroups: [
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Thom "the Dragonborn" Vidalis', status: 'concluded' as const, campaign: 'Campaign One · 2012 to ?', description: 'The original Dragonborn with a tail. Catchphrase: "I hate gnolls."' },
+      ],
+    },
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Marendithas Bearcharger', status: 'concluded' as const, campaign: 'Campaign One · dates unknown', description: '[Marendithas description goes here. The wiki has plenty.]' },
+      ],
+    },
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Bananas Foster', status: 'concluded' as const, campaign: 'Campaign One · dates unknown', description: '[Bananas Foster description goes here.]' },
+      ],
+    },
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Jett Razor', status: 'concluded' as const, campaign: 'Campaign One · dates unknown', description: '[Jett description goes here.]' },
+      ],
+    },
+    {
+      status: 'retired' as const,
+      characters: [
+        { name: 'Steve the Gnoll', status: 'retired' as const, campaign: 'Campaign One', description: 'How do you explain this?' },
+      ],
+    },
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Skud Derringer', status: 'concluded' as const, campaign: 'Campaign One · dates unknown', description: '[Skud description goes here.]' },
+      ],
+    },
+    {
+      status: 'current' as const,
+      characters: [
+        { name: 'Screetch Echo', status: 'current' as const, campaign: 'Campaign Two · ongoing', description: 'Once known as Squirrel Man, the masked vigilante. Wealthy from mining, emotionally bankrupt from approximately twenty-four ex-wives.' },
+      ],
+    },
+  ],
+};
+
+const nika = {
+  id: 'nika',
+  alt: false,
+  roman: 'V',
+  rolePill: 'Player · Creative Chaos Engine',
+  name: 'Nika Howard',
+  currently: "Plays R'oarc.",
+  bio: 'Joined the cast on episode 81. The only cast member who came in after the show started, which technically makes her the only one who chose to be here.',
+  quote: '"[Real Nika quote goes here.]"',
+  image: '/images/cast/nika.jpg',
+  quickFacts: [
+    { num: 'Episode 81', label: 'Joined' },
+    { num: 'Many', label: 'Player characters' },
+    { num: '2', label: 'Campaigns' },
+  ],
+  characterCount: 3,
+  characterCountNote: 'may contain spoilers',
+  characterGroups: [
+    {
+      status: 'concluded' as const,
+      characters: [
+        { name: 'Jaela', status: 'concluded' as const, campaign: 'Campaign One · ended 2022', description: '[Jaela description from Nika goes here]' },
+        { name: 'Lahni Caplan', status: 'concluded' as const, campaign: 'Campaign One · ended 2022', description: '[Lahni description from Nika goes here]' },
+      ],
+    },
+    {
+      status: 'current' as const,
+      characters: [
+        { name: "R'oarc", status: 'current' as const, campaign: 'Campaign Two · ongoing', description: 'Half-orc artificer with a talent for invention and a passion for necromancy.' },
+      ],
+    },
+  ],
+};
+
+const vince = {
+  id: 'vince',
+  alt: true,
+  roman: 'VI',
+  rolePill: 'Editor',
+  name: 'Vince Kenny',
+  currently: 'Behind the boards. Cleaning up after the cast.',
+  bio: "An old friend in a new chair. Vince started editing the show in early 2026, a few months in and already cleaning up after twelve-plus years of cast running jokes only the rest of us remember. The audio's been getting noticeably better. We're choosing not to take it personally.",
+  image: '/images/cast/vince.jpg',
+  quickFacts: [
+    { num: '2026', label: 'Joined' },
+    { num: 'Old', label: 'Friend' },
+    { num: '∞', label: 'Patience' },
+  ],
+  // No characterGroups — Vince doesn't play characters
+  // No extra
+};
+---
+
+<Layout title="The Cast">
+  <PageHero
+    eyebrow="The Party"
+    title="Six humans.<br/>Mostly."
+    sub="The people responsible for Drunkeros, for better and for worse. Seen here with super-fan Nika Howard."
+  />
+  <CrewPhoto
+    src="/images/cast/group.jpg"
+    alt="The full cast at the table"
+    caption='"Ooooo my little butt is wett!"'
+    captionSub="The full crew when Wizards still liked us."
+  />
+  <CastSectionMichael />
+  <CastSection {...tim} />
+  <CastSection {...jennifer} />
+  <CastSection {...bachmann} />
+  <CastSection {...nika} />
+  <CastSection {...vince} />
+  <Listen />
+</Layout>

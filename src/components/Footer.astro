@@ -1,0 +1,203 @@
+---
+// No props yet. Social URLs will become props eventually so they're easy to update from one place.
+---
+
+<footer class="ft">
+  <div class="ft-inner">
+    <div class="ft-top">
+      <div class="ft-brand-block">
+        <div class="ft-brand-row">
+          <img class="ft-brand-wordmark" src="/images/logo-white.png" alt="Greetings, Adventurers!" />
+        </div>
+        <div class="ft-brand-tag">An ongoing actual play. Set in Drunkeros. Since 2012.</div>
+        <div class="ft-brand-network">
+          A production of <a href="https://geeklyinc.com">GeeklyInc</a>. Home of Dear Internet, Taverns &amp; Caverns, Welcome to St. Paxton, and more.
+        </div>
+      </div>
+      <div class="ft-socials-block">
+        <div class="ft-socials-label">FOLLOW THE SHOW</div>
+        <div class="ft-socials-row">
+          <a class="ft-social" href="#" title="X / Twitter" aria-label="X / Twitter">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 3h3l-7 8 8 10h-6l-5-6.5L4.5 21H1.5l7.5-8.5L1.5 3h6.2l4.5 6z"/></svg>
+          </a>
+          <a class="ft-social" href="#" title="Bluesky" aria-label="Bluesky">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M5.5 4c2.6 1.9 5.4 5.7 6.5 7.8 1.1-2.1 3.9-5.9 6.5-7.8 1.5-1.1 4-1.9 4 .9 0 .6-.3 4.7-.5 5.3-.7 2.4-3.1 3-5.3 2.6 3.7.6 4.7 2.7 2.6 4.8-3.9 4-5.7-1-6.1-2.3-.5-1.4-.6-1.4-1.1 0-.4 1.3-2.2 6.3-6.1 2.3-2.1-2.1-1.1-4.2 2.6-4.8-2.2.4-4.6-.2-5.3-2.6C1.8 9.6 1.5 5.5 1.5 4.9c0-2.8 2.5-2 4-.9z"/></svg>
+          </a>
+          <a class="ft-social" href="#" title="Instagram" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg>
+          </a>
+          <a class="ft-social" href="#" title="Facebook" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22 12a10 10 0 10-11.6 9.9V15h-2.5v-3h2.5V9.7c0-2.5 1.5-3.9 3.8-3.9 1.1 0 2.2.2 2.2.2V8.5h-1.3c-1.2 0-1.6.8-1.6 1.6V12h2.8l-.4 3h-2.4v6.9A10 10 0 0022 12z"/></svg>
+          </a>
+          <a class="ft-social" href="#" title="YouTube" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.3a2.7 2.7 0 00-1.9-1.9C19.5 5 12 5 12 5s-7.5 0-9.1.4A2.7 2.7 0 001 7.3 28 28 0 00.6 12 28 28 0 001 16.7a2.7 2.7 0 001.9 1.9C4.5 19 12 19 12 19s7.5 0 9.1-.4a2.7 2.7 0 001.9-1.9 28 28 0 00.4-4.7 28 28 0 00-.4-4.7zM9.8 15V9l5.3 3z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="ft-bottom">
+      <div>© 2026 GeeklyInc</div>
+      <div class="ft-legal-links">
+        <span>Patreon</span>
+        <span>Wiki</span>
+        <span>Cast</span>
+        <span>Press</span>
+        <span>Contact</span>
+        <span>Privacy</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ft {
+    padding: 56px 40px 28px;
+    border-top: 0.5px solid var(--border);
+    background: var(--bg-2);
+  }
+
+  .ft-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .ft-top {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 40px;
+    align-items: start;
+    padding-bottom: 32px;
+    border-bottom: 0.5px solid var(--border);
+  }
+
+  .ft-brand-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .ft-brand-row {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 4px;
+  }
+
+  .ft-brand-wordmark {
+  height: 36px;
+  width: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+  .ft-brand-tag {
+    font-size: 12px;
+    color: var(--text-2);
+    font-weight: 500;
+    margin-top: 4px;
+  }
+
+  .ft-brand-network {
+    font-size: 13px;
+    color: var(--text-3);
+    margin-top: 8px;
+  }
+
+  .ft-brand-network a {
+    color: var(--green);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+  }
+
+  .ft-brand-network a:hover {
+    color: #b8db82;
+  }
+
+  .ft-socials-block {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    align-items: flex-end;
+  }
+
+  .ft-socials-label {
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    color: var(--text-3);
+    font-weight: 500;
+  }
+
+  .ft-socials-row {
+    display: flex;
+    gap: 8px;
+  }
+
+  .ft-social {
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-3);
+    transition: all 0.2s;
+    text-decoration: none;
+  }
+
+  .ft-social:hover {
+    color: var(--text);
+    border-color: rgba(255, 255, 255, 0.25);
+    background: var(--surface-2);
+    transform: translateY(-1px);
+  }
+
+  .ft-social svg {
+    width: 17px;
+    height: 17px;
+  }
+
+  .ft-bottom {
+    padding-top: 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: var(--text-4);
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .ft-legal-links {
+    display: flex;
+    gap: 18px;
+  }
+
+  .ft-legal-links span {
+    cursor: pointer;
+    transition: color 0.2s;
+  }
+
+  .ft-legal-links span:hover {
+    color: var(--text-3);
+  }
+
+  @media (max-width: 720px) {
+    .ft {
+      padding: 40px 24px 24px;
+    }
+    .ft-top {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .ft-socials-block {
+      align-items: flex-start;
+    }
+    .ft-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+</style>

@@ -1,0 +1,135 @@
+---
+// src/pages/episodes/[slug].astro
+import Layout from '../../layouts/Layout.astro';
+import EpisodeBreadcrumb from '../../components/EpisodeBreadcrumb.astro';
+import EpisodeHero from '../../components/EpisodeHero.astro';
+import PlayerBand from '../../components/PlayerBand.astro';
+import EpisodeCast from '../../components/EpisodeCast.astro';
+import ShowNotes from '../../components/ShowNotes.astro';
+import Transcript from '../../components/Transcript.astro';
+import EpisodeSidebar from '../../components/EpisodeSidebar.astro';
+import EpisodeNav from '../../components/EpisodeNav.astro';
+
+import { loadEpisodes, getNeighbors, type Episode } from '../../lib/rss';
+
+// Optional: per-slug transcript files. We'll look for one but treat missing as fine.
+import { existsSync, readFileSync } from 'node:fs';
+import { resolve } from 'node:path';
+
+export async function getStaticPaths() {
+  const episodes = await loadEpisodes();
+  return episodes.map((ep) => ({
+    params: { slug: ep.slug },
+    props: { episode: ep },
+  }));
+}
+
+interface Props {
+  episode: Episode;
+}
+
+const { episode: ep } = Astro.props;
+const { prev, next } = await getNeighbors(ep.slug);
+
+// Try to load a transcript JSON if one exists for this slug.
+// Path: src/data/transcripts/[slug].json
+let transcript: any[] = [];
+let transcriptStatus = '';
+const transcriptPath = resolve(process.cwd(), `src/data/transcripts/${ep.slug}.json`);
+if (existsSync(transcriptPath)) {
+  try {
+    const raw = readFileSync(transcriptPath, 'utf-8');
+    const parsed = JSON.parse(raw);
+    if (Array.isArray(parsed)) {
+      transcript = parsed;
+      transcriptStatus = 'Auto-generated · AssemblyAI';
+    } else if (parsed.segments) {
+      transcript = parsed.segments;
+      transcriptStatus = parsed.status || 'Auto-generated · AssemblyAI';
+    }
+  } catch (e) {
+    console.warn(`[transcript] failed to parse ${transcriptPath}`, e);
+  }
+}
+
+// Default cast lineup. When you need per-episode lineups (e.g., bonus episodes),
+// extend this with a lookup keyed by ep.slug or ep.kind.
+const defaultCast = [
+  { player: 'Mike Bachmann', initials: 'MB', role: 'as Screech Echo', avatarClass: 'avatar-bach' },
+  { player: 'Jennifer Cheek', initials: 'JC', role: 'as Selene Von Esper', avatarClass: 'avatar-jen' },
+  { player: 'Nika Howard', initials: 'NH', role: "as R'Oarc", avatarClass: 'avatar-nika' },
+  { player: 'Tim Lanning', initials: 'TL', role: "as T'Chuck", avatarClass: 'avatar-tim' },
+  { player: 'Michael DiMauro', initials: 'MD', role: 'Dungeon Master', avatarClass: 'avatar-michael' },
+];
+
+const showNotes = ep.description ? [ep.description] : [];
+
+const campaignLabel =
+  ep.kind === 'c1' ? 'Campaign One' :
+  ep.kind === 'c2' ? 'Campaign Two' :
+  'Bonus';
+const campaignHref = ep.kind === 'c1' ? '/campaign-1' : ep.kind === 'c2' ? '/campaign-2' : '/episodes';
+const breadcrumbCurrent = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : 'Bonus';
+
+const prevLink = prev ? {
+  href: `/episodes/${prev.slug}`,
+  label: prev.episodeNumber ? `Episode ${prev.episodeNumber}` : 'Bonus',
+  title: prev.title,
+} : undefined;
+const nextLink = next ? {
+  href: `/episodes/${next.slug}`,
+  label: next.episodeNumber ? `Episode ${next.episodeNumber}` : 'Bonus',
+  title: next.title,
+} : undefined;
+
+// For the sidebar mentions list. Until we have real per-episode mention data,
+// pass an empty array — sidebar handles this gracefully (or we can add a 'no mentions yet' fallback later).
+const mentions: any[] = [];
+---
+
+<Layout title={`${ep.title} · ${campaignLabel}, Episode ${ep.episodeNumber ?? 'Bonus'}`}>
+  <EpisodeBreadcrumb
+    campaignHref={campaignHref}
+    campaignLabel={campaignLabel}
+    current={breadcrumbCurrent}
+  />
+
+  <EpisodeHero
+    campaign={campaignLabel}
+    episodeNumber={String(ep.episodeNumber ?? 'Bonus')}
+    title={ep.title}
+    description={ep.description}
+    artUrl={ep.artUrl}
+    releaseDate={ep.releaseDate}
+    duration={ep.duration}
+    season={`Season ${ep.season}`}
+    dm="Michael DiMauro"
+  />
+
+  <PlayerBand showId={ep.acastShowId} episodeId={ep.acastEpisodeId} />
+
+  <section class="ep-body">
+    <div class="ep-content">
+      <EpisodeCast cast={defaultCast} />
+      <ShowNotes paragraphs={showNotes} />
+      {transcript.length > 0 && (
+        <Transcript segments={transcript} status={transcriptStatus} />
+      )}
+    </div>
+    <EpisodeSidebar mentions={mentions} />
+  </section>
+
+  <EpisodeNav prev={prevLink} next={nextLink} />
+</Layout>
+
+<style>
+  .ep-body { max-width: 1280px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 60px; align-items: start; }
+  .ep-content { min-width: 0; }
+
+  @media (max-width: 1024px) {
+    .ep-body { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 900px) {
+    .ep-body { padding: 40px 24px; }
+  }
+</style>

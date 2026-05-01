@@ -1,0 +1,46 @@
+---
+import type { CastMember } from '../lib/rss';
+
+interface Props {
+  cast: CastMember[];
+}
+const { cast } = Astro.props;
+---
+
+<div class="ep-section">
+  <div class="ep-section-eyebrow">At the table</div>
+  <h2 class="ep-section-title">In this episode</h2>
+  <div class="ep-cast-grid">
+    {cast.map((member) => (
+      <div class="ep-cast-card">
+        <div class={`ep-cast-avatar ${member.avatarClass}`}>{member.initials}</div>
+        <div class="ep-cast-info">
+          <div class="ep-cast-player">{member.player}</div>
+          <div class="ep-cast-char">{member.role}</div>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+<style>
+  .ep-section { margin-bottom: 50px; }
+  .ep-section-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 12px; }
+  .ep-section-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 700; line-height: 1.1; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 22px; }
+
+  .ep-cast-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .ep-cast-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 10px; transition: border-color 0.2s; }
+  .ep-cast-card:hover { border-color: rgba(151,196,89,0.3); }
+  .ep-cast-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 16px; color: rgba(245,240,224,0.85); flex-shrink: 0; letter-spacing: 0.02em; }
+  .avatar-michael { background: #2a3326; }
+  .avatar-tim { background: #2a2333; }
+  .avatar-jen { background: #332a23; }
+  .avatar-bach { background: #1f3329; }
+  .avatar-nika { background: #331f1f; }
+  .ep-cast-player { font-size: 14px; font-weight: 600; color: var(--text); }
+  .ep-cast-char { font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
+
+  @media (max-width: 900px) {
+    .ep-cast-grid { grid-template-columns: 1fr; }
+  }
+</style>

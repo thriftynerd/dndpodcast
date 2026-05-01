@@ -1,0 +1,45 @@
+<section class="com">
+  <div class="com-card discord">
+    <div class="com-eyebrow" style="color: #8d96f5;">Community</div>
+    <div class="com-title">Join the Discord</div>
+    <div class="com-sub">The unofficial-official hangout. Lore debates, fan art, occasional cast appearances.</div>
+    <div class="com-cta" style="color: #8d96f5;">Open in Discord →</div>
+  </div>
+  <div class="com-card youtube">
+    <div class="com-eyebrow" style="color: #ff5757;">Watch</div>
+    <div class="com-title">Subscribe on YouTube</div>
+    <div class="com-sub">Video versions of episodes and clips you can share.</div>
+    <div class="com-cta" style="color: #ff5757;">Watch on YouTube →</div>
+  </div>
+  <div class="com-card">
+    <div class="com-eyebrow" style="color: var(--green);">Newsletter</div>
+    <div class="com-title">The Farholde Trumpeter</div>
+    <div class="com-sub">A monthly note from the cast. What we're playing, watching, and jackin it to.</div>
+    <div class="com-cta" style="color: var(--green);">Subscribe →</div>
+  </div>
+</section>
+
+<style>
+  .com { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; padding: 60px 40px; background: var(--bg-2); max-width: 1280px; margin: 0 auto; }
+  .com-card { padding: 28px; border-radius: 12px; background: var(--surface); border: 0.5px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
+  .com-card.live { border-color: rgba(255,87,87,0.3); }
+  .com-card.patreon { border-color: rgba(212,175,55,0.25); }
+  .com-card.discord { border-color: rgba(88,101,242,0.3); }
+  .com-card.youtube { border-color: rgba(255,0,0,0.25); }
+  .com-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 0.22em; font-weight: 600; }
+  .com-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-weight: 700; color: var(--text); margin-top: 2px; }
+  .com-sub { font-size: 14px; color: var(--text-3); line-height: 1.55; flex: 1; margin: 4px 0 6px; }
+  .com-cta { font-size: 14px; font-weight: 600; }
+  .com-live-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff3030; animation: pulse 2s infinite; }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* Font system override from mockup */
+  .com-title { font-weight: 600; }
+
+  /* Readability pass override from mockup */
+  .com-sub { font-style: normal; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+
+  @media (max-width: 900px) {
+    .com { grid-template-columns: 1fr; padding: 40px 24px; }
+  }
+</style>

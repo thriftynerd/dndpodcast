@@ -1,0 +1,23 @@
+---
+interface Props {
+  paragraphs: string[];
+}
+const { paragraphs } = Astro.props;
+---
+
+<div class="ep-section">
+  <div class="ep-section-eyebrow">What happened</div>
+  <h2 class="ep-section-title">Show notes</h2>
+  <div class="ep-notes">
+    {paragraphs.map((p) => <p>{p}</p>)}
+  </div>
+</div>
+
+<style>
+  .ep-section { margin-bottom: 50px; }
+  .ep-section-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 12px; }
+  .ep-section-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 700; line-height: 1.1; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 22px; }
+
+  .ep-notes p { font-size: 16.5px; color: var(--text-2); line-height: 1.7; margin-bottom: 18px; }
+  .ep-notes p:last-child { margin-bottom: 0; }
+</style>

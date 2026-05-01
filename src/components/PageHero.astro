@@ -1,0 +1,41 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  sub?: string;
+  bgImage?: string;
+}
+
+const { eyebrow, title, sub, bgImage = '/images/drunkeros-map.jpg' } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="page-hero-bg" style={`background-image: url('${bgImage}');`}></div>
+  <div class="page-hero-overlay"></div>
+  <div class="page-hero-content">
+    <div class="page-hero-eyebrow">{eyebrow}</div>
+    <h1 class="page-hero-title" set:html={title}></h1>
+    {sub && <p class="page-hero-sub">{sub}</p>}
+  </div>
+</section>
+
+<style>
+  .page-hero { position: relative; padding: 120px 40px 100px; overflow: hidden; background-color: #0a1410; }
+  .page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; opacity: 0.35; }
+  .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(10,15,12,0.55) 0%, rgba(10,15,12,0.85) 100%); }
+  .page-hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; text-align: center; }
+  .page-hero-eyebrow { font-size: 13px; letter-spacing: 0.32em; color: var(--green); font-weight: 600; margin-bottom: 22px; display: inline-flex; align-items: center; gap: 16px; }
+  .page-hero-eyebrow::before, .page-hero-eyebrow::after { content: ''; width: 36px; height: 1px; background: var(--green); }
+  .page-hero-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(3rem, 6.5vw, 6rem); line-height: 1; font-weight: 700; color: #f5f0e0; letter-spacing: -0.02em; margin-bottom: 26px; text-shadow: 0 2px 24px rgba(0,0,0,0.55); }
+  .page-hero-sub { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.1rem, 1.6vw, 1.4rem); color: #d8d4c5; line-height: 1.55; max-width: 680px; margin: 0 auto; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+
+  /* Font System override from mockup */
+  .page-hero-title { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.01em; }
+
+  /* Readability pass override from mockup */
+  .page-hero-sub { font-weight: 500; }
+
+  @media (max-width: 900px) {
+    .page-hero { padding: 70px 24px 70px; }
+  }
+</style>

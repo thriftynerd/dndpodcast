@@ -1,0 +1,63 @@
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grad"></div>
+  <div class="hero-vignette"></div>
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-eyebrow"><span class="hero-pulse"></span><span>Campaign Two · Live</span></div>
+      <h1 class="hero-title">Welcome to<br/>Farholde.</h1>
+      <p class="hero-sub">Where magic is illegal, the cops are corrupt and the government is fascist. It's not hard to miss what we are trying to say.</p>
+      <div class="hero-actions">
+        <span class="btn-p"><svg width="13" height="13" viewBox="0 0 12 12"><polygon points="3,2 3,10 10,6" fill="currentColor"/></svg>Latest episode</span>
+        <span class="btn-s">Start with Episode 1</span>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><div class="hstat-num">182</div><div class="hstat-lbl">Episodes</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-num">2022</div><div class="hstat-lbl">Started</div></div>
+        <div class="hstat-div"></div>
+        <div class="hstat"><div class="hstat-num">Mondays</div><div class="hstat-lbl">New episodes</div></div>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="/images/c2/selene.webp" alt="Selene Von Esper, our portal into Farholde" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero { position: relative; min-height: 88vh; overflow: hidden; background: #0a0a0e; }
+  .hero-bg { position: absolute; inset: 0; background-image: url('/images/drunkeros-map.jpg'); background-size: cover; background-position: center; opacity: 0.18; filter: hue-rotate(290deg) saturate(0.6); }
+  .hero-grad { position: absolute; inset: 0; background: radial-gradient(ellipse at 70% 50%, rgba(107,58,168,0.32) 0%, transparent 55%), radial-gradient(ellipse at 20% 100%, rgba(197,64,138,0.18) 0%, transparent 50%), linear-gradient(180deg, rgba(10,8,15,0.85) 0%, rgba(10,15,12,0.95) 100%); }
+  .hero-vignette { position: absolute; inset: 0; background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.6) 100%); }
+  .hero-content { position: relative; z-index: 2; max-width: 1280px; margin: 0 auto; padding: 100px 40px 80px; min-height: 88vh; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 60px; align-items: center; }
+  .hero-text { position: relative; z-index: 3; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 12px; font-size: 12px; letter-spacing: 0.32em; color: var(--green); font-weight: 600; margin-bottom: 22px; }
+  .hero-pulse { width: 8px; height: 8px; border-radius: 50%; background: var(--green); animation: pulse 2s infinite; box-shadow: 0 0 12px rgba(151,196,89,0.6); }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+  .hero-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2.75rem, 5.8vw, 5.6rem); line-height: 0.95; font-weight: 700; color: #f8f3e3; letter-spacing: 0.005em; margin-bottom: 22px; text-shadow: 0 4px 30px rgba(0,0,0,0.7), 0 2px 8px rgba(0,0,0,0.4); }
+  .hero-sub { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.15rem, 1.5vw, 1.4rem); color: #d8d4c5; line-height: 1.5; max-width: 95%; margin-bottom: 36px; text-shadow: 0 1px 8px rgba(0,0,0,0.6); }
+  .hero-actions { display: flex; gap: 12px; margin-bottom: 44px; flex-wrap: wrap; }
+  .btn-p { background: var(--green); color: #0a0f0c; padding: 14px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; transition: transform 0.15s; }
+  .btn-p:hover { transform: translateY(-2px); }
+  .btn-s { background: rgba(20,15,30,0.65); color: var(--text); padding: 14px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; border: 0.5px solid rgba(255,255,255,0.3); display: inline-flex; align-items: center; gap: 10px; cursor: pointer; backdrop-filter: blur(8px); }
+  .hero-stats { display: flex; align-items: center; gap: 30px; padding-top: 26px; border-top: 0.5px solid var(--border-2); flex-wrap: wrap; }
+  .hstat { display: flex; flex-direction: column; }
+  .hstat-num { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.6rem, 2.2vw, 2.2rem); font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: 0.005em; }
+  .hstat-lbl { font-size: 12px; letter-spacing: 0.18em; color: var(--text-3); margin-top: 7px; font-weight: 500; }
+  .hstat-div { width: 1px; height: 38px; background: var(--border-2); }
+
+  .hero-art { position: relative; z-index: 2; height: 70vh; max-height: 720px; min-height: 480px; display: flex; align-items: center; justify-content: center; }
+  .hero-art img { height: 100%; width: auto; max-width: 100%; object-fit: contain; filter: drop-shadow(0 30px 60px rgba(0,0,0,0.5)) drop-shadow(0 0 80px rgba(168,127,199,0.25)); }
+
+  /* Readability pass override from mockup */
+  .hero-sub { font-weight: 500; }
+
+  @media (max-width: 900px) {
+    .hero { min-height: auto; }
+    .hero-content { grid-template-columns: 1fr; gap: 32px; padding: 60px 24px 40px; min-height: auto; }
+    .hero-art { height: auto; min-height: 380px; max-height: 500px; order: -1; }
+    .hero-stats { gap: 18px; }
+    .hstat-div { display: none; }
+  }
+</style>

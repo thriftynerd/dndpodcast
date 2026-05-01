@@ -1,0 +1,51 @@
+---
+const npcs = [
+  { tag: 'Resistance mentor', name: 'Ratma', desc: 'Gandalf, if Gandalf smoked four packs a day.' },
+  { tag: 'The last dragon', name: "J'Michael", desc: 'Not the sharpest dragon. Still a dragon.' },
+  { tag: 'Pirate?', name: 'Maris Womple', desc: 'Maybe. Marrying into the Von Esper family either way.' },
+  { tag: 'Classic NPC', name: 'Oldman Breadbasket', desc: "People can't get enough of his crusty bread." },
+];
+---
+
+<section class="npcs">
+  <div class="npcs-inner">
+    <div class="npcs-header">
+      <div class="sec-eyebrow">Notable Faces</div>
+      <h2 class="sec-title">Around Farholde</h2>
+    </div>
+    <div class="npc-grid">
+      {npcs.map((npc) => (
+        <div class="npc-card">
+          <div class="npc-tag">{npc.tag}</div>
+          <h4 class="npc-name">{npc.name}</h4>
+          <p class="npc-desc">{npc.desc}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .npcs { padding: 80px 40px; background: var(--bg); border-top: 0.5px solid var(--border); }
+  .npcs-inner { max-width: 1280px; margin: 0 auto; }
+  .npcs-header { margin-bottom: 40px; }
+  .sec-eyebrow { font-size: 13px; letter-spacing: 0.3em; color: var(--green); font-weight: 600; margin-bottom: 14px; }
+  .sec-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2rem, 3.6vw, 3.2rem); font-weight: 700; line-height: 1.05; color: #f5f0e0; letter-spacing: 0.005em; }
+  .npc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+  .npc-card { background: var(--surface); border-radius: 10px; border: 0.5px solid var(--border); padding: 24px 22px; transition: transform 0.2s, border-color 0.2s; cursor: default; }
+  .npc-card:hover { transform: translateY(-2px); border-color: rgba(151,196,89,0.25); }
+  .npc-tag { font-size: 11px; letter-spacing: 0.22em; color: var(--gold); font-weight: 600; text-transform: uppercase; margin-bottom: 10px; }
+  .npc-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 600; color: var(--text); line-height: 1.2; margin-bottom: 8px; }
+  .npc-desc { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 15px; color: var(--text-3); line-height: 1.5; }
+
+  /* Readability pass override from mockup */
+  .npc-desc { font-style: normal; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; color: var(--text-2); }
+
+  @media (max-width: 1024px) {
+    .npc-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 900px) {
+    .npcs { padding: 50px 24px; }
+    .npc-grid { grid-template-columns: 1fr; }
+  }
+</style>

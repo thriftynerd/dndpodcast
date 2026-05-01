@@ -1,0 +1,55 @@
+<section class="codex">
+  <div class="codex-inner">
+    <div class="codex-grid">
+      <div>
+        <div class="sec-eyebrow">The codex</div>
+        <h2 class="sec-title">The world<br/>of Drunkeros</h2>
+        <p class="start-sub" style="margin-top: 18px;">Two campaigns yield a tangled, glorious mess of locations, characters, factions, and inside jokes. The wiki is the canonical map of all of it. Every named NPC, every cursed item, every running gag, catalogued by the people who care about it most.</p>
+        <div class="codex-stats">
+          <div class="codex-stat"><div class="codex-stat-n">847</div><div class="codex-stat-l">Pages</div></div>
+          <div class="codex-stat"><div class="codex-stat-n">312</div><div class="codex-stat-l">Characters</div></div>
+          <div class="codex-stat"><div class="codex-stat-n">94</div><div class="codex-stat-l">Locations</div></div>
+        </div>
+        <div class="codex-cta-row">
+          <span class="btn-p" style="background: var(--gold); padding: 12px 22px; font-size: 14px;">Open the wiki →</span>
+        </div>
+      </div>
+      <div class="codex-map">
+        <img src="/images/image01_32a1cf16.jpg" alt="Map of Drunkeros" />
+        <div class="codex-map-overlay">
+          <span class="codex-map-cta">Explore the interactive map →</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .codex { padding: 80px 40px; background: var(--bg); }
+  .codex-inner { max-width: 1280px; margin: 0 auto; }
+  .codex-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; align-items: center; }
+  .sec-eyebrow { font-size: 13px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 10px; }
+  .sec-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: #f5f0e0; line-height: 1.05; }
+  .start-sub { font-size: 16px; color: var(--text-2); line-height: 1.55; max-width: 720px; }
+  .codex-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 28px; }
+  .codex-stat { padding: 22px 14px; background: var(--surface); border-radius: 10px; text-align: center; border: 0.5px solid var(--border); }
+  .codex-stat-n { font-family: "Cormorant Garamond", Georgia, serif; font-size: 32px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .codex-stat-l { font-size: 12px; letter-spacing: 0.18em; color: var(--text-3); margin-top: 8px; font-weight: 500; }
+  .codex-cta-row { margin-top: 32px; display: flex; gap: 12px; }
+  .btn-p { background: var(--green); color: #0a0f0c; padding: 14px 24px; border-radius: 8px; font-size: 15px; font-weight: 600; display: inline-flex; align-items: center; gap: 10px; cursor: pointer; transition: transform 0.15s; }
+  .btn-p:hover { transform: translateY(-2px); }
+  .codex-map { aspect-ratio: 1.41; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 24px 60px rgba(0,0,0,0.5); border: 0.5px solid rgba(151,196,89,0.2); cursor: pointer; }
+  .codex-map img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.6s; }
+  .codex-map:hover img { transform: scale(1.04); }
+  .codex-map-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, transparent 60%, rgba(10,15,12,0.85) 100%); display: flex; align-items: flex-end; padding: 20px; }
+  .codex-map-cta { font-size: 13px; color: var(--text); font-weight: 600; }
+
+  /* Font system overrides from mockup */
+  .sec-title { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
+  .codex-stat-n { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
+
+  @media (max-width: 900px) {
+    .codex { padding: 50px 24px; }
+    .codex-grid { grid-template-columns: 1fr; gap: 30px; }
+  }
+</style>

@@ -1,17 +1,24 @@
 ---
-
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Livestream from '../components/Livestream.astro';
+import Campaigns from '../components/Campaigns.astro';
+import Cast from '../components/Cast.astro';
+import LatestEpisodes from '../components/LatestEpisodes.astro';
+import BeginAdventure from '../components/BeginAdventure.astro';
+import Codex from '../components/Codex.astro';
+import Patreon from '../components/Patreon.astro';
+import Community from '../components/Community.astro';
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title="Greetings, Adventurers! · Welcome to Drunkeros">
+  <Hero />
+  <Livestream />
+  <Campaigns />
+  <Cast />
+  <LatestEpisodes />
+  <BeginAdventure />
+  <Codex />
+  <Patreon />
+  <Community />
+</Layout>

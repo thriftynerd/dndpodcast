@@ -1,0 +1,283 @@
+---
+// Two campaign cards. Static content for now. When we eventually build
+// /campaign-1 and /campaign-2 pages, the hrefs become real.
+---
+
+<section class="camps">
+  <a class="camp c1" href="#">
+    <div class="camp-bg"></div>
+    <div class="camp-tint"></div>
+    <div class="camp-overlay"></div>
+    <div class="camp-content">
+      <div class="camp-top">
+        <div class="camp-status s-done">Concluded</div>
+        <div class="camp-meta-top">2012-2022</div>
+      </div>
+      <div class="camp-bottom">
+        <div class="camp-num">Campaign one</div>
+        <div class="camp-title">The original saga</div>
+        <div class="camp-desc">
+          Where it all began as <em>Drunks and Dragons</em>. The crew that built
+          Drunkeros from the ground up. Back when we were young and still had dreams.
+        </div>
+        <div class="camp-starring">
+          <strong>Starring</strong>Titus Harper · Aludra Wyrmsbane · Thom Vidalis · Jaela
+        </div>
+        <div class="camp-foot">
+          <span class="camp-cta-btn">Enter the saga <span style="opacity:0.7">→</span></span>
+          <span class="camp-stat-pill">500+ episodes</span>
+        </div>
+      </div>
+    </div>
+  </a>
+
+  <a class="camp c2" href="campaign-2.html">
+    <div class="camp-bg"></div>
+    <div class="camp-tint"></div>
+    <div class="camp-overlay"></div>
+    <div class="camp-content">
+      <div class="camp-top">
+        <div class="camp-status s-live"><span class="s-dot"></span>Live</div>
+        <div class="camp-meta-top">New episodes Mondays</div>
+      </div>
+      <div class="camp-bottom">
+        <div class="camp-num">Campaign two</div>
+        <div class="camp-title">The next generation</div>
+        <div class="camp-desc">
+          A new crew on the other side of the world. In Farholde, the capital
+          city where magic is illegal unless you're the cops. Still making dick jokes.
+        </div>
+        <div class="camp-starring">
+          <strong>Starring</strong>T'chuck · Selene Von Esper · Screetch Echo · R'oarc
+        </div>
+        <div class="camp-foot">
+          <span class="camp-cta-btn">Enter the saga <span style="opacity:0.7">→</span></span>
+          <span class="camp-stat-pill">Episode 182</span>
+        </div>
+      </div>
+    </div>
+  </a>
+</section>
+
+<style>
+  .camps {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    padding: 14px;
+    background: var(--bg-2);
+  }
+
+  .camp {
+    position: relative;
+    min-height: 540px;
+    border-radius: 14px;
+    overflow: hidden;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    isolation: isolate;
+    display: block;
+  }
+  .camp:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
+  }
+  .camp:hover .camp-bg { transform: scale(1.06); }
+
+  .camp-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.7s ease;
+  }
+  .camp.c1 .camp-bg {
+    background-image: url('/images/image02_065bd96d.jpg');
+    background-position: center 30%;
+    filter: sepia(0.5) brightness(0.45) saturate(0.85) contrast(1.05);
+  }
+  .camp.c2 .camp-bg {
+    background-image: url('/images/c2-bg.jpg');
+    filter: brightness(0.55) saturate(1.15) contrast(1.05);
+  }
+
+  .camp-tint {
+    position: absolute;
+    inset: 0;
+    mix-blend-mode: multiply;
+  }
+  .camp.c1 .camp-tint {
+    background: linear-gradient(180deg, rgba(60, 30, 5, 0.4) 0%, rgba(20, 12, 5, 0.6) 100%);
+  }
+  .camp.c2 .camp-tint {
+    background: linear-gradient(180deg, rgba(15, 40, 20, 0.4) 0%, rgba(8, 18, 12, 0.6) 100%);
+  }
+
+  .camp-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.35) 40%,
+      rgba(8, 12, 8, 0.92) 88%,
+      rgba(8, 12, 8, 0.98) 100%
+    );
+  }
+
+  .camp-content {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 38px 38px 36px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .camp-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .camp-status {
+    font-size: 11px;
+    letter-spacing: 0.24em;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+  }
+  .s-done {
+    background: rgba(212, 175, 55, 0.2);
+    color: #e8c875;
+    border: 0.5px solid rgba(212, 175, 55, 0.4);
+  }
+  .s-live {
+    background: rgba(151, 196, 89, 0.2);
+    color: #b8db82;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 0.5px solid rgba(151, 196, 89, 0.4);
+  }
+  .s-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--green);
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 12px rgba(151, 196, 89, 0.6);
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .camp-meta-top {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.22em;
+    color: rgba(245, 240, 224, 0.55);
+    text-align: right;
+    font-weight: 500;
+  }
+  .camp-bottom {
+    display: flex;
+    flex-direction: column;
+  }
+  .camp-num {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.28em;
+    color: rgba(245, 240, 224, 0.6);
+    margin-bottom: 12px;
+    font-weight: 500;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.6);
+  }
+  .camp-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(2.25rem, 3.4vw, 3.4rem);
+    line-height: 0.98;
+    font-weight: 600;
+    color: #f8f3e3;
+    margin-bottom: 18px;
+    letter-spacing: 0.005em;
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.7);
+  }
+  .camp-desc {
+    font-size: 15.5px;
+    color: rgba(216, 212, 197, 0.92);
+    line-height: 1.6;
+    margin-bottom: 22px;
+    max-width: 95%;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+  }
+  .camp-desc em {
+    color: #e8c875;
+    font-style: italic;
+    font-weight: 500;
+  }
+  .camp-starring {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: rgba(245, 240, 224, 0.55);
+    margin-bottom: 22px;
+    padding-top: 14px;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.12);
+    font-weight: 500;
+  }
+  .camp-starring strong {
+    color: rgba(245, 240, 224, 0.85);
+    font-weight: 500;
+    margin-right: 8px;
+    letter-spacing: 0.22em;
+  }
+  .camp-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+  }
+  .camp-cta-btn {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f8f3e3;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 0.5px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(12px);
+    transition: background 0.2s, border-color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .camp:hover .camp-cta-btn {
+    background: rgba(255, 255, 255, 0.14);
+    border-color: rgba(255, 255, 255, 0.4);
+  }
+  .camp.c1:hover .camp-cta-btn {
+    border-color: rgba(212, 175, 55, 0.5);
+    background: rgba(212, 175, 55, 0.12);
+  }
+  .camp.c2:hover .camp-cta-btn {
+    border-color: rgba(151, 196, 89, 0.5);
+    background: rgba(151, 196, 89, 0.12);
+  }
+  .camp-stat-pill {
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: rgba(245, 240, 224, 0.6);
+    font-weight: 500;
+  }
+
+  @media (max-width: 900px) {
+    .camps { grid-template-columns: 1fr; }
+    .camp { min-height: 460px; }
+    .camp-content { padding: 30px 26px 30px; }
+    .camp-title { font-size: clamp(2rem, 8vw, 2.4rem); }
+  }
+</style>

@@ -1,0 +1,176 @@
+<section class="cast-section" id="michael">
+  <div class="cast-section-inner">
+    <div class="cast-photo-col">
+      <div class="cast-photo-frame"><img src="/images/cast/michael.jpg" alt="Michael DiMauro" /></div>
+      <div class="cast-roman">I</div>
+    </div>
+    <div class="cast-content-col">
+      <div class="cast-role-pill">Dungeon Master</div>
+      <h2 class="cast-section-name">Michael "Thrifty Nerd" DiMauro</h2>
+      <div class="cast-currently">Wots all this then?</div>
+      <p class="cast-section-bio">Co-founder of GeeklyInc and chief engineer. He found his old D&D books in the attic and foolishly asked his pals if they wanted to play. He delights in making his pals laugh at the table. Rage-baiting is his love language. He has a giant heart and even bigger hog.</p>
+      <div class="cast-quote">"The Championship is actually the second highest level with the Premiership being the actual top. But Champions League consists of teams all over Europe hey where are you going?"</div>
+      <div class="cast-quickfacts">
+        <div class="qf"><div class="qf-num">Episode 1</div><div class="qf-lbl">Joined</div></div>
+        <div class="qf"><div class="qf-num">2</div><div class="qf-lbl">Campaigns run</div></div>
+        <div class="qf"><div class="qf-num">Hundreds</div><div class="qf-lbl">NPCs voiced</div></div>
+      </div>
+
+      <div class="dm-creations">
+        <div class="dm-creations-eyebrow">What he's built</div>
+        <h3 class="dm-creations-title">Hundreds of NPCs.<br/>Huge Hog.</h3>
+        <p class="dm-creations-sub">From the first zombie in episode one to whoever just walked into the tavern, almost every little guy in Drunkeros was born out of Michael panicking.</p>
+        <figure class="dm-poster" id="npc-poster">
+          <img class="dm-poster-img" src="/images/npc-roster.jpg" alt="Roll call of named NPCs from Drunkeros, fan art by Killurmonkey Art" />
+          <div class="dm-poster-zoom-hint">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+            <span>Hover to zoom · click for full view</span>
+          </div>
+          <div class="dm-poster-lens"></div>
+          <figcaption class="dm-poster-caption">
+            Fan art by <a href="http://ko-fi.com/killurmonkey" target="_blank" rel="noopener" class="dm-credit-link">Killurmonkey Art</a>. Hundreds of named characters, and this is just Campaign 1.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Same cast-section base styles as the generic CastSection — duplicated here so this component is self-contained */
+  .cast-section { position: relative; padding: 90px 40px; border-top: 0.5px solid var(--border); }
+  .cast-section:first-of-type { border-top: none; padding-top: 100px; }
+  .cast-section-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: 80px; align-items: start; }
+
+  .cast-photo-col { position: sticky; top: 100px; }
+  .cast-photo-frame { width: 100%; aspect-ratio: 1; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06); position: relative; background: linear-gradient(135deg, #1d2820, #1a1f1a); display: flex; align-items: center; justify-content: center; }
+  .cast-photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cast-roman { position: absolute; top: -16px; left: -16px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--gold); background: var(--bg); padding: 6px 14px; border-radius: 6px; border: 0.5px solid rgba(212,175,55,0.4); letter-spacing: 0.1em; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+
+  .cast-role-pill { font-size: 11px; letter-spacing: 0.28em; color: var(--gold); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+  .cast-section-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.5rem, 4.2vw, 3.8rem); line-height: 0.98; font-weight: 700; color: #f5f0e0; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .cast-currently { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.1rem, 1.4vw, 1.25rem); color: var(--green); margin-bottom: 30px; }
+  .cast-section-bio { font-size: 17px; color: var(--text-2); line-height: 1.65; margin-bottom: 28px; max-width: 680px; }
+  .cast-section-bio::first-letter { font-family: "Cormorant Garamond", Georgia, serif; font-size: 3.4em; float: left; line-height: 0.85; padding: 6px 12px 0 0; color: var(--gold); font-weight: 700; }
+  .cast-quote { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 18px; color: var(--text); padding: 20px 28px; border-left: 2px solid var(--gold); margin: 0 0 30px; background: rgba(212,175,55,0.04); border-radius: 0 6px 6px 0; max-width: 620px; }
+  .cast-quickfacts { display: flex; gap: 32px; padding: 22px 0; border-top: 0.5px solid var(--border-2); border-bottom: 0.5px solid var(--border-2); margin-bottom: 36px; flex-wrap: wrap; }
+  .qf { display: flex; flex-direction: column; }
+  .qf-num { font-family: "Cormorant Garamond", Georgia, serif; font-size: 24px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .qf-lbl { font-size: 12px; letter-spacing: 0.18em; color: var(--text-3); margin-top: 8px; font-weight: 500; text-transform: uppercase; }
+
+  /* DM creations panel (Michael-only) */
+  .dm-creations { margin-top: 8px; }
+  .dm-creations-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--gold); font-weight: 600; margin-bottom: 12px; text-transform: uppercase; }
+  .dm-creations-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.75rem, 2.4vw, 2.2rem); font-weight: 700; line-height: 1.1; color: #f5f0e0; margin-bottom: 14px; letter-spacing: -0.01em; }
+  .dm-creations-sub { font-size: 15.5px; color: var(--text-2); line-height: 1.6; max-width: 600px; margin-bottom: 22px; }
+  .dm-poster { margin: 0; border-radius: 12px; overflow: hidden; background: #f4ede0; box-shadow: 0 24px 60px rgba(0,0,0,0.4), 0 0 0 1px rgba(255,255,255,0.04); cursor: pointer; transition: transform 0.3s ease, box-shadow 0.3s ease; position: relative; }
+  .dm-poster:hover { transform: translateY(-3px); box-shadow: 0 32px 70px rgba(0,0,0,0.5); }
+  .dm-poster-img { width: 100%; height: auto; display: block; }
+  .dm-poster-zoom-hint { position: absolute; top: 14px; right: 14px; background: rgba(10,15,12,0.92); color: var(--text); padding: 8px 12px; border-radius: 6px; font-size: 12px; font-weight: 500; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(6px); border: 0.5px solid rgba(255,255,255,0.12); pointer-events: none; transition: opacity 0.25s; z-index: 3; letter-spacing: 0.02em; }
+  .dm-poster:hover .dm-poster-zoom-hint { opacity: 0; }
+  .dm-poster-lens { position: absolute; width: 220px; height: 220px; border-radius: 50%; border: 3px solid var(--gold); box-shadow: 0 12px 40px rgba(0,0,0,0.6), inset 0 0 0 1px rgba(255,255,255,0.25); pointer-events: none; opacity: 0; transition: opacity 0.18s; background-repeat: no-repeat; z-index: 4; }
+  .dm-poster.lens-active .dm-poster-lens { opacity: 1; }
+  .dm-poster-caption { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 13px; color: var(--text-3); padding: 14px 18px; background: var(--surface); border-top: 0.5px solid var(--border); }
+  .dm-credit-link { color: var(--gold); text-decoration: none; border-bottom: 0.5px solid rgba(212,175,55,0.4); transition: color 0.2s, border-color 0.2s; }
+  .dm-credit-link:hover { color: #e8c875; border-bottom-color: var(--gold); }
+
+  /* Lightbox (lives at body scope, see :global) */
+  :global(.lightbox-overlay) { position: fixed; inset: 0; background: rgba(5,8,5,0.96); z-index: 1000; display: none; align-items: center; justify-content: center; padding: 40px; backdrop-filter: blur(8px); cursor: zoom-out; }
+  :global(.lightbox-overlay.open) { display: flex; }
+  :global(.lightbox-overlay img) { max-width: 100%; max-height: 100%; object-fit: contain; box-shadow: 0 30px 100px rgba(0,0,0,0.8); cursor: default; }
+  :global(.lightbox-close) { position: fixed; top: 20px; right: 24px; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 0.5px solid rgba(255,255,255,0.2); color: var(--text); display: flex; align-items: center; justify-content: center; cursor: pointer; font-size: 24px; line-height: 1; transition: background 0.2s; z-index: 1001; }
+  :global(.lightbox-close:hover) { background: rgba(255,255,255,0.14); }
+  :global(.lightbox-caption) { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 14px; color: var(--text-3); z-index: 1001; }
+
+  @media (hover: none) {
+    .dm-poster-lens, .dm-poster-zoom-hint { display: none; }
+  }
+
+  /* Font System overrides from mockup */
+  .dm-creations-title { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
+  .qf-num { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
+  .cast-section-name, .cast-roman { font-weight: 600; }
+
+  /* Readability pass overrides from mockup */
+  .dm-poster-caption { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-style: normal; font-weight: 500; color: var(--text-2); }
+  .cast-currently { font-weight: 600; }
+
+  @media (max-width: 1024px) {
+    .cast-photo-col { position: static; max-width: 380px; }
+  }
+  @media (max-width: 900px) {
+    .cast-section { padding: 60px 24px; }
+    .cast-section-inner { grid-template-columns: 1fr; gap: 40px; }
+    .cast-photo-col { max-width: 360px; margin: 0 auto; }
+    .cast-quickfacts { gap: 22px; }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    const poster = document.getElementById('npc-poster');
+    if (!poster) return;
+    const img = poster.querySelector('.dm-poster-img');
+    const lens = poster.querySelector('.dm-poster-lens');
+    if (!img || !lens) return;
+
+    const ZOOM = 2.5;
+    const LENS_SIZE = 220;
+
+    function ensureLensImage() {
+      if (!lens.style.backgroundImage) {
+        lens.style.backgroundImage = `url(${img.src})`;
+      }
+    }
+
+    poster.addEventListener('mouseenter', () => {
+      ensureLensImage();
+      poster.classList.add('lens-active');
+    });
+
+    poster.addEventListener('mouseleave', () => {
+      poster.classList.remove('lens-active');
+    });
+
+    poster.addEventListener('mousemove', (e) => {
+      const rect = img.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+
+      if (x < 0 || y < 0 || x > rect.width || y > rect.height) {
+        poster.classList.remove('lens-active');
+        return;
+      }
+      poster.classList.add('lens-active');
+
+      const lensX = Math.max(0, Math.min(rect.width - LENS_SIZE, x - LENS_SIZE/2));
+      const lensY = Math.max(0, Math.min(rect.height - LENS_SIZE, y - LENS_SIZE/2));
+      lens.style.left = lensX + 'px';
+      lens.style.top = lensY + 'px';
+
+      const bgX = -(x * ZOOM - LENS_SIZE/2);
+      const bgY = -(y * ZOOM - LENS_SIZE/2);
+      lens.style.backgroundSize = `${rect.width * ZOOM}px ${rect.height * ZOOM}px`;
+      lens.style.backgroundPosition = `${bgX}px ${bgY}px`;
+    });
+
+    const lightbox = document.createElement('div');
+    lightbox.className = 'lightbox-overlay';
+    lightbox.innerHTML = `
+      <button class="lightbox-close" aria-label="Close">×</button>
+      <img src="${img.src}" alt="${img.alt}"/>
+      <div class="lightbox-caption">Fan art by Killurmonkey Art · click anywhere to close</div>
+    `;
+    document.body.appendChild(lightbox);
+
+    poster.style.cursor = 'zoom-in';
+    poster.addEventListener('click', (e) => {
+      if (e.target.closest('.dm-credit-link')) return;
+      lightbox.classList.add('open');
+    });
+    lightbox.addEventListener('click', () => lightbox.classList.remove('open'));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') lightbox.classList.remove('open');
+    });
+  })();
+</script>

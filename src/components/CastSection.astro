@@ -1,0 +1,190 @@
+---
+interface Character {
+  name: string;
+  status: 'current' | 'concluded' | 'fallen' | 'retired' | 'active';
+  campaign: string;
+  description: string;
+}
+
+interface CharacterGroup {
+  status: 'current' | 'concluded' | 'fallen' | 'retired' | 'active';
+  characters: Character[];
+}
+
+interface QuickFact {
+  num: string;
+  label: string;
+}
+
+interface Extra {
+  label: string;
+  title: string;
+  description: string;
+}
+
+interface Props {
+  id: string;
+  alt?: boolean;
+  roman: string;
+  rolePill: string;
+  name: string;
+  currently: string;
+  bio: string;
+  quote?: string;
+  quickFacts: QuickFact[];
+  characterGroups?: CharacterGroup[];
+  characterCount?: number;
+  characterCountNote?: string;
+  extra?: Extra;
+  image: string;
+}
+
+const {
+  id, alt = false, roman, rolePill, name, currently, bio, quote,
+  quickFacts, characterGroups, characterCount, characterCountNote,
+  extra, image,
+} = Astro.props;
+---
+
+<section class={`cast-section ${alt ? 'alt' : ''}`} id={id}>
+  <div class="cast-section-inner">
+    <div class="cast-photo-col">
+      <div class="cast-photo-frame"><img src={image} alt={name} /></div>
+      <div class="cast-roman">{roman}</div>
+    </div>
+    <div class="cast-content-col">
+      <div class="cast-role-pill">{rolePill}</div>
+      <h2 class="cast-section-name">{name}</h2>
+      <div class="cast-currently">{currently}</div>
+      <p class="cast-section-bio">{bio}</p>
+      {quote && <div class="cast-quote">{quote}</div>}
+      <div class="cast-quickfacts">
+        {quickFacts.map((qf) => (
+          <div class="qf">
+            <div class="qf-num">{qf.num}</div>
+            <div class="qf-lbl">{qf.label}</div>
+          </div>
+        ))}
+      </div>
+
+      {characterGroups && characterCount && (
+        <details class="char-history">
+          <summary>
+            <span class="ch-label">Show character history</span>
+            <span class="ch-count">{characterCount} characters · {characterCountNote || 'may contain spoilers'}</span>
+            <span class="ch-arrow">▾</span>
+          </summary>
+          <div class="char-timeline">
+            {characterGroups.map((group) => (
+              <div class={`char-entry st-${group.status}`}>
+                <div class="char-marker"><div class="char-dot"></div></div>
+                {group.characters.map((char) => (
+                  <div class="char-card">
+                    <div class="char-status">{char.status.charAt(0).toUpperCase() + char.status.slice(1)}</div>
+                    <h3 class="char-name">{char.name}</h3>
+                    <div class="char-meta">{char.campaign}</div>
+                    <p class="char-desc" set:html={char.description}></p>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        </details>
+      )}
+
+      {extra && (
+        <div class="cast-extra">
+          <div class="extra-label">{extra.label}</div>
+          <div class="extra-title">{extra.title}</div>
+          <p class="extra-desc" set:html={extra.description}></p>
+        </div>
+      )}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cast-section { position: relative; padding: 90px 40px; border-top: 0.5px solid var(--border); }
+  .cast-section:first-of-type { border-top: none; padding-top: 100px; }
+  .cast-section-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 460px) minmax(0, 1fr); gap: 80px; align-items: start; }
+  .cast-section.alt .cast-section-inner { grid-template-columns: minmax(0, 1fr) minmax(0, 460px); }
+  .cast-section.alt .cast-photo-col { order: 2; }
+  .cast-section.alt .cast-content-col { order: 1; }
+
+  .cast-photo-col { position: sticky; top: 100px; }
+  .cast-photo-frame { width: 100%; aspect-ratio: 1; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 80px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06); position: relative; background: linear-gradient(135deg, #1d2820, #1a1f1a); display: flex; align-items: center; justify-content: center; }
+  .cast-photo-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cast-roman { position: absolute; top: -16px; left: -16px; font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--gold); background: var(--bg); padding: 6px 14px; border-radius: 6px; border: 0.5px solid rgba(212,175,55,0.4); letter-spacing: 0.1em; box-shadow: 0 8px 24px rgba(0,0,0,0.4); }
+  .cast-section.alt .cast-roman { left: auto; right: -16px; }
+
+  .cast-role-pill { font-size: 11px; letter-spacing: 0.28em; color: var(--gold); font-weight: 600; text-transform: uppercase; margin-bottom: 12px; }
+  .cast-section-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2.5rem, 4.2vw, 3.8rem); line-height: 0.98; font-weight: 700; color: #f5f0e0; letter-spacing: -0.02em; margin-bottom: 14px; }
+  .cast-currently { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: clamp(1.1rem, 1.4vw, 1.25rem); color: var(--green); margin-bottom: 30px; }
+  .cast-section-bio { font-size: 17px; color: var(--text-2); line-height: 1.65; margin-bottom: 28px; max-width: 680px; }
+  .cast-section-bio::first-letter { font-family: "Cormorant Garamond", Georgia, serif; font-size: 3.4em; float: left; line-height: 0.85; padding: 6px 12px 0 0; color: var(--gold); font-weight: 700; }
+  .cast-quote { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 18px; color: var(--text); padding: 20px 28px; border-left: 2px solid var(--gold); margin: 0 0 30px; background: rgba(212,175,55,0.04); border-radius: 0 6px 6px 0; max-width: 620px; }
+  .cast-quickfacts { display: flex; gap: 32px; padding: 22px 0; border-top: 0.5px solid var(--border-2); border-bottom: 0.5px solid var(--border-2); margin-bottom: 36px; flex-wrap: wrap; }
+  .qf { display: flex; flex-direction: column; }
+  .qf-num { font-family: "Cormorant Garamond", Georgia, serif; font-size: 24px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .qf-lbl { font-size: 12px; letter-spacing: 0.18em; color: var(--text-3); margin-top: 8px; font-weight: 500; text-transform: uppercase; }
+
+  /* Character history */
+  .char-history { border: 0.5px solid var(--border-2); border-radius: 10px; background: var(--surface); overflow: hidden; transition: border-color 0.2s; }
+  .char-history[open] { border-color: rgba(151,196,89,0.3); }
+  .char-history summary { list-style: none; padding: 20px 24px; cursor: pointer; display: flex; align-items: center; gap: 16px; transition: background 0.2s; }
+  .char-history summary::-webkit-details-marker { display: none; }
+  .char-history summary:hover { background: var(--surface-2); }
+  .ch-label { font-size: 14px; font-weight: 600; color: var(--text); }
+  .ch-count { font-size: 13px; color: var(--text-3); margin-left: auto; }
+  .ch-arrow { color: var(--green); font-size: 14px; transition: transform 0.25s; }
+  .char-history[open] .ch-arrow { transform: rotate(180deg); }
+
+  .char-timeline { padding: 8px 24px 28px; position: relative; }
+  .char-entry { display: grid; grid-template-columns: 28px 1fr; gap: 0; position: relative; padding: 18px 0; }
+  .char-marker { display: flex; justify-content: center; padding-top: 12px; position: relative; }
+  .char-marker::before { content: ''; position: absolute; top: 0; bottom: -36px; left: 50%; width: 1px; background: var(--border-2); transform: translateX(-50%); }
+  .char-entry:last-child .char-marker::before { bottom: 0; height: 32px; }
+  .char-dot { width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--text-3); position: relative; z-index: 2; box-shadow: 0 0 0 4px var(--surface); }
+  .char-entry.st-current .char-dot { background: var(--green); border-color: var(--green); box-shadow: 0 0 0 4px var(--surface), 0 0 16px rgba(151,196,89,0.5); }
+  .char-entry.st-active .char-dot { background: var(--green); border-color: var(--green); box-shadow: 0 0 0 4px var(--surface); }
+  .char-entry.st-concluded .char-dot { background: var(--gold); border-color: var(--gold); box-shadow: 0 0 0 4px var(--surface); }
+  .char-entry.st-fallen .char-dot { background: var(--red); border-color: var(--red); box-shadow: 0 0 0 4px var(--surface); }
+  .char-entry.st-retired .char-dot { background: var(--text-4); border-color: var(--text-3); box-shadow: 0 0 0 4px var(--surface); }
+  .char-card { padding-left: 20px; }
+  .char-status { display: inline-block; font-size: 10px; letter-spacing: 0.22em; font-weight: 600; padding: 3px 10px; border-radius: 999px; margin-bottom: 8px; text-transform: uppercase; }
+  .st-current .char-status { background: rgba(151,196,89,0.16); color: var(--green); }
+  .st-active .char-status { background: rgba(151,196,89,0.16); color: var(--green); }
+  .st-concluded .char-status { background: rgba(212,175,55,0.16); color: var(--gold); }
+  .st-fallen .char-status { background: rgba(211,90,90,0.16); color: var(--red); }
+  .st-retired .char-status { background: rgba(168,165,156,0.12); color: var(--text-3); }
+  .char-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+  .char-meta { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 13px; color: var(--text-3); margin-bottom: 8px; letter-spacing: 0.02em; }
+  .char-desc { font-size: 14.5px; color: var(--text-2); line-height: 1.6; max-width: 580px; }
+
+  /* Extra section */
+  .cast-extra { margin-top: 24px; padding: 22px 24px; border-radius: 10px; background: linear-gradient(135deg, rgba(151,196,89,0.06), rgba(212,175,55,0.04)); border: 0.5px solid rgba(151,196,89,0.2); }
+  .extra-label { font-size: 11px; letter-spacing: 0.24em; color: var(--green); font-weight: 600; text-transform: uppercase; margin-bottom: 6px; }
+  .extra-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--text); margin-bottom: 8px; }
+  .extra-desc { font-size: 14.5px; color: var(--text-2); line-height: 1.6; }
+
+  /* Font System overrides from mockup */
+  .qf-num { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
+  .cast-section-name, .char-name, .extra-title, .cast-roman { font-weight: 600; }
+
+  /* Readability pass overrides from mockup */
+  .char-meta { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-style: normal; font-weight: 500; color: var(--text-2); }
+  .cast-currently { font-weight: 600; }
+
+  @media (max-width: 1024px) {
+    .cast-photo-col { position: static; max-width: 380px; }
+  }
+  @media (max-width: 900px) {
+    .cast-section { padding: 60px 24px; }
+    .cast-section-inner { grid-template-columns: 1fr; gap: 40px; }
+    .cast-section.alt .cast-section-inner { grid-template-columns: 1fr; }
+    .cast-section.alt .cast-photo-col { order: 1; }
+    .cast-section.alt .cast-content-col { order: 2; }
+    .cast-photo-col { max-width: 360px; margin: 0 auto; }
+    .cast-quickfacts { gap: 22px; }
+  }
+</style>

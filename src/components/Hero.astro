@@ -1,0 +1,236 @@
+---
+// Hero component. No props for now since all content is static.
+---
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-vignette"></div>
+
+  <div class="hero-content">
+    <div class="hero-art">
+      <div class="hero-art-frame">
+        <img src="/images/splash-art.jpg" alt="Greetings, Adventurers! mascot" />
+      </div>
+    </div>
+
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <div class="hero-eb-line"></div>
+        <span>Actual play · Dungeons &amp; Dragons</span>
+      </div>
+
+      <h1 class="hero-title">Welcome to<br />Drunkeros.</h1>
+
+      <div class="hero-altname">Originally Drunks and Dragons. Same chaos, new chapter.</div>
+
+      <p class="hero-tag">Hundreds of episodes. Two campaigns. One impossibly stupid world. Hold on to your butts, - Ray Arnold</p>
+
+      <div class="hero-actions">
+        <a class="btn-p" href="#">
+          <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true">
+            <polygon points="3,2 3,10 10,6" fill="currentColor" />
+          </svg>
+          Latest episode
+        </a>
+        <a class="btn-s" href="#">Start from the beginning</a>
+      </div>
+
+      <div class="stats">
+        <div class="stat">
+          <div class="stat-num">2012</div>
+          <div class="stat-lbl">On the air since</div>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <div class="stat-num">600+</div>
+          <div class="stat-lbl">Episodes</div>
+        </div>
+        <div class="stat-div"></div>
+        <div class="stat">
+          <div class="stat-num">2</div>
+          <div class="stat-lbl">Campaigns</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+    background-color: #0a1410;
+  }
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background-image: url('/images/drunkeros-map.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(10,20,15,0.78) 0%, rgba(10,15,12,0.68) 50%, rgba(15,30,18,0.85) 100%);
+  }
+  .hero-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.55) 100%);
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 80px 40px 50px;
+    min-height: 90vh;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: 60px;
+    align-items: center;
+  }
+
+  .hero-art-frame {
+    width: 100%;
+    max-width: 520px;
+    aspect-ratio: 1;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.06);
+    background: #f4ede0;
+  }
+  .hero-art-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-text {
+    display: flex;
+    flex-direction: column;
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-size: 13px;
+    letter-spacing: 0.28em;
+    color: var(--green);
+    font-weight: 600;
+    margin-bottom: 24px;
+    text-transform: uppercase;
+  }
+  .hero-eb-line {
+    width: 38px;
+    height: 1px;
+    background: var(--green);
+  }
+  .hero-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(2.75rem, 5.5vw, 5.5rem);
+    line-height: 0.95;
+    font-weight: 700;
+    color: #f5f0e0;
+    letter-spacing: 0.01em;
+    margin-bottom: 14px;
+    text-shadow: 0 2px 24px rgba(0,0,0,0.55);
+  }
+  .hero-altname {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    font-weight: 600;
+    font-size: clamp(0.95rem, 1.15vw, 1.1rem);
+    color: var(--gold);
+    margin-bottom: 22px;
+    letter-spacing: 0.01em;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  }
+  .hero-tag {
+    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    color: #d8d4c5;
+    line-height: 1.55;
+    max-width: 95%;
+    margin-bottom: 36px;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.6);
+  }
+
+  .hero-actions {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 44px;
+    flex-wrap: wrap;
+  }
+  .btn-p,
+  .btn-s {
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .btn-p {
+    background: var(--green);
+    color: #0a0f0c;
+    transition: transform 0.15s;
+  }
+  .btn-p:hover { transform: translateY(-2px); }
+  .btn-s {
+    background: rgba(20,30,22,0.65);
+    color: var(--text);
+    border: 0.5px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(8px);
+  }
+
+  .stats {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    padding-top: 26px;
+    border-top: 0.5px solid var(--border-2);
+    flex-wrap: wrap;
+  }
+  .stat { display: flex; flex-direction: column; }
+  .stat-num {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(1.75rem, 2.4vw, 2.4rem);
+    font-weight: 700;
+    color: var(--gold);
+    line-height: 1;
+    letter-spacing: 0.005em;
+  }
+  .stat-lbl {
+    font-size: 12px;
+    letter-spacing: 0.18em;
+    color: var(--text-3);
+    margin-top: 7px;
+    font-weight: 500;
+    text-transform: uppercase;
+  }
+  .stat-div {
+    width: 1px;
+    height: 38px;
+    background: var(--border-2);
+  }
+
+  @media (max-width: 720px) {
+    .hero { min-height: auto; }
+    .hero-content {
+      grid-template-columns: 1fr;
+      gap: 32px;
+      padding: 60px 24px 40px;
+      min-height: auto;
+    }
+    .hero-art-frame { max-width: 360px; margin: 0 auto; }
+    .stats { gap: 18px; }
+    .stat-div { display: none; }
+  }
+</style>

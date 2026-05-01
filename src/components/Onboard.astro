@@ -1,0 +1,24 @@
+<section class="onboard">
+  <div class="onboard-inner">
+    <div>
+      <div class="onboard-eyebrow">For new adventurers</div>
+      <div class="onboard-title">A hundred and eighty episodes is a lot.<br/>Let us show you the way in.</div>
+      <div class="onboard-sub">Campaign Two starts with the party arriving in Farholde, and the city has been finding new ways to disappoint them ever since. Start at episode one or jump in cold. The chaos works either way.</div>
+    </div>
+    <span class="onboard-cta">Start with Episode 1 →</span>
+  </div>
+</section>
+
+<style>
+  .onboard { padding: 60px 40px; background: linear-gradient(135deg, #0e1d12, #1a2818); border-top: 0.5px solid rgba(151,196,89,0.25); border-bottom: 0.5px solid rgba(151,196,89,0.25); }
+  .onboard-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: 1fr auto; gap: 40px; align-items: center; }
+  .onboard-eyebrow { font-size: 13px; letter-spacing: 0.28em; color: var(--gold); font-weight: 600; margin-bottom: 14px; }
+  .onboard-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(1.6rem, 2.6vw, 2.2rem); font-weight: 600; color: #f5f0e0; line-height: 1.15; margin-bottom: 12px; }
+  .onboard-sub { font-size: 16px; color: var(--text-2); line-height: 1.55; max-width: 720px; }
+  .onboard-cta { background: var(--gold); color: #1a1410; padding: 16px 28px; border-radius: 8px; font-size: 15px; font-weight: 700; white-space: nowrap; cursor: pointer; }
+
+  @media (max-width: 900px) {
+    .onboard { padding: 50px 24px; }
+    .onboard-inner { grid-template-columns: 1fr; gap: 24px; }
+  }
+</style>

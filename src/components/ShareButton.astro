@@ -1,0 +1,61 @@
+<button class="btn-secondary" id="share-btn" type="button">
+  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+  <span id="share-btn-label">Share</span>
+</button>
+
+<style>
+  .btn-secondary { background: var(--surface); color: var(--text); padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 0.5px solid var(--border-2); display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: background 0.2s; font-family: inherit; }
+  .btn-secondary:hover { background: var(--surface-2); }
+
+  :global(.share-toast) {
+    position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
+    background: var(--surface-2); color: var(--text); padding: 12px 22px; border-radius: 10px;
+    border: 0.5px solid rgba(151,196,89,0.4); font-size: 14px; font-weight: 500;
+    display: flex; align-items: center; gap: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.25s; z-index: 1000;
+  }
+  :global(.share-toast.show) { opacity: 1; transform: translateX(-50%) translateY(0); }
+  :global(.share-toast svg) { color: var(--green); flex-shrink: 0; }
+</style>
+
+<script is:inline>
+  (function() {
+    var btn = document.getElementById('share-btn');
+    if (!btn) return;
+
+    var toast = document.createElement('div');
+    toast.className = 'share-toast';
+    document.body.appendChild(toast);
+
+    function showToast(msg) {
+      toast.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span>' + msg + '</span>';
+      toast.classList.add('show');
+      clearTimeout(toast._timer);
+      toast._timer = setTimeout(function() { toast.classList.remove('show'); }, 2200);
+    }
+
+    btn.addEventListener('click', async function() {
+      var url = window.location.href.split('#')[0];
+      var title = document.title;
+      var summary = document.querySelector('meta[name="description"]');
+      var text = summary ? summary.content : title;
+
+      if (navigator.share) {
+        try {
+          await navigator.share({ title: title, text: text, url: url });
+          return;
+        } catch (e) {
+          if (e && e.name === 'AbortError') return;
+        }
+      }
+
+      try {
+        await navigator.clipboard.writeText(url);
+        showToast('Link copied to clipboard');
+      } catch (e) {
+        window.prompt('Copy this link:', url);
+      }
+    });
+  })();
+</script>

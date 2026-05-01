@@ -1,0 +1,117 @@
+---
+const cast = [
+  {
+    name: 'Michael DiMauro',
+    role: 'Dungeon Master',
+    plays: 'behind the screen',
+    tagline: "He always wanted to be a DM growing up, and now he does it as a weird part time job! Thrifty has been turning his cast's shittiest ideas into Drunkeros canon since episode one. Huge hog.",
+    image: '/images/cast/michael.jpg',
+    portraitClass: 'p1',
+  },
+  {
+    name: 'Tim Lanning',
+    role: 'Cast',
+    plays: "plays T'chuck",
+    tagline: "All of his characters' name's begin with a T. Think about it.",
+    image: '/images/cast/tim.jpg',
+    portraitClass: 'p2',
+  },
+  {
+    name: 'Jennifer Cheek',
+    role: 'Cast',
+    plays: 'plays Selene Von Esper',
+    tagline: 'Original girl since the very first roll. Enjoyer of the Real Housewives of Wrestling.',
+    image: '/images/cast/jennifer.jpg',
+    portraitClass: 'p3',
+  },
+  {
+    name: 'Mike Bachmann',
+    role: 'Cast',
+    plays: 'plays Screetch Echo',
+    tagline: "He doesn't realize it yet, but his current character is going to die when he is level 19!",
+    image: '/images/cast/bachmann.jpg',
+    portraitClass: 'p4',
+  },
+  {
+    name: 'Nika Howard',
+    role: 'Cast',
+    plays: "plays R'oarc",
+    tagline: 'Joined on episode 81. Technically the only cast member who chose to be here.',
+    image: '/images/cast/nika.jpg',
+    portraitClass: 'p5',
+  },
+  {
+    name: 'Vince Kenny',
+    role: 'Editor',
+    plays: 'behind the boards',
+    tagline: "An old friend in a new chair. Editor since early 2026. The audio's been getting noticeably better.",
+    image: '/images/cast/vince.jpg',
+    portraitClass: 'p6',
+  },
+];
+---
+
+<section class="cast">
+  <div class="cast-inner">
+    <div class="cast-header">
+      <div class="sec-eyebrow">The party</div>
+      <h2>Meet the cast</h2>
+      <p>The people responsible for Drunkeros, for better and for worse.</p>
+    </div>
+    <div class="cast-grid">
+      {cast.map((member) => (
+        <div class="cast-card">
+          <div class={`cast-portrait ${member.portraitClass}`}>
+            <img src={member.image} alt={member.name} />
+          </div>
+          <div class="cast-body">
+            <div class="cast-role">{member.role}</div>
+            <div class="cast-name">{member.name}</div>
+            <div class="cast-plays">{member.plays}</div>
+            <div class="cast-tagline">{member.tagline}</div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .cast { padding: 90px 40px 0; background: var(--bg); position: relative; }
+  .cast::before { content: ''; position: absolute; inset: 0; background-image: url('/images/drunkeros-map.jpg'); background-size: cover; background-position: center; opacity: 0.04; pointer-events: none; }
+  .cast-inner { max-width: 1280px; margin: 0 auto; position: relative; }
+  .cast-header { text-align: center; margin-bottom: 50px; }
+  .cast-header .sec-eyebrow { display: inline-block; }
+  .cast-header h2 { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; line-height: 1.05; margin-bottom: 14px; color: #f5f0e0; }
+  .cast-header p { font-size: 16px; color: var(--text-2); max-width: 580px; margin: 0 auto; line-height: 1.55; font-style: italic; }
+  .cast-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .cast-card { background: var(--surface); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); cursor: pointer; transition: transform 0.25s, border-color 0.2s; }
+  .cast-card:hover { transform: translateY(-5px); border-color: rgba(151,196,89,0.35); }
+  .cast-card:hover .cast-portrait img { transform: scale(1.04); }
+  .cast-portrait { width: 100%; aspect-ratio: 1; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+  .cast-portrait img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.5s; }
+  .cast-portrait span { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(4rem, 8vw, 7rem); font-weight: 700; color: rgba(245,240,224,0.45); letter-spacing: -0.04em; position: relative; z-index: 2; text-shadow: 0 4px 24px rgba(0,0,0,0.4); }
+  .cast-portrait.p1 { background: #1d2820; }
+  .cast-portrait.p6 { background: #1d1f25; }
+  .cast-body { padding: 22px 24px 26px; }
+  .cast-role { font-size: 11px; letter-spacing: 0.24em; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
+  .cast-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--text); line-height: 1.2; margin-bottom: 6px; }
+  .cast-plays { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 14px; color: var(--gold); margin-bottom: 12px; }
+  .cast-tagline { font-size: 13.5px; color: var(--text-3); line-height: 1.55; font-style: italic; }
+
+  /* === Font System overrides from mockup === */
+  .cast-header h2 { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
+  .cast-name { font-weight: 600; }
+
+  /* === Readability pass v2 from mockup === */
+  .cast-tagline,
+  .cast-header p {
+    font-style: normal;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  .cast-plays {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-weight: 500;
+    color: #e8c875;
+  }
+</style>

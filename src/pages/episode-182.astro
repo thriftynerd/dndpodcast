@@ -1,0 +1,58 @@
+---
+import Layout from '../layouts/Layout.astro';
+import EpisodeBreadcrumb from '../components/EpisodeBreadcrumb.astro';
+import EpisodeHero from '../components/EpisodeHero.astro';
+import PlayerBand from '../components/PlayerBand.astro';
+import EpisodeCast from '../components/EpisodeCast.astro';
+import ShowNotes from '../components/ShowNotes.astro';
+import Transcript from '../components/Transcript.astro';
+import EpisodeSidebar from '../components/EpisodeSidebar.astro';
+import EpisodeNav from '../components/EpisodeNav.astro';
+
+import { episode182 as ep } from '../data/episode-182';
+---
+
+<Layout title={`${ep.title} · ${ep.campaign}, Episode ${ep.episodeNumber}`}>
+  <EpisodeBreadcrumb
+    campaignHref="/campaign-2"
+    campaignLabel="Campaign 2"
+    current={`Episode ${ep.episodeNumber}`}
+  />
+
+  <EpisodeHero
+    campaign={ep.campaign}
+    episodeNumber={ep.episodeNumber}
+    title={ep.title}
+    description={ep.description}
+    artUrl={ep.artUrl}
+    releaseDate={ep.releaseDate}
+    duration={ep.duration}
+    season={ep.season}
+    dm={ep.dm}
+  />
+
+  <PlayerBand showId={ep.acastShowId} episodeId={ep.acastEpisodeId} />
+
+  <section class="ep-body">
+    <div class="ep-content">
+      <EpisodeCast cast={ep.cast} />
+      <ShowNotes paragraphs={ep.showNotes} />
+      <Transcript segments={ep.transcript} status={ep.transcriptStatus} />
+    </div>
+    <EpisodeSidebar mentions={ep.mentions} />
+  </section>
+
+  <EpisodeNav prev={ep.prev} next={ep.next} />
+</Layout>
+
+<style>
+  .ep-body { max-width: 1280px; margin: 0 auto; padding: 60px 40px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 320px); gap: 60px; align-items: start; }
+  .ep-content { min-width: 0; }
+
+  @media (max-width: 1024px) {
+    .ep-body { grid-template-columns: 1fr; gap: 40px; }
+  }
+  @media (max-width: 900px) {
+    .ep-body { padding: 40px 24px; }
+  }
+</style>

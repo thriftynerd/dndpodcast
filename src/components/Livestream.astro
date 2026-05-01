@@ -1,0 +1,31 @@
+<section class="livestream" id="livestream">
+  <div class="livestream-inner">
+    <div class="livestream-status"><span class="livestream-pulse"></span><span>Live every Tuesday · 8 PM ET</span></div>
+    <div class="livestream-divider"></div>
+    <div class="livestream-name"><strong>Live Recording Every Tuesday.</strong> But sometimes Thursday. We give away dice every week at <a href="https://twitch.tv/geeklyinc">twitch.tv/geeklyinc</a>.</div>
+    <span class="livestream-cta">Watch on Twitch →</span>
+  </div>
+</section>
+
+<style>
+  .livestream { scroll-margin-top: 76px; background: linear-gradient(90deg, rgba(145,70,255,0.12), rgba(145,70,255,0.04) 40%, transparent), var(--bg-2); padding: 18px 40px; border-bottom: 0.5px solid rgba(145,70,255,0.25); position: relative; }
+  .livestream-inner { max-width: 1280px; margin: 0 auto; display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+  .livestream-status { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: 0.22em; color: #ff5757; font-weight: 600; }
+  .livestream-pulse { width: 9px; height: 9px; border-radius: 50%; background: #ff3030; animation: pulse 2s infinite; }
+  .livestream-divider { width: 1px; height: 22px; background: var(--border-2); }
+  .livestream-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 15px; color: var(--text); font-style: italic; font-weight: 500; }
+  .livestream-name strong { color: var(--text); font-weight: 700; font-style: normal; margin-right: 4px; }
+  .livestream-cta { margin-left: auto; background: var(--twitch); color: #fff; padding: 10px 18px; border-radius: 6px; font-size: 13px; font-weight: 600; white-space: nowrap; cursor: pointer; transition: transform 0.15s, background 0.15s; }
+  .livestream-cta:hover { transform: translateY(-1px); background: #a45fff; }
+
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
+
+  /* Readability pass override from mockup */
+  .livestream-name { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; font-weight: 500; color: #e8e3d4; }
+
+  @media (max-width: 900px) {
+    .livestream { padding: 14px 20px; }
+    .livestream-inner { gap: 12px; }
+    .livestream-cta { margin-left: 0; }
+  }
+</style>

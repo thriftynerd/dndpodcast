@@ -1,0 +1,40 @@
+---
+interface Props {
+  episodeCount: number;
+  totalHours: string;
+  campaignCount: number;
+  yearStarted: number;
+}
+const { episodeCount, totalHours, campaignCount, yearStarted } = Astro.props;
+---
+
+<section class="page-hero">
+  <div class="page-hero-eyebrow">All Episodes</div>
+  <h1 class="page-hero-title">The archive.</h1>
+  <div class="page-hero-stats">
+    <div class="phs"><div class="phs-num">{episodeCount}</div><div class="phs-lbl">Episodes</div></div>
+    <div class="phs-div"></div>
+    <div class="phs"><div class="phs-num">{totalHours}</div><div class="phs-lbl">Hours</div></div>
+    <div class="phs-div"></div>
+    <div class="phs"><div class="phs-num">{campaignCount}</div><div class="phs-lbl">Campaigns</div></div>
+    <div class="phs-div"></div>
+    <div class="phs"><div class="phs-num">{yearStarted}</div><div class="phs-lbl">Started</div></div>
+  </div>
+</section>
+
+<style>
+  .page-hero { padding: 70px 40px 40px; max-width: 1280px; margin: 0 auto; text-align: center; }
+  .page-hero-eyebrow { font-size: 13px; letter-spacing: 0.32em; color: var(--green); font-weight: 600; margin-bottom: 18px; }
+  .page-hero-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; font-weight: 700; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 28px; }
+  .page-hero-stats { display: inline-flex; align-items: center; gap: 28px; padding: 22px 36px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; flex-wrap: wrap; justify-content: center; }
+  .phs { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .phs-num { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.4rem, 2vw, 1.9rem); font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: 0.005em; }
+  .phs-lbl { font-size: 11px; letter-spacing: 0.18em; color: var(--text-3); font-weight: 500; text-transform: uppercase; }
+  .phs-div { width: 1px; height: 32px; background: var(--border-2); }
+
+  @media (max-width: 900px) {
+    .page-hero { padding: 50px 24px 30px; }
+    .page-hero-stats { gap: 18px; padding: 18px 22px; }
+    .phs-div { display: none; }
+  }
+</style>

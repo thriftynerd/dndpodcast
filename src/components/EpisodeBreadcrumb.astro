@@ -1,0 +1,28 @@
+---
+interface Props {
+  campaignHref: string;
+  campaignLabel: string;
+  current: string;
+}
+const { campaignHref, campaignLabel, current } = Astro.props;
+---
+
+<div class="crumb">
+  <a href="/">Home</a>
+  <span class="crumb-sep">/</span>
+  <a href={campaignHref}>{campaignLabel}</a>
+  <span class="crumb-sep">/</span>
+  <span class="crumb-current">{current}</span>
+</div>
+
+<style>
+  .crumb { padding: 18px 40px 0; max-width: 1280px; margin: 0 auto; font-size: 13px; color: var(--text-3); display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .crumb a { color: var(--text-3); transition: color 0.2s; }
+  .crumb a:hover { color: var(--text); }
+  .crumb-sep { color: var(--text-4); }
+  .crumb-current { color: var(--text-2); }
+
+  @media (max-width: 900px) {
+    .crumb { padding: 16px 24px 0; }
+  }
+</style>

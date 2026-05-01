@@ -1,0 +1,77 @@
+<section class="search-band">
+  <div class="search-inner">
+    <div class="search-box">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="search-input" placeholder="Search episode titles, descriptions, or transcripts..." />
+    </div>
+    <div class="filter-pills" id="filter-pills">
+      <button class="fp active" data-kind="all" type="button">All</button>
+      <button class="fp" data-kind="c2" type="button">Campaign 2</button>
+      <button class="fp" data-kind="c1" type="button">Campaign 1</button>
+      <button class="fp" data-kind="bonus" type="button">Bonus</button>
+    </div>
+    <div class="search-results-count" id="results-count"></div>
+  </div>
+</section>
+
+<style>
+  .search-band { padding: 24px 40px; background: var(--bg-2); border-top: 0.5px solid var(--border); border-bottom: 0.5px solid var(--border); position: sticky; top: 64px; z-index: 50; backdrop-filter: blur(8px); }
+  .search-inner { max-width: 1280px; margin: 0 auto; display: flex; gap: 18px; align-items: center; flex-wrap: wrap; }
+  .search-box { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 0.5px solid var(--border-2); border-radius: 8px; padding: 10px 16px; flex: 1; min-width: 280px; max-width: 480px; transition: border-color 0.2s; }
+  .search-box:focus-within { border-color: rgba(151,196,89,0.5); }
+  .search-box svg { color: var(--text-4); flex-shrink: 0; }
+  .search-box input { background: transparent; border: none; outline: none; color: var(--text); font-size: 14px; flex: 1; font-family: inherit; }
+  .search-box input::placeholder { color: var(--text-4); }
+
+  .filter-pills { display: flex; gap: 6px; }
+  .fp { padding: 8px 14px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 999px; color: var(--text-3); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+  .fp:hover { color: var(--text); border-color: var(--border-2); }
+  .fp.active { background: rgba(151,196,89,0.12); color: var(--green); border-color: rgba(151,196,89,0.4); }
+
+  .search-results-count { font-size: 13px; color: var(--text-3); margin-left: auto; }
+
+  @media (max-width: 900px) {
+    .search-band { padding: 18px 24px; position: static; }
+    .search-box { min-width: 100%; max-width: none; }
+    .search-results-count { width: 100%; }
+  }
+</style>
+
+<script is:inline>
+  (function() {
+    var searchInput = document.getElementById('search-input');
+    var pills = document.querySelectorAll('.fp');
+
+    function dispatchFilterChange() {
+      var activePill = document.querySelector('.fp.active');
+      var kind = activePill ? activePill.getAttribute('data-kind') : 'all';
+      var query = searchInput ? searchInput.value.toLowerCase().trim() : '';
+      document.dispatchEvent(new CustomEvent('archive:filter-changed', {
+        detail: { kind: kind, query: query }
+      }));
+    }
+
+    if (searchInput) {
+      searchInput.addEventListener('input', dispatchFilterChange);
+    }
+    pills.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        pills.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        dispatchFilterChange();
+      });
+    });
+
+    // Listen for results count updates from EpisodeList
+    var $count = document.getElementById('results-count');
+    document.addEventListener('archive:results-count', function(e) {
+      if (!$count) return;
+      var detail = e.detail || {};
+      if (detail.showing) {
+        $count.textContent = detail.total + ' episode' + (detail.total === 1 ? '' : 's');
+      } else {
+        $count.textContent = '';
+      }
+    });
+  })();
+</script>

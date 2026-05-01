@@ -1,0 +1,50 @@
+<section class="world">
+  <div class="world-inner">
+    <div class="world-aside">
+      <div class="sec-eyebrow">The Setting</div>
+      <h2 class="sec-title">The City of<br/>Farholde</h2>
+      <div class="world-stat-grid">
+        <div class="world-stat"><div class="world-stat-num">Capital</div><div class="world-stat-lbl">Of the realm</div></div>
+        <div class="world-stat"><div class="world-stat-num">Illegal</div><div class="world-stat-lbl">Magic, technically</div></div>
+        <div class="world-stat"><div class="world-stat-num">The OT</div><div class="world-stat-lbl">ACAB</div></div>
+        <div class="world-stat"><div class="world-stat-num">Theme</div><div class="world-stat-lbl">On the Nose</div></div>
+      </div>
+    </div>
+    <div class="world-content">
+      <p>We started in Rimeford, traveled underground to Mineford, and have finally ended in Farholde, the capital city of the realm. It's beautiful, oppressive, ridiculous, and held together by propaganda, fear, and theonite collars.</p>
+      <p>Magic is illegal in this realm. Unless you are part of the OT, the anti-magic police force. Magical construct guards patrol the checkpoints. Even the occasional battle of teh carnivals isn't enough to lift peoples' spirits.</p>
+      <div class="world-pull">
+        <div class="world-pull-text">"Come for the capital city splendor, stay because you were detained at a checkpoint."</div>
+        <div class="world-pull-attr">Farholde tourism board (unverified)</div>
+      </div>
+      <p>Our heroes are tangled in resistance plots, noble weddings, forbidden gods, living batteries, masked identities, family drama, and one very drunk dragon named <em>J'Michael</em>.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .world { padding: 100px 40px; background: var(--bg); position: relative; overflow: hidden; }
+  .world::before { content: ''; position: absolute; left: -10%; top: 30%; width: 50%; height: 60%; background: radial-gradient(ellipse, rgba(107,58,168,0.06) 0%, transparent 70%); pointer-events: none; }
+  .world-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 80px; align-items: start; position: relative; }
+  .world-aside { position: sticky; top: 100px; }
+  .sec-eyebrow { font-size: 13px; letter-spacing: 0.3em; color: var(--green); font-weight: 600; margin-bottom: 14px; }
+  .sec-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2rem, 3.6vw, 3.2rem); font-weight: 700; line-height: 1.05; color: #f5f0e0; letter-spacing: 0.005em; }
+  .world-stat-grid { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  .world-stat { padding: 18px 16px; background: var(--surface); border-radius: 8px; border: 0.5px solid var(--border); }
+  .world-stat-num { font-family: "Cinzel", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--gold); line-height: 1; }
+  .world-stat-lbl { font-size: 11px; letter-spacing: 0.18em; color: var(--text-3); margin-top: 8px; font-weight: 500; text-transform: uppercase; }
+  .world-content p { font-size: 17px; color: var(--text-2); line-height: 1.7; margin-bottom: 22px; }
+  .world-content p:first-of-type::first-letter { font-family: "Cormorant Garamond", Georgia, serif; font-size: 4em; float: left; line-height: 0.85; padding: 6px 14px 0 0; color: var(--gold); font-weight: 600; }
+  .world-content em { color: #e8c875; font-style: italic; }
+  .world-pull { margin: 28px 0; padding: 22px 28px; border-left: 2px solid var(--c2-magenta); background: rgba(197,64,138,0.06); border-radius: 0 6px 6px 0; }
+  .world-pull-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 19px; color: #f0ebe0; line-height: 1.5; }
+  .world-pull-attr { font-size: 12px; letter-spacing: 0.2em; color: var(--text-3); margin-top: 10px; font-weight: 500; }
+
+  @media (max-width: 1024px) {
+    .world-aside { position: static; }
+  }
+  @media (max-width: 900px) {
+    .world { padding: 60px 24px; }
+    .world-inner { grid-template-columns: 1fr; gap: 40px; }
+  }
+</style>
