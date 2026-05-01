@@ -1,85 +1,66 @@
 ---
+import { loadEpisodes } from '../lib/rss';
+
 interface Props {
   campaign?: 'all' | 'c1' | 'c2';
   title?: string;
+  count?: number;
 }
 
-const { campaign = 'all', title = 'Latest episodes' } = Astro.props;
+const { campaign = 'all', title = 'Latest episodes', count = 4 } = Astro.props;
 
-const allEpisodes = [
-  {
-    art: 'https://geeklyinc.com/wp-content/uploads/2025/11/C2-163-079a-300x179.jpg',
-    badge: 'C2 · Ep 182',
-    campaign: 'c2',
-    name: 'Big Bad Bread Wars',
-    meta: '1h 24m · April 20, 2026',
-  },
-  {
-    art: 'https://geeklyinc.com/wp-content/uploads/2026/04/C2-164-080a-300x179.jpg',
-    badge: 'C2 · Ep 181',
-    campaign: 'c2',
-    name: 'Check Point Bing Bong',
-    meta: '1h 18m · April 13, 2026',
-  },
-  {
-    art: 'https://geeklyinc.com/wp-content/uploads/2024/11/C2-121-03d1-300x179.jpg',
-    badge: 'C2 · Ep 180',
-    campaign: 'c2',
-    name: 'Super Rat Day',
-    meta: '1h 32m · April 6, 2026',
-  },
-  {
-    art: 'https://geeklyinc.com/wp-content/uploads/2026/03/178-banner-dedchicken-300x179.jpg',
-    badge: 'C2 · Ep 179',
-    campaign: 'c2',
-    name: "Von Esper's Very Sad Wedding Day",
-    meta: '1h 41m · March 30, 2026',
-  },
-];
+const all = await loadEpisodes();
 
-const episodes = campaign === 'all'
-  ? allEpisodes
-  : allEpisodes.filter((ep) => ep.campaign === campaign);
+// Filter by campaign if requested, then take the most recent N
+const filtered = campaign === 'all' ? all : all.filter((ep) => ep.kind === campaign);
+const episodes = filtered.slice(0, count);
+
+function badgeFor(ep: typeof episodes[number]): string {
+  if (ep.kind === 'bonus') return 'Bonus';
+  if (ep.episodeNumber == null) return ep.kind.toUpperCase();
+  return `${ep.kind === 'c2' ? 'C2' : 'C1'} · Ep ${ep.episodeNumber}`;
+}
 ---
 
 <section class="sec">
   <div class="sec-inner">
     <div class="sec-hd">
       <div><div class="sec-eyebrow">Most recent</div><div class="sec-title">{title}</div></div>
-      <div class="sec-link">Browse archive →</div>
+      <a class="sec-link" href="/episodes">Browse archive →</a>
     </div>
     <div class="eps">
       {episodes.map((ep) => (
-        <div class="ep-card">
+        <a class="ep-card" href={`/episodes/${ep.slug}`}>
           <div class="ep-art">
-            <img src={ep.art} alt="" />
-            <div class="ep-num-badge">{ep.badge}</div>
+            {ep.artUrl ? <img src={ep.artUrl} alt="" /> : <div class="ep-art-placeholder">{ep.kind.toUpperCase()}</div>}
+            <div class="ep-num-badge">{badgeFor(ep)}</div>
             <div class="ep-play"><svg width="14" height="14" viewBox="0 0 12 12"><polygon points="3,2 3,10 10,6" fill="currentColor"/></svg></div>
           </div>
           <div class="ep-body">
-            <div class="ep-name">{ep.name}</div>
-            <div class="ep-meta">{ep.meta}</div>
+            <div class="ep-name">{ep.title}</div>
+            <div class="ep-meta">{ep.duration} · {ep.releaseDate}</div>
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </div>
 </section>
 
 <style>
-  /* same styles as before, unchanged */
   .sec { padding: 80px 40px; background: var(--bg); }
   .sec-inner { max-width: 1280px; margin: 0 auto; }
   .sec-hd { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; gap: 20px; flex-wrap: wrap; }
   .sec-eyebrow { font-size: 13px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 10px; }
   .sec-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: #f5f0e0; line-height: 1.05; }
-  .sec-link { font-size: 14px; color: var(--text-3); }
+  .sec-link { font-size: 14px; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+  .sec-link:hover { color: var(--green); }
 
   .eps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-  .ep-card { background: var(--surface); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); cursor: pointer; transition: transform 0.2s, border-color 0.2s; }
+  .ep-card { background: var(--surface); border-radius: 12px; overflow: hidden; border: 0.5px solid var(--border); cursor: pointer; transition: transform 0.2s, border-color 0.2s; text-decoration: none; display: block; color: inherit; }
   .ep-card:hover { transform: translateY(-3px); border-color: rgba(151,196,89,0.3); }
   .ep-art { width: 100%; aspect-ratio: 16/9; position: relative; overflow: hidden; background: var(--bg-2); }
   .ep-art img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
+  .ep-art-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: "Cinzel", Georgia, serif; color: var(--text-4); font-size: 24px; font-weight: 700; letter-spacing: 0.08em; }
   .ep-card:hover .ep-art img { transform: scale(1.04); }
   .ep-num-badge { position: absolute; top: 14px; left: 14px; background: rgba(10,15,12,0.85); color: var(--green); padding: 5px 12px; border-radius: 5px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; backdrop-filter: blur(4px); }
   .ep-play { position: absolute; bottom: 14px; right: 14px; width: 42px; height: 42px; border-radius: 50%; background: rgba(10,15,12,0.88); color: var(--green); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
