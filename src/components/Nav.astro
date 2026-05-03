@@ -1,8 +1,16 @@
 ---
+import { loadEpisodes } from '../lib/rss';
+
 const path = Astro.url.pathname;
 
 const isActive = (matchers: string[]) =>
   matchers.some((m) => path === m || path.startsWith(m + '/'));
+
+// Get the most recent episode for the "Listen latest" CTA. If for any reason
+// the feed isn't available, fall back to the episodes archive.
+const episodes = await loadEpisodes();
+const latest = episodes[0];
+const latestHref = latest ? `/episodes/${latest.slug}` : '/episodes';
 ---
 
 <nav class="nav">
@@ -23,7 +31,7 @@ const isActive = (matchers: string[]) =>
       : <a href="/campaign-2" class="nav-link">The world</a>}
 
     <a href="https://dndpodcast.fandom.com/" target="_blank" rel="noopener" class="nav-link">Wiki</a>
-    <a href="https://shows.acast.com/greetings-adventurers" target="_blank" rel="noopener" class="nav-cta">▶ Listen latest</a>
+    <a href={latestHref} class="nav-cta">▶ Listen latest</a>
   </div>
 </nav>
 

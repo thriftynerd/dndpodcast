@@ -1,5 +1,24 @@
 ---
-// Hero component. No props for now since all content is static.
+import { loadEpisodes } from '../lib/rss';
+
+// Pull the episode list once. Astro caches this across components at build time.
+const episodes = await loadEpisodes();
+
+// Episodes are sorted newest-first by loadEpisodes()
+const latest = episodes[0];
+const oldest = episodes[episodes.length - 1];
+
+const latestHref = latest ? `/episodes/${latest.slug}` : '#';
+const firstHref = oldest ? `/episodes/${oldest.slug}` : '#';
+
+// Stats: episode count (rounded down to nearest 50 for "X+" style)
+// and total hours of audio across the entire archive.
+const episodeCount = episodes.length;
+const episodeCountRounded = Math.floor(episodeCount / 50) * 50;
+
+const totalSeconds = episodes.reduce((sum, ep) => sum + (ep.durationSeconds || 0), 0);
+const totalHours = Math.floor(totalSeconds / 3600);
+const totalHoursRounded = Math.floor(totalHours / 100) * 100;
 ---
 
 <section class="hero">
@@ -27,13 +46,13 @@
       <p class="hero-tag">Hundreds of episodes. Two campaigns. One impossibly stupid world. Hold on to your butts, - Ray Arnold</p>
 
       <div class="hero-actions">
-        <a class="btn-p" href="#">
+        <a class="btn-p" href={latestHref}>
           <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true">
             <polygon points="3,2 3,10 10,6" fill="currentColor" />
           </svg>
           Latest episode
         </a>
-        <a class="btn-s" href="#">Start from the beginning</a>
+        <a class="btn-s" href={firstHref}>Start from the beginning</a>
       </div>
 
       <div class="stats">
@@ -43,13 +62,13 @@
         </div>
         <div class="stat-div"></div>
         <div class="stat">
-          <div class="stat-num">600+</div>
+          <div class="stat-num">{episodeCountRounded}+</div>
           <div class="stat-lbl">Episodes</div>
         </div>
         <div class="stat-div"></div>
         <div class="stat">
-          <div class="stat-num">2</div>
-          <div class="stat-lbl">Campaigns</div>
+          <div class="stat-num">{totalHoursRounded}+</div>
+          <div class="stat-lbl">Hours of audio</div>
         </div>
       </div>
     </div>
