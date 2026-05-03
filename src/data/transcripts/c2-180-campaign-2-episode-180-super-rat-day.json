@@ -1,0 +1,5570 @@
+[
+  {
+    "time": "00:28",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Greeting, adventurers! I am your Dungeon Master, Michael Thrifty Nerd DiMauro. My pronouns are he/him. With me this week, hopefully it's Nika Howard."
+  },
+  {
+    "time": "00:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Baby, it's me."
+  },
+  {
+    "time": "00:42",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Can we hear me? Ah, yes, it's me. I am here. I am loud, verbally and otherwise, and my pronouns are she/her."
+  },
+  {
+    "time": "00:53",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Also with us this week, Timothy Lanning."
+  },
+  {
+    "time": "00:55",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "What up, what up? It's great to be here. Thanks for having me. My pronouns are he/him."
+  },
+  {
+    "time": "00:59",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "J'Michael Bachmann."
+  },
+  {
+    "time": "01:01",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Hey everybody, do you like that? When I smack it and you watch it bounce right back?"
+  },
+  {
+    "time": "01:05",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "What?"
+  },
+  {
+    "time": "01:06",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "You'll have to excuse Michael. He really lost it when he saw me do the right left. I'm a man eater."
+  },
+  {
+    "time": "01:13",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I understand."
+  },
+  {
+    "time": "01:13",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Y'all are just a light snack."
+  },
+  {
+    "time": "01:14",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "What?"
+  },
+  {
+    "time": "01:15",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's a song."
+  },
+  {
+    "time": "01:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "What's he saying? Are you singing?"
+  },
+  {
+    "time": "01:17",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That's all right. That's all right. It works for me."
+  },
+  {
+    "time": "01:19",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Is that like poetry?"
+  },
+  {
+    "time": "01:21",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Is he doing poetry?"
+  },
+  {
+    "time": "01:22",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "He's doing Megan Thee Stallion's verse in—"
+  },
+  {
+    "time": "01:25",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Twice."
+  },
+  {
+    "time": "01:25",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That Twice song. Strategy. Strategy."
+  },
+  {
+    "time": "01:28",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Are we going to get suit?"
+  },
+  {
+    "time": "01:29",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I don't think so."
+  },
+  {
+    "time": "01:30",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's a cover. He did really good."
+  },
+  {
+    "time": "01:32",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, it's a cover."
+  },
+  {
+    "time": "01:32",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "He didn't sing it."
+  },
+  {
+    "time": "01:33",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "He said it really good."
+  },
+  {
+    "time": "01:34",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, and it was less than 10 seconds?"
+  },
+  {
+    "time": "01:37",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I don't know. I took a long time to do it. My pronouns are he/him."
+  },
+  {
+    "time": "01:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Cherry for Cheeks here."
+  },
+  {
+    "time": "01:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Hello, everyone. My pronouns are she/her."
+  },
+  {
+    "time": "01:44",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "We're back, guys."
+  },
+  {
+    "time": "01:45",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Hey, what's up? We're back."
+  },
+  {
+    "time": "01:46",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "We're back. I'm getting really distracted by the freaking chat."
+  },
+  {
+    "time": "01:51",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Why are they booty shaking everything?"
+  },
+  {
+    "time": "01:53",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "There's boots shaking in there."
+  },
+  {
+    "time": "01:54",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "They are. Yeah, there's some snail booty shaking in there."
+  },
+  {
+    "time": "01:56",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Booties on the ground."
+  },
+  {
+    "time": "01:56",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I can't."
+  },
+  {
+    "time": "01:59",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Stop looking at it."
+  },
+  {
+    "time": "02:00",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I can't. This is porno to him. No jacking off."
+  },
+  {
+    "time": "02:04",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Just because we're talking about vaginas and jacking off all the time."
+  },
+  {
+    "time": "02:07",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Here's some butt shaking."
+  },
+  {
+    "time": "02:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "And cum, and who knows what else."
+  },
+  {
+    "time": "02:10",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "This is a jack-off instructional podcast. Just ours is really weird."
+  },
+  {
+    "time": "02:14",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Oh, man."
+  },
+  {
+    "time": "02:14",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Okay."
+  },
+  {
+    "time": "02:15",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "We should call this JOI. Adventure JOI."
+  },
+  {
+    "time": "02:19",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Where guys choose—"
+  },
+  {
+    "time": "02:20",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Choose your own JOI."
+  },
+  {
+    "time": "02:22",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Stop talking about jacking off."
+  },
+  {
+    "time": "02:24",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Fine."
+  },
+  {
+    "time": "02:24",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Is that what that is?"
+  },
+  {
+    "time": "02:27",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Instruction. Sleeping."
+  },
+  {
+    "time": "02:28",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Because it's Monday, so everything is wrong."
+  },
+  {
+    "time": "02:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm sleepy."
+  },
+  {
+    "time": "02:32",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh, yeah, because the episode just came out today."
+  },
+  {
+    "time": "02:36",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah."
+  },
+  {
+    "time": "02:36",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I hope that you listen to it."
+  },
+  {
+    "time": "02:38",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Michael."
+  },
+  {
+    "time": "02:39",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah."
+  },
+  {
+    "time": "02:40",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I know that you usually save this for the end, but I don't know about you guys, but I've died many times to Michael's prototype of the Drinks and Daggers computer game."
+  },
+  {
+    "time": "02:50",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Oh, yeah."
+  },
+  {
+    "time": "02:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Pyre smacking my bare back, butt, and balls."
+  },
+  {
+    "time": "02:54",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Thank you for bringing it up, Timmy. It functions kind of, but it's still got a long way to go. But if you want to check it out, you can. Patreon.com/ThriftyCrafts. But it's fun. It works kind of."
+  },
+  {
+    "time": "03:08",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's really cool."
+  },
+  {
+    "time": "03:09",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You can choose different characters now."
+  },
+  {
+    "time": "03:11",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "And it looks really good."
+  },
+  {
+    "time": "03:11",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah."
+  },
+  {
+    "time": "03:12",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah."
+  },
+  {
+    "time": "03:12",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It plays like dog shit."
+  },
+  {
+    "time": "03:14",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. I didn't know what was happening."
+  },
+  {
+    "time": "03:16",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You won't."
+  },
+  {
+    "time": "03:20",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And then I started to, and I just thought I drew really bad."
+  },
+  {
+    "time": "03:23",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "And that's why—"
+  },
+  {
+    "time": "03:24",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I was like, nothing's happening. It's like, oh, you didn't get any good cards."
+  },
+  {
+    "time": "03:27",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You can't do anything."
+  },
+  {
+    "time": "03:28",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "But you know, it'll get better as I go."
+  },
+  {
+    "time": "03:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "So yeah, it's a journey."
+  },
+  {
+    "time": "03:32",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Follow me on this journey."
+  },
+  {
+    "time": "03:32",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Much like an adventure."
+  },
+  {
+    "time": "03:34",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "All right, fuck it. Let's play D&D."
+  },
+  {
+    "time": "03:39",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Previously on Greetings, Adventurers."
+  },
+  {
+    "time": "03:45",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You get a tap on the shoulder."
+  },
+  {
+    "time": "03:47",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I turn around."
+  },
+  {
+    "time": "03:49",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It's Leo. It's Selene's brother. Can you believe this joker up there trying to give a speech?"
+  },
+  {
+    "time": "03:55",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "But I am but a lowly servant."
+  },
+  {
+    "time": "03:57",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You know, he did the same thing to my sister. Oh, he just gave her to the OT, and now I'm marrying Maris Wample. I heard that her vagina is only like an inch deep and has like a 4-inch radius or something."
+  },
+  {
+    "time": "04:15",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "How loud does he say that? How loud does he say that?"
+  },
+  {
+    "time": "04:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Pretty loud."
+  },
+  {
+    "time": "04:18",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Where is your soon-to-be good wife, sir? She's locked up in the bathroom. I don't know. Hey, you in the armor."
+  },
+  {
+    "time": "04:26",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Me?"
+  },
+  {
+    "time": "04:27",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Can you go into the shitter and get Maris? I don't love him at all. He doesn't have what I need, and no man does."
+  },
+  {
+    "time": "04:37",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Ah, no!"
+  },
+  {
+    "time": "04:38",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "R'Oarc would like to raise up her skirt."
+  },
+  {
+    "time": "04:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh my God. Oh my God."
+  },
+  {
+    "time": "04:43",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "She shows— her pussy, and she says, he knows exactly what you need."
+  },
+  {
+    "time": "04:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Holy shit. Guards, guards!"
+  },
+  {
+    "time": "04:52",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Oh God. I grab her fiancé and push him in there."
+  },
+  {
+    "time": "04:57",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Derrigus Van Esper is choking on a walnut."
+  },
+  {
+    "time": "05:00",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I think this guy's choking. Uh, alright, pick it up. One, two."
+  },
+  {
+    "time": "05:05",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You pop that walnut right out. I think you should sit next to me at the feast."
+  },
+  {
+    "time": "05:11",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Won't that Upset some of the other lords."
+  },
+  {
+    "time": "05:13",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "My lord, you can have my wife's seat."
+  },
+  {
+    "time": "05:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Where's she gonna be?"
+  },
+  {
+    "time": "05:16",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I don't know."
+  },
+  {
+    "time": "05:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oops, I dropped this, and then I bent down."
+  },
+  {
+    "time": "05:20",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Don't spank me."
+  },
+  {
+    "time": "05:28",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Anyway, anyways, y'all were, uh, hanging out at the feast. You were pre-gaming at the feast before the feast happened."
+  },
+  {
+    "time": "05:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, that's where the real sickos go. That's getting set up."
+  },
+  {
+    "time": "05:40",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "And you ran into Selene's— both his dad and his brother. Yeah, yeah, his dad, her dad, and her brother."
+  },
+  {
+    "time": "05:46",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Sorry, you know, forget her brother and his dad."
+  },
+  {
+    "time": "05:48",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, yeah, yeah, her brother and his dad. Yeah, exactly."
+  },
+  {
+    "time": "05:52",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And her dad looks like your friend Nick. It's her."
+  },
+  {
+    "time": "05:54",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Exactly."
+  },
+  {
+    "time": "05:55",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, hijinks ensue. Not really hijinks ensue."
+  },
+  {
+    "time": "05:58",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Not really. It's pretty normal."
+  },
+  {
+    "time": "06:00",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "There were some Maris-based hijinks."
+  },
+  {
+    "time": "06:02",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "There were some light hijinks. There was a lot of Just people taking their pants off."
+  },
+  {
+    "time": "06:05",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. Or took her cooter out, which is not a big deal. I mean, that happens a lot. Because I guess we had to, like—"
+  },
+  {
+    "time": "06:11",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That's pretty normal."
+  },
+  {
+    "time": "06:11",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Every family function."
+  },
+  {
+    "time": "06:13",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, we had to, like, invent, like, an old-timey butt flap for her cooter inside of her artificer armor. So, yeah, it's pretty normal."
+  },
+  {
+    "time": "06:21",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, so she can piss at it."
+  },
+  {
+    "time": "06:22",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. Yeah."
+  },
+  {
+    "time": "06:23",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I bet in your artificer armor, you got, like, one of those, like, shiwi situations so you can, like, piss out of it at a length."
+  },
+  {
+    "time": "06:30",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I think she has a little— like nanobyte kind of thing where like a little, like, would open up."
+  },
+  {
+    "time": "06:36",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Michael, be careful. This feels like it's very close to a Screetch grappling situation."
+  },
+  {
+    "time": "06:40",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "If you get in there, this thing is dangerous."
+  },
+  {
+    "time": "06:42",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "And then a little funnel."
+  },
+  {
+    "time": "06:44",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah."
+  },
+  {
+    "time": "06:44",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "And then the shiwi funnel would come out."
+  },
+  {
+    "time": "06:46",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Call it pussy whipping."
+  },
+  {
+    "time": "06:48",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Is shiwi a play on kiwi?"
+  },
+  {
+    "time": "06:50",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "No, it's so— It's lady piss."
+  },
+  {
+    "time": "06:53",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I think it's like she can wee outside."
+  },
+  {
+    "time": "06:56",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah."
+  },
+  {
+    "time": "06:56",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah."
+  },
+  {
+    "time": "06:56",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's like a funnel thing so you can piss outside in here and not have it drip down your legs."
+  },
+  {
+    "time": "07:01",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Ugh."
+  },
+  {
+    "time": "07:02",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "What's gross about that, Michael?"
+  },
+  {
+    "time": "07:03",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's just like a plastic dick."
+  },
+  {
+    "time": "07:05",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's like, yeah."
+  },
+  {
+    "time": "07:07",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Ugh."
+  },
+  {
+    "time": "07:07",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And I have to suck it?"
+  },
+  {
+    "time": "07:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Only for pissing, though!"
+  },
+  {
+    "time": "07:10",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Actually, can I say that I think that she would not, she would have the little nanobytes open up, but I think that—"
+  },
+  {
+    "time": "07:16",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Stop saying nanobytes. You don't have nanobytes."
+  },
+  {
+    "time": "07:18",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "What's a nanobyte?"
+  },
+  {
+    "time": "07:19",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Jesus Christ."
+  },
+  {
+    "time": "07:20",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "She's making it up."
+  },
+  {
+    "time": "07:21",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You're working with Steve, Michael."
+  },
+  {
+    "time": "07:23",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Tony Stark ass ruined all the fucking, ruined all the damn Marvel movies with your nanomachines taking their helmets off."
+  },
+  {
+    "time": "07:28",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I hate it."
+  },
+  {
+    "time": "07:29",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "And she, much like Dune, uses the urine to re-filter through the system."
+  },
+  {
+    "time": "07:38",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Now that, she be drinking that."
+  },
+  {
+    "time": "07:40",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That sounds like Roar."
+  },
+  {
+    "time": "07:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "100%."
+  },
+  {
+    "time": "07:42",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "And it tastes just like kiwi water."
+  },
+  {
+    "time": "07:45",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, she loves that. Strawberry. Everyone, every time for brunch on Sunday, everyone gets some of this like really delicious strawberry kiwi beverage and nobody knows where it comes from. And Roar can never tell."
+  },
+  {
+    "time": "07:58",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, that's crazy."
+  },
+  {
+    "time": "07:59",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, it's from the—"
+  },
+  {
+    "time": "08:00",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "We're thirsty for it."
+  },
+  {
+    "time": "08:01",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "She's giving everyone her piss."
+  },
+  {
+    "time": "08:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And now I can't metagame knowing that I've been drinking your piss for so long. That sucks."
+  },
+  {
+    "time": "08:06",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Because you don't know. Yeah. And you like it."
+  },
+  {
+    "time": "08:07",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's going to be stuff."
+  },
+  {
+    "time": "08:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You like the taste of it."
+  },
+  {
+    "time": "08:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I mean, maybe that's how your character went from being a bard to an artificer. You just drank your piss so much you got, like, the science in you."
+  },
+  {
+    "time": "08:17",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, I was piss maxing."
+  },
+  {
+    "time": "08:19",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "And I— Yeah, piss maxing. People do that, though. People really think it's good for them."
+  },
+  {
+    "time": "08:22",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You can drink your pee. It makes you stronger. It gives you nanobites."
+  },
+  {
+    "time": "08:25",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It doesn't work that way."
+  },
+  {
+    "time": "08:26",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Wait, why? Tell them not to, Jenna Rourke."
+  },
+  {
+    "time": "08:28",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It only works in D&D, in fantasy world."
+  },
+  {
+    "time": "08:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah."
+  },
+  {
+    "time": "08:31",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You don't gain benefits from piss maxing in real life. Don't drink your piss."
+  },
+  {
+    "time": "08:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "If your girl's piss tastes like kiwi, run away."
+  },
+  {
+    "time": "08:39",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "But kiwi strawberry, drink that shit up."
+  },
+  {
+    "time": "08:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "So you're just— Setting the scene, we're still in the pregame zone. I believe R'Oarc just got another reminder."
+  },
+  {
+    "time": "08:58",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "An insistent reminder."
+  },
+  {
+    "time": "08:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Her nanobites were like, \"Hey, you got to go over here.\" I'm going."
+  },
+  {
+    "time": "09:02",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "To steal that bell."
+  },
+  {
+    "time": "09:03",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Oh my God. Okay. I look at everyone and I say, I gotta go."
+  },
+  {
+    "time": "09:10",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I gotta go."
+  },
+  {
+    "time": "09:11",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I gotta go."
+  },
+  {
+    "time": "09:12",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "She just, like, fully stops and just, like, stands, like, corpse style and is like, I gotta go."
+  },
+  {
+    "time": "09:19",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Why is R'Oarc T-posing like that?"
+  },
+  {
+    "time": "09:23",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "And then she, like, yeah, crap."
+  },
+  {
+    "time": "09:24",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's like she, like, kind of just, like, reset her brain or something."
+  },
+  {
+    "time": "09:27",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "All right, well, go, I guess."
+  },
+  {
+    "time": "09:30",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Go on out, skit."
+  },
+  {
+    "time": "09:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "The bathroom's around the corner. I think you were there. I think you broke into it."
+  },
+  {
+    "time": "09:35",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "No, I gotta, I gotta, I gotta go see a bell about stealing it."
+  },
+  {
+    "time": "09:41",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's still, that still sounds, that still feels like you're going to the bathroom."
+  },
+  {
+    "time": "09:45",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I'm gonna go ring that bell."
+  },
+  {
+    "time": "09:49",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "What?"
+  },
+  {
+    "time": "09:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That sounds like you're gonna fucking jack off. Don't tell me that."
+  },
+  {
+    "time": "09:52",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Hampus."
+  },
+  {
+    "time": "09:53",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I'm gonna steal that bell from the town square."
+  },
+  {
+    "time": "09:57",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Okay, that was getting more, a little more esoteric."
+  },
+  {
+    "time": "09:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, I still feel like it's jacking off, but you might be shitting at the same time."
+  },
+  {
+    "time": "10:04",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "R'Oarc, as you're saying that—"
+  },
+  {
+    "time": "10:06",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Oh, shit."
+  },
+  {
+    "time": "10:07",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "A servant comes out of the building of the castle and he comes scurrying over towards Darius Von Esper, Selene's dad, and the OT agent. And he looks rather frantic and you can't help but overhear him say that there's a disturbance in the wine cellar. He thinks he saw a rat. Then he says, \"Giant rat,\" which, not a big deal, sure."
+  },
+  {
+    "time": "10:43",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yes."
+  },
+  {
+    "time": "10:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "But he's like, \"Miss Von Esper is on her way now to inspect the vintages.\" Selene's mom."
+  },
+  {
+    "time": "10:52",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Selene, yes. Should I go kill her?"
+  },
+  {
+    "time": "10:57",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No!"
+  },
+  {
+    "time": "10:57",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh, so she can like feel the vibes of work and it's just like— does the sign with the, you know, when your hand goes up?"
+  },
+  {
+    "time": "11:06",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "She cuts across."
+  },
+  {
+    "time": "11:07",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "\"Oh, you want me to—\" Yeah."
+  },
+  {
+    "time": "11:08",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, no, no, don't cut her."
+  },
+  {
+    "time": "11:11",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You want me to go?\" And she sees that they're like—"
+  },
+  {
+    "time": "11:13",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Just like, cut it out."
+  },
+  {
+    "time": "11:15",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I'm doing the wave my hands but lightly."
+  },
+  {
+    "time": "11:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm trying not to bring attention to myself. Yeah."
+  },
+  {
+    "time": "11:20",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Don't kill her."
+  },
+  {
+    "time": "11:23",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "So it's mother."
+  },
+  {
+    "time": "11:25",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "She gives birth. Mother Mom is a good pussy."
+  },
+  {
+    "time": "11:30",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "What the fuck? Okay, uh, she's gonna be down in the wine— the wines. Should I check? I'm gonna go. I'm just gonna go check on her."
+  },
+  {
+    "time": "11:38",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Okay, go, but don't get— don't get— don't kill her. I won't kill her."
+  },
+  {
+    "time": "11:42",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "There's a big rat down there. I forgot that part. Let's go. I'm gonna go. That's— I said it to myself."
+  },
+  {
+    "time": "11:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm gonna stand here. You go there."
+  },
+  {
+    "time": "11:50",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, I go, Michael."
+  },
+  {
+    "time": "11:55",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Darius is looking around and he's trying to find people to maybe help."
+  },
+  {
+    "time": "12:01",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "He's like, \"You, sir.\" Okay, I don't think I said this last time and I do want to say, I think I mentioned last time that Leo has kind of like a James Marsden look to him. I've decided that my father has kind of a Donald Sutherland vibe."
+  },
+  {
+    "time": "12:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That makes sense to me. He's kind of older."
+  },
+  {
+    "time": "12:17",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Maybe he's like, we'll say he's like—"
+  },
+  {
+    "time": "12:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "He's like grandpa age. He's like, yeah, he's an older dad. Yeah, yeah, yeah."
+  },
+  {
+    "time": "12:22",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "So he's like looking at like the chef. He's like eyeing up people who he thinks might be able to deal with a rat problem."
+  },
+  {
+    "time": "12:28",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I could help deal with a rat too. I mean, I was in the war. I don't know. Hmm. It's not a big deal."
+  },
+  {
+    "time": "12:36",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "It kind of feels like an early game quest, but—"
+  },
+  {
+    "time": "12:38",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah."
+  },
+  {
+    "time": "12:40",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Kill 10 rats."
+  },
+  {
+    "time": "12:41",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Michael, bring them back. Subverting the thing by waiting till we're level 13 to do it."
+  },
+  {
+    "time": "12:45",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "We just like absolutely like explode like 50 rats at one time. Get fucked. How many rats can I kill with a fireball? Let's go. No! I think a lot."
+  },
+  {
+    "time": "12:56",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Ooh, I don't know. Do you guys think you can handle a rat? I think it might be a giant rat."
+  },
+  {
+    "time": "13:01",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "We fucking love giant rats."
+  },
+  {
+    "time": "13:02",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, done."
+  },
+  {
+    "time": "13:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I don't give a damn. I've catered with these three before. We've had to fight big old gator once in the sewer. That's real, you know, that happens."
+  },
+  {
+    "time": "13:11",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Okay, well, I don't want anyone to know. Obviously this is a big occasion."
+  },
+  {
+    "time": "13:16",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Let's just say I'm good. With secrets."
+  },
+  {
+    "time": "13:19",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I think I— We could get paid in secrets. Huh?"
+  },
+  {
+    "time": "13:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, that would actually be really good. That's what I was implying, but that's like, is better."
+  },
+  {
+    "time": "13:29",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, like if we did this, you could pay us in a few secrets."
+  },
+  {
+    "time": "13:32",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I don't know how I would do that. I don't think—"
+  },
+  {
+    "time": "13:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Well, you got time. Yeah. We'll go bash this rat. It'll be good."
+  },
+  {
+    "time": "13:41",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I was thinking more of a handsome reward of some kind, monetary."
+  },
+  {
+    "time": "13:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, that's good too. That's good too. We could buy secrets. What about a favor?"
+  },
+  {
+    "time": "13:53",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Are you wildly connected?"
+  },
+  {
+    "time": "13:54",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Favor? Yeah, that could be."
+  },
+  {
+    "time": "13:57",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yes, I'm extremely connected. Insight check. My dice is gone."
+  },
+  {
+    "time": "14:03",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It fell down."
+  },
+  {
+    "time": "14:04",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, I rolled bad."
+  },
+  {
+    "time": "14:06",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Uh, 12. No reason to not believe him."
+  },
+  {
+    "time": "14:09",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Sure, sure, it's true. My, my insight is on an 11 minus 1, so a 10, Michael."
+  },
+  {
+    "time": "14:15",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, you're pretty sure he's You don't, yeah, whatever."
+  },
+  {
+    "time": "14:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Hell yeah. All right, well, don't worry about it now. Put it on our tab, whatever that means."
+  },
+  {
+    "time": "14:23",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I don't, I can't, no. Shh."
+  },
+  {
+    "time": "14:26",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We know you're good for it. And I put my finger on his lips. Don't worry about it. Spit on it. This is just, what? Spit on it. What? Stop. You just said you were gonna leave. What's happening?"
+  },
+  {
+    "time": "14:38",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Well, I was leaving, but then there's a big rat."
+  },
+  {
+    "time": "14:40",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Michael said that I, sorry. Who's Michael? Sorry, this weird voice. I suddenly saw this servant scurrying around in this weird voice. It was mixed metal. There's a groove to it, so I wasn't sure."
+  },
+  {
+    "time": "14:51",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I mean, we don't know if it's legally mixed messages or, like, heightening the tension or a third thing. I mean, you do have that rat whistle, so maybe that's what it is."
+  },
+  {
+    "time": "14:59",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Oh, yeah! Okay, see, because in my head, I was thinking that maybe I could just take the rat and it could be like a pet."
+  },
+  {
+    "time": "15:07",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, and you are the most Charlie of us, and Michael is correct, whoever that is. You're probably the one that thinks about rats, like, a lot."
+  },
+  {
+    "time": "15:14",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, I think of all of us, you'd probably think of rats the most."
+  },
+  {
+    "time": "15:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. Yeah. Screetch thinks of bats."
+  },
+  {
+    "time": "15:19",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yes. Mm, okay. Do you think of all animals?"
+  },
+  {
+    "time": "15:22",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You think about all animals."
+  },
+  {
+    "time": "15:24",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Is this a conversation our characters are having or we're having?"
+  },
+  {
+    "time": "15:27",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I think it's both. Yes, I think it's both. I think it's both."
+  },
+  {
+    "time": "15:30",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Our nose are bleeding because we know Michael exists for a little bit, which is not great."
+  },
+  {
+    "time": "15:33",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, yeah, yeah. We all sort of freaking out and then we're like, ugh."
+  },
+  {
+    "time": "15:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Just like paradise. Who's Michael?"
+  },
+  {
+    "time": "15:38",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Screetch knows you're right, but he's still kind of offended. And I pull 3 rats out of my magic hat. I'm like, save."
+  },
+  {
+    "time": "15:44",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Save those."
+  },
+  {
+    "time": "15:46",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "No it can't! It's on cooldown now for the rest of the day."
+  },
+  {
+    "time": "15:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Alright well hold those we'll feed it to the big rat."
+  },
+  {
+    "time": "15:50",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, can I play my rat pipe? And then they could just like— I don't know where they go with the rat pipe. Doo doo doo doo da doo doo."
+  },
+  {
+    "time": "15:56",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Let's go downstairs before doing any rat shit guys come on!"
+  },
+  {
+    "time": "15:58",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I feel like there was something about them specifically hating us."
+  },
+  {
+    "time": "16:02",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Hide those rats! We're at the briefing! I'm so sorry."
+  },
+  {
+    "time": "16:05",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's right you can summon rats but they don't like you."
+  },
+  {
+    "time": "16:08",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, they don't like me and they don't heed any instructions."
+  },
+  {
+    "time": "16:11",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "They're freaking out. They're just around."
+  },
+  {
+    "time": "16:12",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah. This is a loose rat."
+  },
+  {
+    "time": "16:14",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "My fingers are getting chewed to the nubs. I used my finger."
+  },
+  {
+    "time": "16:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I had a rat hat in our Thursday game to save myself from a giant hungry hippo. Wow. So, there's many good things you can do with rats."
+  },
+  {
+    "time": "16:24",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "With a rat hat. Yeah, with the rat hat."
+  },
+  {
+    "time": "16:25",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Were you doing the classic, like, elephant is afraid of mice type thing? Is that what was happening there?"
+  },
+  {
+    "time": "16:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, he was hungry and I wanted it to eat the rat instead of me. Wow. And then it found a whole bunch of dead bodies and it was like, yummy."
+  },
+  {
+    "time": "16:36",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "And it loved it. In my therapy D&D game, I have a rat. My character has a big rat. An R-O-U-S."
+  },
+  {
+    "time": "16:42",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "What does that mean? What do you think that means?"
+  },
+  {
+    "time": "16:44",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "What do you guys think that means?"
+  },
+  {
+    "time": "16:46",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Well, it is really funny to think like every choice in the Therapy D&D game is like therapy. It's like, what does the rat mean to you? What does the rat represent? I guess to me it's like I just like cheese a lot and I'm always going on adventures for my cheese and stuff."
+  },
+  {
+    "time": "17:00",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Oh yeah, Nika, you can control these rats. It's indifferent towards me and other creatures and isn't under my control, but it doesn't say that it can't be put under control."
+  },
+  {
+    "time": "17:08",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, Michael, I believe I have this thing. Hold on. I'm pretty sure I took it where I can talk to animals. We're walking down the hole, by the way."
+  },
+  {
+    "time": "17:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "This is all natural."
+  },
+  {
+    "time": "17:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, yeah, yeah, yeah, yeah. We're walking down."
+  },
+  {
+    "time": "17:17",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "We're walking down. We're walking. We're on the move."
+  },
+  {
+    "time": "17:19",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, we're on the move. We're getting quite into the magic territory. He's a magician, I say. He's a magician. He didn't put the full bed sewn into his hat the whole time."
+  },
+  {
+    "time": "17:27",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "These are sanitary rats. They're sanitary."
+  },
+  {
+    "time": "17:30",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That explains why they're so angry. Certified plague-free rats."
+  },
+  {
+    "time": "17:33",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "My husband loves to keep rat in his pants. Makes things spicy."
+  },
+  {
+    "time": "17:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's his rat. That's his rat."
+  },
+  {
+    "time": "17:40",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That's his rat. I'm still getting used to being called your husband."
+  },
+  {
+    "time": "17:42",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. That weirded me out. I was like, who are you talking about?"
+  },
+  {
+    "time": "17:45",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "So sorry. Oh, yeah. I have Speak with Animals. So, yeah, I talk to these rats. Hey, what do you need, lady?"
+  },
+  {
+    "time": "17:58",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Which one said that, Michael?"
+  },
+  {
+    "time": "17:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "There's 3. Yeah, show the 3."
+  },
+  {
+    "time": "18:01",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "The middle one. Okay."
+  },
+  {
+    "time": "18:03",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "What's his name? Garthule. Garthule."
+  },
+  {
+    "time": "18:09",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Garthule. Garthule. Okay. Where did I come from? I didn't know, I didn't exist until like a minute ago."
+  },
+  {
+    "time": "18:17",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You came from pants, you're magic. What?"
+  },
+  {
+    "time": "18:20",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's a hat. Hat from a hat."
+  },
+  {
+    "time": "18:22",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We can't hear you, but it's a hat."
+  },
+  {
+    "time": "18:23",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Why am I here? What does it mean? Yeah, it's a hat. It's a hat. It's a thing that's on a head. And you are gonna live. I don't know what a fucking hat is. Well, I don't know."
+  },
+  {
+    "time": "18:37",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I don't know what your rat brain concepts He wasn't born yesterday. Is she fighting it?"
+  },
+  {
+    "time": "18:40",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "They both look— they look more angry. I thought she was gonna try to, like, calm him down. They look mad."
+  },
+  {
+    "time": "18:45",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "So we're gonna go beat this big rat."
+  },
+  {
+    "time": "18:46",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Do you want to come help us? Uh, how big is this rat?"
+  },
+  {
+    "time": "18:50",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Which rat is that, Michael?"
+  },
+  {
+    "time": "18:51",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's the one on the right."
+  },
+  {
+    "time": "18:53",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "What's its name?"
+  },
+  {
+    "time": "18:54",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "What's his name? Uh, Darthol."
+  },
+  {
+    "time": "18:57",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Darthol? Darthol? Darthol? Garthal and Darthol?"
+  },
+  {
+    "time": "19:02",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Garthiol!"
+  },
+  {
+    "time": "19:03",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Garthiol and Darthol. Garthuel?"
+  },
+  {
+    "time": "19:07",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I gotta remember those."
+  },
+  {
+    "time": "19:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I'm writing them down, by the way."
+  },
+  {
+    "time": "19:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Get fucked, Michael. Well, I think we've done the, like, is it the same rat every time science, and I forget what we came up with."
+  },
+  {
+    "time": "19:15",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I don't think it is, no. And it only exists for 1 hour."
+  },
+  {
+    "time": "19:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, because— yeah, yeah, I think you're right."
+  },
+  {
+    "time": "19:19",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "They're gonna go away after an hour?"
+  },
+  {
+    "time": "19:21",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah. Damn. So we definitely should establish backstories for these rats."
+  },
+  {
+    "time": "19:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, yeah, yeah."
+  },
+  {
+    "time": "19:26",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "And we can't eat them. They just got invented."
+  },
+  {
+    "time": "19:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, you can't eat them. It's like a diet. They disappear from your tummy."
+  },
+  {
+    "time": "19:32",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh, that's so true."
+  },
+  {
+    "time": "19:32",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Oh yeah."
+  },
+  {
+    "time": "19:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's a little hack."
+  },
+  {
+    "time": "19:35",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's a good idea for a rat."
+  },
+  {
+    "time": "19:37",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, we should slurp down the left rat before he has a chance to talk."
+  },
+  {
+    "time": "19:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Okay, yeah. Bash, bash, bash, bash!"
+  },
+  {
+    "time": "19:42",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Michael, we eat him immediately."
+  },
+  {
+    "time": "19:45",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm the smart one! Do you really? No! No, Michael. We can't bash a rat."
+  },
+  {
+    "time": "19:50",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "We put it in our butts."
+  },
+  {
+    "time": "19:51",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Do you really? I look at Screeetch and I give him that look. He knows that look where it's like, you want to eat this rat?"
+  },
+  {
+    "time": "19:57",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You're not going to eat me. You know that look. The are you going to eat that rat look. Don't eat me."
+  },
+  {
+    "time": "20:02",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "You're not going to eat me, are you?"
+  },
+  {
+    "time": "20:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "This bitch doesn't know how to not be told to kill a mom. But she knows the sign for \"let's eat rats together.\" She has 10,000 specific looks."
+  },
+  {
+    "time": "20:13",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I can't go through them all now, but we have a spreadsheet that Nika and I worked out. It's all 10,000 looks."
+  },
+  {
+    "time": "20:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You guys are married, and killing a mom hasn't come up before. Eat rats comes up a lot. A lot."
+  },
+  {
+    "time": "20:24",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's all the time."
+  },
+  {
+    "time": "20:24",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You'd actually be surprised how much eat rats comes up."
+  },
+  {
+    "time": "20:27",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "It's like number 7 that we came up with."
+  },
+  {
+    "time": "20:32",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. It saves so much time."
+  },
+  {
+    "time": "20:35",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Ah, so what is the point of this?"
+  },
+  {
+    "time": "20:39",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Existence. To kill big rat. Damn it."
+  },
+  {
+    "time": "20:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah. I think it's for you guys, kill this bigger rat."
+  },
+  {
+    "time": "20:44",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We can't hear. You brought me in to kill this rat? Bachmann might be able to. I don't know. They came from his hat."
+  },
+  {
+    "time": "20:50",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "No, I can't."
+  },
+  {
+    "time": "20:50",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You're going to kill the big rat. And then whenever you, like, end up passing, like, not that that's going to happen anytime soon or in, like, 59 minutes and 30 seconds. Am I going to die? No, you're not going to die in 59 minutes and 30 seconds. Holy shit, am I going to die?"
+  },
+  {
+    "time": "21:04",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No. I'm going to die. No. What do you know? Nothing. I was freaking out. That's crazy."
+  },
+  {
+    "time": "21:09",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Actually, I know a lot. So. Oh. Yeah. Uh-huh. I'm your god."
+  },
+  {
+    "time": "21:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "But not like in the big G. You're like a big naked god."
+  },
+  {
+    "time": "21:18",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah."
+  },
+  {
+    "time": "21:19",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Where's your tail? Wait, your pussy's still out? This is my skin."
+  },
+  {
+    "time": "21:23",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's all spiky."
+  },
+  {
+    "time": "21:24",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh, because there's no fur on it. Yeah, yeah, yeah. Yeah. You're like, where's the pussy's tail?"
+  },
+  {
+    "time": "21:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Her pussy was out and we denied her her nanites."
+  },
+  {
+    "time": "21:32",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You gotta put the pussy up when the rat's coming home."
+  },
+  {
+    "time": "21:34",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Put the pussy out."
+  },
+  {
+    "time": "21:34",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's not safe."
+  },
+  {
+    "time": "21:35",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Pussy has been put away while the rats are out."
+  },
+  {
+    "time": "21:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's our Big Dog shirt. Yeah, when the rats are out. Pussy goes away when the rats are at play. Let's start a big rat company."
+  },
+  {
+    "time": "21:45",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Big rat. Yeah, big rat. Oh my God."
+  },
+  {
+    "time": "21:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Sorry, that cheese in the trash is mine. I need that."
+  },
+  {
+    "time": "21:52",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I need a big rat shirt."
+  },
+  {
+    "time": "21:53",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I'm writing that down. I'm writing that down."
+  },
+  {
+    "time": "21:55",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's a good idea."
+  },
+  {
+    "time": "21:56",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That was a good one. That's a marketable idea right there."
+  },
+  {
+    "time": "21:59",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, that's a good one."
+  },
+  {
+    "time": "22:01",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I just put in my notes, big rat shirt. We should make one."
+  },
+  {
+    "time": "22:05",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I'm 12 and love your podcast."
+  },
+  {
+    "time": "22:08",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We hear that all the time. Oh no! We're talking about horrible things! Shout out to all the 12-year-olds that listen and now have, like, children."
+  },
+  {
+    "time": "22:15",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "We have a 12-year-old energy."
+  },
+  {
+    "time": "22:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Not gonna lie. Yeah, yeah, yeah, yeah, yeah. Hey, Mr."
+  },
+  {
+    "time": "22:20",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "12-year-old, you got any disposable income? You want to buy a big rat shirt?"
+  },
+  {
+    "time": "22:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Steal your parents' credit card, kid. And this is in character, not in the real world, of course. Okay, locking the door. Thank God. You were 12 when we started the podcast. Yeah, that's right. Just kidding."
+  },
+  {
+    "time": "22:36",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I'm 33. Thank God."
+  },
+  {
+    "time": "22:38",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "So, are we done here or what?"
+  },
+  {
+    "time": "22:41",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "No. So, yeah, you're going to go down there and then whenever you end up passing, you will—"
+  },
+  {
+    "time": "22:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "What the fuck? Why do you keep talking about this?"
+  },
+  {
+    "time": "22:50",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Stop it. You have to stop getting caught up on that part. That is just something—"
+  },
+  {
+    "time": "22:54",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Why do you keep bringing it up? Because I'm trying to understand. Jesus. Oh my God. I'm just trying to tell him to shut up."
+  },
+  {
+    "time": "23:00",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You'll be a hero."
+  },
+  {
+    "time": "23:02",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Or I guess it's R'Oarc. Who's Mika? What the fuck is wrong with us? I'm going to be a hero to who? To other rats that don't exist for long?"
+  },
+  {
+    "time": "23:11",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You don't know how long you exist."
+  },
+  {
+    "time": "23:13",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, right. Yeah. We don't know that. We don't legally know that."
+  },
+  {
+    "time": "23:16",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "That's why I said you're passing at an indeterminate time."
+  },
+  {
+    "time": "23:20",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "All right. It's very dark. It's grim."
+  },
+  {
+    "time": "23:25",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Well, life is grim, friend. Garthal and Garth— Garthuel and Darthuel."
+  },
+  {
+    "time": "23:31",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Darthal. Darthal. Darthal the third one."
+  },
+  {
+    "time": "23:33",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Darthal the silent third one that has probably not been eaten."
+  },
+  {
+    "time": "23:36",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I think he was trying to talk earlier, but there was a lot going on. Yeah, I was trying to eat it."
+  },
+  {
+    "time": "23:40",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "He did not get eaten. Jumped on it. So you're going to help us?"
+  },
+  {
+    "time": "23:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I don't know how I'm going to help you, but I'll try, I guess."
+  },
+  {
+    "time": "23:45",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I don't know. Yeah, whatever feels good. You guys are really jawing. What the fuck are you talking about with this rat? We're getting close to where the big rat is. This is the deepest basement."
+  },
+  {
+    "time": "23:53",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "We've been going down steps for all—"
+  },
+  {
+    "time": "23:55",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "yeah, what's this, Final Fantasy 7 but in reverse? Am I right? Am I right? Yes."
+  },
+  {
+    "time": "24:00",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "So you get to the top of the stairs for the basement, um, that's where the— oh, the guy, the, the, the, the servant— is that right? Is that the right word I want to use?"
+  },
+  {
+    "time": "24:11",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Servant? Man at arms? That's not it. Is—"
+  },
+  {
+    "time": "24:14",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "they show you where it is, and that, that's when you run into Selene's Mom. Mrs. Von Esper."
+  },
+  {
+    "time": "24:22",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Is she hot?"
+  },
+  {
+    "time": "24:23",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Um, Selene, is your mom hot? Uh, yeah, I think my mom's—"
+  },
+  {
+    "time": "24:27",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I think my mother is a handsome woman. Yeah, like she's got a little gray, she's got a little distinguished gray. Oh, um, fuck, hold on. What's her name?"
+  },
+  {
+    "time": "24:36",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Like a Helen Mirren? Like a Glenn Close? No, what's the lady?"
+  },
+  {
+    "time": "24:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I always think she's French, but she's not actually French, but she plays the mom, Megan's mom, in Mad Men. Julia Child? No, I will find it. Julia Ormond. Kind of a Julia Ormond vibe."
+  },
+  {
+    "time": "24:52",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "So I can see a part of her body."
+  },
+  {
+    "time": "24:53",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "She's hot. I had a crush on Julia Ormond like a long time ago because she was in a King Arthur movie. Oh my gosh, she plays— yeah, yeah, I love— I fucking love First Night. Oh my God. Yeah, Julia Ormond."
+  },
+  {
+    "time": "25:08",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "There's a little bit, a little more gray, a little gray in her hair."
+  },
+  {
+    "time": "25:10",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, like a streak, like a—"
+  },
+  {
+    "time": "25:12",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "yeah, yeah, yeah, yeah, yeah, by lightning."
+  },
+  {
+    "time": "25:13",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah. You hear a crash coming from down the stairs as you're walking up."
+  },
+  {
+    "time": "25:21",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And she's like, \"My word!\" Don't mind us or the rats that this woman is yelling at. \"My word!\" What's her voice like? We're going to go down there. Oh wait, you don't want to know, but we're going down there and these are magic. But don't tell anybody. And by magic, lowercase m magic."
+  },
+  {
+    "time": "25:37",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I'm— What's your mom's voice like? I know."
+  },
+  {
+    "time": "25:43",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I mean, she could have a voice like this. I don't know. I was thinking, what's in your—"
+  },
+  {
+    "time": "25:47",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Really sex it up. This is a Ross voice."
+  },
+  {
+    "time": "25:49",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Sexpot."
+  },
+  {
+    "time": "25:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Michael, really sex it up. Oh, yeah."
+  },
+  {
+    "time": "25:51",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "We don't have a Ross in this."
+  },
+  {
+    "time": "25:53",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Or she could have a horrid voice. I don't know."
+  },
+  {
+    "time": "25:56",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Make it like one of those, like, '90s, like, phone sex lines. Like, 1-800-COME-HOG."
+  },
+  {
+    "time": "26:02",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Mm-hmm. Is your hog hard? Are you at a payphone?"
+  },
+  {
+    "time": "26:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Do you have rats in your pants? Is that a rat in your pants or are you happy to see me?"
+  },
+  {
+    "time": "26:15",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Oh. Uh. Mm. Mm. Stop. Oh. Mm. Hi, I'm Jennifer's mom."
+  },
+  {
+    "time": "26:24",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Jennifer's mom!"
+  },
+  {
+    "time": "26:27",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "This is me, Jennifer's mom. It's me, Jennifer's mom."
+  },
+  {
+    "time": "26:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's what she sounds like, yeah."
+  },
+  {
+    "time": "26:33",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, my mom actually sounds like that."
+  },
+  {
+    "time": "26:35",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Uh, who are you? Are you, uh—"
+  },
+  {
+    "time": "26:38",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We're just some, uh, servants that work with the catering company for the wedding."
+  },
+  {
+    "time": "26:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "There seems to be some sort of disturbance downstairs."
+  },
+  {
+    "time": "26:45",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Sorry, Michael, can you remind me? Are we not— or we wanted to hide— we want to hide the existence of the rats from her, right? Because from the general public."
+  },
+  {
+    "time": "26:54",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Okay, for sure."
+  },
+  {
+    "time": "26:56",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "So the guests don't think like, oh my God, this wedding is full of rats."
+  },
+  {
+    "time": "27:01",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "This wine tastes like rat."
+  },
+  {
+    "time": "27:03",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh my God, there's so many rats."
+  },
+  {
+    "time": "27:06",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "There's been an issue in the vintage. The temperature has risen from 58 degrees up to 62. And you know what that means, Miss Selene. Miss Von Esper. Miss Selene."
+  },
+  {
+    "time": "27:16",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Miss Selene's mom."
+  },
+  {
+    "time": "27:17",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Daddy to my daughter."
+  },
+  {
+    "time": "27:20",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's bad, I believe. So bad."
+  },
+  {
+    "time": "27:24",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I knew you knew how bad this was. We probably need you to stay away for the next 59 minutes and 24 seconds."
+  },
+  {
+    "time": "27:31",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Roll persuasion. Or I guess deception."
+  },
+  {
+    "time": "27:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I do think a big rat's body temperature would raise the temp, but Yeah. I don't know how much. I don't really know a lot about the science of the rat."
+  },
+  {
+    "time": "27:44",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "If your wine cellar is filled with the bodies of warm rats, it will make the wine warmer than it should be, for sure."
+  },
+  {
+    "time": "27:51",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I have Lucky and I've never used it. Can I do that? I have 5 Luck points."
+  },
+  {
+    "time": "27:57",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Sounds like Michael's lucky."
+  },
+  {
+    "time": "27:59",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Give myself advantage on the roll. I rolled a 3 and I rolled a 1. So my total— Is 10. Get him out of the way."
+  },
+  {
+    "time": "28:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Get him out of the way."
+  },
+  {
+    "time": "28:10",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's so sad. Ah, well, this actually— if the temperature has risen to those degrees, then I, I must inspect it myself and make sure that everything's on the up and up. I'll vomit."
+  },
+  {
+    "time": "28:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Is that— did you say that? Yeah. No, no, don't worry about it. Don't— what? That's not gonna help. Uh, there's, there's a situation. We were trying to keep it on the DL, but looks like there's a pest problem. We're going to go ahead. That's why we have these 3 things that guy is holding. What? The rats, lady. The rats. These are— well, these are—"
+  },
+  {
+    "time": "28:44",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "these are— these are traps. Holding them out. Yeah. These are trap rats to catch a bigger rat. Yeah. So it's part of it."
+  },
+  {
+    "time": "28:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's a whole—"
+  },
+  {
+    "time": "28:51",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "this one looks like she's going to throw up. They'll disappear in an hour. You can eat the left one."
+  },
+  {
+    "time": "28:57",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, no, we're going to eat the left one. We have dibs on that one."
+  },
+  {
+    "time": "29:02",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, it's the fattest one."
+  },
+  {
+    "time": "29:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, just— I'm sorry, ma'am. It would be like— to do our craft, we need space. And apparently it's a big situation. I'm sorry. You, young woman."
+  },
+  {
+    "time": "29:13",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "She's talking to Selene. Yes, milady. You seem—"
+  },
+  {
+    "time": "29:18",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "have you worked for me before? You seem familiar. Oh, maybe."
+  },
+  {
+    "time": "29:22",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Maybe in the past at some point I— and Selene, like, even though Selene has a different face on right now, she still is like, squirming and isn't really making eye contact. Maybe in the past—"
+  },
+  {
+    "time": "29:34",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Stand up straight!"
+  },
+  {
+    "time": "29:36",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh, yes. Also, her body language is like she's trying to act like a meek servant, but her fists are balled and clenched."
+  },
+  {
+    "time": "29:48",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yes, I don't know what it is, but I got a strange feeling when I look at you."
+  },
+  {
+    "time": "29:55",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Maybe it's the smell. Yeah, it might be a smell. We've been talking about that. You don't smell bad."
+  },
+  {
+    "time": "30:00",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You don't smell bad."
+  },
+  {
+    "time": "30:01",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm so glad."
+  },
+  {
+    "time": "30:02",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Not like that one. Which one? Me?"
+  },
+  {
+    "time": "30:05",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Or she? Is it me? Can I throw up, Michael?"
+  },
+  {
+    "time": "30:10",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "They all look— You all looked like, is it me?"
+  },
+  {
+    "time": "30:14",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Which one of us smells bad? I would just like to throw up."
+  },
+  {
+    "time": "30:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You were all sniffing at each other's eyes."
+  },
+  {
+    "time": "30:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, it's like, fuck it, I'm throwing up. Who gives a fuck? Do you want to? You want to throw up?"
+  },
+  {
+    "time": "30:22",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I don't understand."
+  },
+  {
+    "time": "30:22",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, because at this point I've been dry heaving for like 20 seconds and I would just like to and feel better at this point."
+  },
+  {
+    "time": "30:30",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "What the heck? Stop doing that. I'm going to kick her down the stairs."
+  },
+  {
+    "time": "30:34",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "What is this? What end? Yeah, I mean, barf all you want. Okay."
+  },
+  {
+    "time": "30:38",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "R'Oarc just does one and then she's good. One? Yeah, just one. One? One throw up."
+  },
+  {
+    "time": "30:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Numerical barf? Yeah."
+  },
+  {
+    "time": "30:45",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Well, like, you know, well, because like—"
+  },
+  {
+    "time": "30:47",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Singular barf."
+  },
+  {
+    "time": "30:48",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah. Okay. Just a little barf."
+  },
+  {
+    "time": "30:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Why is she so good at that? We need to have a very special episode."
+  },
+  {
+    "time": "30:52",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You just go, \"Bleh!\" And then, like, stuff comes out, and that's it?"
+  },
+  {
+    "time": "30:55",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, and then she feels better. And it stops? Yeah, because she's like, \"Okay, why is this person throwing up over here? Well, I'm gonna throw up and then just be done with it. If I don't throw up, then it's just weird. She's gonna be like, 'What, were you faking it this whole time?'\" So, like, you have to commit to the bit and finish through, like— This bitch is faking throwing up!"
+  },
+  {
+    "time": "31:12",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, I guess that's true. I guess that's true from a certain point of view. That's what you said is true. I guess our confusion is why you started it and why you didn't stop doing it and so forth and so on, I think, is where our confusion and fear really is coming from."
+  },
+  {
+    "time": "31:33",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Felt right."
+  },
+  {
+    "time": "31:34",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That being said, Selene's mom was like, \"Ah, gross!\" Good idea."
+  },
+  {
+    "time": "31:40",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Nice job, actually."
+  },
+  {
+    "time": "31:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "We've got it from here."
+  },
+  {
+    "time": "31:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Milady? Oh, you go ahead, take care of this and please clean up."
+  },
+  {
+    "time": "31:47",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, we'll do that. Okay, well, I guess I look around and make sure no one is around, but can I do, like, Prestidigitation to clean up the barf? Yeah. Clean or soil. Yeah, I can instantaneously clean or soil an object. The ground. The ground is an object. The ground is an object. I suppose. So I wait. I, like, look around and make sure no one's looking at me, and I bring out the Prestidigitation. Clean up the barf."
+  },
+  {
+    "time": "32:09",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's just like that scene in Cinderella. Exactly. The things are going around and—"
+  },
+  {
+    "time": "32:13",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. There's puke?"
+  },
+  {
+    "time": "32:15",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Well, it's like floating and it's like cleaning up."
+  },
+  {
+    "time": "32:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. Yeah. It's not like that. It's not, sorry. It's not like that."
+  },
+  {
+    "time": "32:19",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's exactly like that."
+  },
+  {
+    "time": "32:20",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's not like that at all. It's just like that. That's too much whimsy."
+  },
+  {
+    "time": "32:24",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Less whimsy with the barf."
+  },
+  {
+    "time": "32:26",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Well, okay, fine. Minus it's like, I don't know, flails cleaning up skeleton bones."
+  },
+  {
+    "time": "32:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, it's light."
+  },
+  {
+    "time": "32:32",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's just light. Yeah, I guess it's just kind of— because I guess I was like pretty good, like, mage hand."
+  },
+  {
+    "time": "32:36",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You invented nanites, but for magic. You made little guys that came out that are much larger than nanites. You keep inventing nanites."
+  },
+  {
+    "time": "32:44",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "They're nanites, but it's actually like little beetles. It's like little beetles."
+  },
+  {
+    "time": "32:46",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, that's fine."
+  },
+  {
+    "time": "32:47",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Teeny tiny ones. I don't know what the fuck is happening, but I'm gonna go down these stairs now."
+  },
+  {
+    "time": "32:52",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, it's rat time."
+  },
+  {
+    "time": "32:53",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Let's go. Yeah. All right. Yeah, Selene's mom runs off and, uh, you guys head down the stairs. You hear, um, you smell wine. You hear something smash. Oh, down below."
+  },
+  {
+    "time": "33:05",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "How do I smell wine? Hell down here. That makes makes sense. It's rampaging. Okay, he's gonna drink all the wine and be fucked up. That might be easier."
+  },
+  {
+    "time": "33:14",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Like when it was like, what was it, a raccoon like broke in and ate like all the donuts and was like, yeah, dying. It's like that, but the rat's just getting fucking wasted on barrels of wine. Yes, that's a cool rat."
+  },
+  {
+    "time": "33:25",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "He'd be easier to— unless he's a monk, then this might be fucked. If he's—"
+  },
+  {
+    "time": "33:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "oh, he's Master Splinter."
+  },
+  {
+    "time": "33:31",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh yes, could be."
+  },
+  {
+    "time": "33:33",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "All right, Michael. We head down."
+  },
+  {
+    "time": "33:36",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You head down and glass crunches beneath your boots as you step down into the wine cellar. Several of the wine shelves have been knocked over. There's red wine splashed all over the ground."
+  },
+  {
+    "time": "33:50",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "What kind? Red. Don't answer that."
+  },
+  {
+    "time": "33:53",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah. A Montiano? That was a vocal step. Yeah."
+  },
+  {
+    "time": "33:59",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "And then you see a really big rat."
+  },
+  {
+    "time": "34:01",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh my God, he is a big rat. That's crazy."
+  },
+  {
+    "time": "34:03",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You're like, look at that. It's a giant rat. And then an even bigger foot steps on that rat."
+  },
+  {
+    "time": "34:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "What? Is it a rat foot?"
+  },
+  {
+    "time": "34:12",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It appears to be a construct of some kind. It looks— it is probably big dog size."
+  },
+  {
+    "time": "34:22",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Big dog. Okay. Okay. All right. All right. I'm listening. I'm leaning forward."
+  },
+  {
+    "time": "34:26",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "My ears perked up."
+  },
+  {
+    "time": "34:27",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "But a bit long. It has clearly burrowed up through the ground and wall. And it has big diggy-looking hands and it's— Oh, like a mole? Like a mole? Yeah, and its nose is like two big grindy things. Oh! Oh, wow, that's fun. And it doesn't look like it has eyes necessarily. It doesn't need them. Doesn't need them. And it is covered in sort of metal and theonite and it looks like one of those guard beasts that has— Yeah. But it seems to have gone awry. Oh, fuck."
+  },
+  {
+    "time": "35:00",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Shit. A guard beast, meaning there's probably something inside of it?"
+  },
+  {
+    "time": "35:04",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Probably. Like a baby rat."
+  },
+  {
+    "time": "35:05",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Well, I was probably a mole."
+  },
+  {
+    "time": "35:06",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "A baby mole. Probably a big— Yeah, baby mole. Baby moles are fucking gross, so."
+  },
+  {
+    "time": "35:09",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "They're kind of gross."
+  },
+  {
+    "time": "35:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I mean, how are we going to bash this thing and protect the wine?"
+  },
+  {
+    "time": "35:14",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "We have to stop it. Hit it with the big rat."
+  },
+  {
+    "time": "35:16",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Well, we got these 3 rats still. Yeah. Yeah."
+  },
+  {
+    "time": "35:18",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's their time to become heroes."
+  },
+  {
+    "time": "35:20",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I don't know if they're going to stop this guy."
+  },
+  {
+    "time": "35:22",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I look at them and I give them the look."
+  },
+  {
+    "time": "35:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I take out 3 small cigarettes and I give it to them."
+  },
+  {
+    "time": "35:27",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You just give them a cigarette before they die?"
+  },
+  {
+    "time": "35:30",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Tiny little rat cigarettes."
+  },
+  {
+    "time": "35:32",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "They look so cool. Thanks for the smoke, buddy, but, uh, what is this?"
+  },
+  {
+    "time": "35:37",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "This is my last cigarette, is it?"
+  },
+  {
+    "time": "35:39",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "No, no, you're good. Many more."
+  },
+  {
+    "time": "35:41",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I'll grab all three of them by the tail and just chuck them at this thing."
+  },
+  {
+    "time": "35:45",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Hey, we get to smoke their whole cigarette!"
+  },
+  {
+    "time": "35:50",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Well, three tiny cigarettes are just spinning midair before they drop to the ground."
+  },
+  {
+    "time": "35:55",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I bet it looks sick."
+  },
+  {
+    "time": "35:56",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Roll, uh, to hit."
+  },
+  {
+    "time": "35:58",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's like a rat shuriken that's on fire."
+  },
+  {
+    "time": "36:00",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Kind of a Rat King shuriken."
+  },
+  {
+    "time": "36:03",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "20. Dirty 20."
+  },
+  {
+    "time": "36:04",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Wow. Yeah, you hit with all 3 rats."
+  },
+  {
+    "time": "36:10",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "How much damage do they do?"
+  },
+  {
+    "time": "36:11",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Do they do any damage at all?"
+  },
+  {
+    "time": "36:14",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "They have cigarettes. And on we."
+  },
+  {
+    "time": "36:18",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I think it's probably like 1 to 2 damage each. Yeah, that sounds correct."
+  },
+  {
+    "time": "36:24",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, that sounds really fair. Should I roll a two-sided die?"
+  },
+  {
+    "time": "36:28",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, you can flip a coin, I guess."
+  },
+  {
+    "time": "36:29",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Oh, is that— Yeah, that's what that is."
+  },
+  {
+    "time": "36:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I guess that's what it is."
+  },
+  {
+    "time": "36:33",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I don't have a coin. I'll just do odds or evens. Wait, which one is the— Which one is 1? Which one's 2? Probably 1. Odds are— Yeah, odds are low. 2 is high. Yeah, yeah, evens. So it's 2. They do 2 damage each."
+  },
+  {
+    "time": "36:46",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, that's sick. Oh, that's— That's really good."
+  },
+  {
+    "time": "36:48",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Sick damage!"
+  },
+  {
+    "time": "36:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Damn you, rats."
+  },
+  {
+    "time": "36:49",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Do they survive, though? Yeah, how much damage do they take?"
+  },
+  {
+    "time": "36:51",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Is he dead?"
+  },
+  {
+    "time": "36:52",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "They also take the same amount of damage, killing them. No!"
+  },
+  {
+    "time": "36:57",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That makes sense. You know what? That makes sense. Fine, rats."
+  },
+  {
+    "time": "36:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That does make sense. And that's fair, Michael, actually."
+  },
+  {
+    "time": "37:01",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Alright, we need to wait until dawn so I can get another 3 rats."
+  },
+  {
+    "time": "37:06",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No."
+  },
+  {
+    "time": "37:06",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "They're sailing off like the elves do in Lord of the Rings."
+  },
+  {
+    "time": "37:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Is that why you summoned rats? Just to throw them at whatever we're going to fight?"
+  },
+  {
+    "time": "37:13",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I just thought of it now."
+  },
+  {
+    "time": "37:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That was cruel."
+  },
+  {
+    "time": "37:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "They didn't even get to smoke their cigarettes."
+  },
+  {
+    "time": "37:17",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "They were going to die anyway. They don't exist."
+  },
+  {
+    "time": "37:19",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I guess you're right."
+  },
+  {
+    "time": "37:20",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I'm sorry. The creature's eyes turn red and it looks like it wants to fight you. Everyone roll initiative. It's good that we wasted our surprise attack around."
+  },
+  {
+    "time": "37:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "With rats!"
+  },
+  {
+    "time": "37:30",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Rats at him. Okay, this would have been more helpful last time I rolled, but I got an nat 20. Nice! Hey, go first! Which is like a 21. No, I won't be going first though, that's the thing."
+  },
+  {
+    "time": "37:42",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, screw Selene. Yeah, probably not. Yeah, I was like, \"Screetcher Selene.\" I'll see you guys tomorrow. I got a 19. I got a 19."
+  },
+  {
+    "time": "37:50",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Dang. I got 26. Yeah, exactly."
+  },
+  {
+    "time": "37:53",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "The rogue's always getting like Who knows what?"
+  },
+  {
+    "time": "37:56",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I mean, we don't know that it's from my rogue levels. It could be from—"
+  },
+  {
+    "time": "37:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's from your rogue levels. Really?"
+  },
+  {
+    "time": "38:00",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "It could be from any of my levels."
+  },
+  {
+    "time": "38:01",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "D&D Beyond, like, your computer would be loud as hell when you load your character sheet."
+  },
+  {
+    "time": "38:06",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It is shy."
+  },
+  {
+    "time": "38:07",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I don't know what to tell. Why does he have so much wisdom?"
+  },
+  {
+    "time": "38:11",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I'm the real reason that RAM prices have skyrocketed. Yeah, yeah."
+  },
+  {
+    "time": "38:14",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I'm just trying to understand your character sheet. You killed Project Sigils."
+  },
+  {
+    "time": "38:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Like, this guy keeps loading in and fucking it up."
+  },
+  {
+    "time": "38:22",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Alright, so, Scratch, you're up first."
+  },
+  {
+    "time": "38:26",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's you now that you killed these rats."
+  },
+  {
+    "time": "38:28",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, you're the rat guy. Yeah."
+  },
+  {
+    "time": "38:30",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's you. Yeah, when you got the rats out, you're Scratch."
+  },
+  {
+    "time": "38:32",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Have you been a rat before? You've not been a rat, man."
+  },
+  {
+    "time": "38:34",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I haven't been a rat."
+  },
+  {
+    "time": "38:36",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You should be a rat!"
+  },
+  {
+    "time": "38:36",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh my God."
+  },
+  {
+    "time": "38:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Well, squirrel, it's kind of like a rat."
+  },
+  {
+    "time": "38:39",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Considering how much your wife loves rats, I think you guys could really get, like, a rat, like, synergy going on. I'm the rat man."
+  },
+  {
+    "time": "38:47",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yes! What if we did that at night? Oh my God. What? Like, like on nights whenever, like, you're not doing— I put cheese in my pussy!"
+  },
+  {
+    "time": "38:56",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "And it's gonna snap on you like a trap! I put a piece of American cheese. What? Yeah, because you put the cheese in the pussy and the cheese is a trap. The pussy is a trap."
+  },
+  {
+    "time": "39:10",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I mean, yeah, that does make logical sense."
+  },
+  {
+    "time": "39:13",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "But like, why would you want to hurt your— Because he likes it. Yeah. I'm not on your level, freak."
+  },
+  {
+    "time": "39:23",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You don't want your dick to get rat trapped."
+  },
+  {
+    "time": "39:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We're just vamping so that Bachmann knows what he wants to do. Now that he doesn't have any rats, he's full of ideas."
+  },
+  {
+    "time": "39:29",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, but you distracted me. Oh, okay."
+  },
+  {
+    "time": "39:32",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You kept talking about pussy rats."
+  },
+  {
+    "time": "39:34",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "No work done."
+  },
+  {
+    "time": "39:35",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Oh my God."
+  },
+  {
+    "time": "39:38",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Everyone be calm. Yeah, it needs to be completely silent. Completely silent."
+  },
+  {
+    "time": "39:42",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Pussy rats. Hell yeah. Hell yeah. I would never title an episode that."
+  },
+  {
+    "time": "39:48",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That'd be so crude."
+  },
+  {
+    "time": "39:49",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I'm going to figure out how to do Arms of the Astral Self for next turn. But for now, I'm going to go up and I'm going to attack it with sword. That's a nat 20."
+  },
+  {
+    "time": "40:06",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, yeah. Let's go."
+  },
+  {
+    "time": "40:07",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Look at you, big dog. He's the big rat now."
+  },
+  {
+    "time": "40:10",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "And then I got my other attack. That's a second nat 20. Shut the fuck up."
+  },
+  {
+    "time": "40:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That is a second nat 20. She sacrificed the 3 rats and this is what happened."
+  },
+  {
+    "time": "40:22",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I'm not brave enough to do a lie that big. This is real. Wow. Wow. If I get a third one, I'm just— I'm going to say a lower number because no one will ever believe me."
+  },
+  {
+    "time": "40:30",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "No, you have to say it because you got 3 rats."
+  },
+  {
+    "time": "40:33",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You got 3 rats. You got 3 nat 20s."
+  },
+  {
+    "time": "40:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's true. Yeah, you sacrificed them to, like, Odin or whatever. We only ever talked to 2 of them."
+  },
+  {
+    "time": "40:40",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, I got a nat 10. Uh, liar. Yeah, so that's a 20 to— that's a 20 to hit on that third attack."
+  },
+  {
+    "time": "40:48",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Does all hit."
+  },
+  {
+    "time": "40:49",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I gotta do the math on how many d6s I get now. This is kind of wild."
+  },
+  {
+    "time": "40:53",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Fuck, it's taking so long."
+  },
+  {
+    "time": "40:54",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I crit so rarely, that's what it is. It's like double the hit dice, right?"
+  },
+  {
+    "time": "40:58",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Or the damage. And including sneak—"
+  },
+  {
+    "time": "41:00",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "your sneak attack die too. Nice. Oh my God, this guy's fucked."
+  },
+  {
+    "time": "41:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And whatever else, whatever other weird shit you have most likely does. There's a few things that don't, just to make it confusing."
+  },
+  {
+    "time": "41:10",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, stop looking at a picture of Splinter."
+  },
+  {
+    "time": "41:12",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I was— I was— I literally was like Googling big rat, big rat species, and I was like, oh right, nutrias. They're kind of like a rat and a beaver at the same time."
+  },
+  {
+    "time": "41:21",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Oh yeah, yeah, yeah. Where's that dice?"
+  },
+  {
+    "time": "41:23",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, that was a 6. Fuck yeah."
+  },
+  {
+    "time": "41:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "35. Holy shit. Wow. What?"
+  },
+  {
+    "time": "41:29",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That's it."
+  },
+  {
+    "time": "41:30",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "God, that's a lot."
+  },
+  {
+    "time": "41:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Does he die? That's a lot."
+  },
+  {
+    "time": "41:33",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "What does it look like, Michael?"
+  },
+  {
+    "time": "41:35",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It looks like you slightly injured it."
+  },
+  {
+    "time": "41:38",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Slightly? Slightly? Are you forgetting the 6 damage that I did to it with the rats?"
+  },
+  {
+    "time": "41:43",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "6 rat damage?"
+  },
+  {
+    "time": "41:44",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I did actually forget about that."
+  },
+  {
+    "time": "41:46",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, you better count that."
+  },
+  {
+    "time": "41:48",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, count it, Michael. Sorry. I will. That's a lot of damage. I'm sorry. Thank you. R'Oarc, do you want to go? Yeah."
+  },
+  {
+    "time": "41:55",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I mean, I would love to go. Okay. I want to really just I think I want to punch this rat. Actually, wait, there's no one down here. Can I Eldritch Blast him?"
+  },
+  {
+    "time": "42:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I mean, I think we can down here. Okay. I guess I'll— I guess as long as we'll try to not— I mean, wine's already been broken though, so, you know."
+  },
+  {
+    "time": "42:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Well, yeah, I mean, Eldritch Blast feels like really the safest spell. That's true."
+  },
+  {
+    "time": "42:21",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's like more targeted. Yeah."
+  },
+  {
+    "time": "42:22",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, okay, okay."
+  },
+  {
+    "time": "42:23",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Fireball would work though. I don't—"
+  },
+  {
+    "time": "42:26",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "listen, don't think I'm not tempted. Do it. I'm gonna set this whole cellar on fire. Do it, do it."
+  },
+  {
+    "time": "42:31",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Uh, I got a 21 to hit him with my Eldritch Blast. That does hit. A pip-poo!"
+  },
+  {
+    "time": "42:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Bazinga! Oh, that's a 10."
+  },
+  {
+    "time": "42:39",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I rolled 10. Goddamn. Goddamn. 16, 22, 24."
+  },
+  {
+    "time": "42:47",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "24. Holy shit. Hike Omaha. What? It's a football thing."
+  },
+  {
+    "time": "42:52",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "You wouldn't understand."
+  },
+  {
+    "time": "42:53",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I wouldn't."
+  },
+  {
+    "time": "42:54",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "What kind of NCAA? Are you talking about gridiron again?"
+  },
+  {
+    "time": "42:57",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You talking about college or NFL?"
+  },
+  {
+    "time": "43:00",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Whack."
+  },
+  {
+    "time": "43:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "How much damage did you do? 24."
+  },
+  {
+    "time": "43:05",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Baiko! 24. Very nice."
+  },
+  {
+    "time": "43:07",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Very nice."
+  },
+  {
+    "time": "43:08",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "So much. And that's 24."
+  },
+  {
+    "time": "43:10",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Describe what you did, though."
+  },
+  {
+    "time": "43:12",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, so she comes out and she sees this rat and she takes her place next to her husband. And this is the time they're going to fight. And she has 3 beams of Eldritch Blast that comes out. And so she's going to do it like a little like pew, pew, pew, pew, pew, pew like that. But it's just 3. So it's like pew, pew, pew. And then she looks at him and then she goes, and then she does a wink. And then she says, it has eyes. I'll have rats for you later. Rats. I'll let you get in my rat trap later. It's a mole. I'm talking to Screech."
+  },
+  {
+    "time": "43:52",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh, you're not part of this."
+  },
+  {
+    "time": "43:54",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay. And then that's my turn."
+  },
+  {
+    "time": "43:57",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I'm talking to my husband."
+  },
+  {
+    "time": "43:59",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "And then I look back at my dad and I say, good luck."
+  },
+  {
+    "time": "44:02",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I hope you kill this rat, Papa."
+  },
+  {
+    "time": "44:04",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Okay, so that's— see, that's why I'm confused, because he's— it's still a mole and not a rat."
+  },
+  {
+    "time": "44:09",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Well, okay, okay. But they— we were told big rat."
+  },
+  {
+    "time": "44:12",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. And then it killed the big rat, right?"
+  },
+  {
+    "time": "44:14",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah. But it's like, it's kind of hard for me to pivot."
+  },
+  {
+    "time": "44:16",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's still a rat to us."
+  },
+  {
+    "time": "44:18",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah. How do we know it's not a vole?"
+  },
+  {
+    "time": "44:20",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I have to kill all three of you and find three New friends."
+  },
+  {
+    "time": "44:24",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "If you— Catwise? Catwise? If it's this hard for you to pivot from the big rat to a giant robot mole, I don't know what we're even doing here."
+  },
+  {
+    "time": "44:32",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I just got all psyched up to fight a rat. Same! And a mole is close enough. It is."
+  },
+  {
+    "time": "44:37",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It is also in the—"
+  },
+  {
+    "time": "44:39",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Well, I don't know. It's a rodent. Is it a rodent?"
+  },
+  {
+    "time": "44:40",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah."
+  },
+  {
+    "time": "44:41",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Uh-huh. Okay, fine, whatever."
+  },
+  {
+    "time": "44:43",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's a rat. Rodentia? It has a little star nose, right? Little star nose?"
+  },
+  {
+    "time": "44:47",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, the little star nose. No, it has two fucking drills."
+  },
+  {
+    "time": "44:49",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Some of them are like that, though."
+  },
+  {
+    "time": "44:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Okay, but the drills could look like stars."
+  },
+  {
+    "time": "44:53",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Stars. Yes. The drills do look like stars when they stop spinning."
+  },
+  {
+    "time": "44:56",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, there. See? Well, there you go."
+  },
+  {
+    "time": "44:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "We haven't seen— That's metagaming, Michael. We're not allowed to know that. Unless it stops each time we get to hit."
+  },
+  {
+    "time": "45:04",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "R'Oarc has a 17. I feel like she knows. 17 what? 17 what? Rat knowledge? Intelligence. Oh. You have to roll. Okay, but she— Anika knows that, so."
+  },
+  {
+    "time": "45:15",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's her passive rat knowledge."
+  },
+  {
+    "time": "45:16",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, exactly."
+  },
+  {
+    "time": "45:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "All right, Michael, who's next? Selene's turn. Yay!"
+  },
+  {
+    "time": "45:21",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Okay. I would like to cast Rauðothim's Psychic Lance upon this mole construct."
+  },
+  {
+    "time": "45:30",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Well, this is important that you know it's a mole."
+  },
+  {
+    "time": "45:32",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I'll say that right now. Yeah, I need to know what it is."
+  },
+  {
+    "time": "45:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "If you say \"the rat,\" ain't going to work."
+  },
+  {
+    "time": "45:37",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's right. And yeah, I mean, I don't have to say the name. I don't need to be able to see it or say the name, but I can see it in this case. So that's an INT save. Do we think this mole is smart? I'm going to go with no. But I could be wrong. I don't think so."
+  },
+  {
+    "time": "45:52",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I don't think they're intelligent. Well, they're slightly intelligent. No, they're not."
+  },
+  {
+    "time": "45:56",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Well, it's weird, right?"
+  },
+  {
+    "time": "45:58",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Because it's like the— it's technology grafted onto a husk, so it doesn't have a high intelligence due to that, even though it itself is not smart. The robo part. Much to think about."
+  },
+  {
+    "time": "46:08",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Michael, yeah, it's 20. Okay, yes, it's intelligence. All right, all right, all right. Oh, there's so— oh my God, It's so smart."
+  },
+  {
+    "time": "46:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Stop it. What? What? Stop saying that."
+  },
+  {
+    "time": "46:19",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It's stupid. Not really."
+  },
+  {
+    "time": "46:21",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It's got an average intelligence at best."
+  },
+  {
+    "time": "46:23",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Same. 18 though. How's that roll?"
+  },
+  {
+    "time": "46:26",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Not good enough. Stop. It's good because you had to do a 20. It's a very high challenge. Your DC is 20 now?"
+  },
+  {
+    "time": "46:33",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Damn."
+  },
+  {
+    "time": "46:34",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's so high. Wait, my DC is 20. That's cool. Yes. Forgot about that. Insane. I love level 13."
+  },
+  {
+    "time": "46:38",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That is 22 psychic damage upon it."
+  },
+  {
+    "time": "46:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Jesus. Okay, fine. Yeah. God, you guys are being so mean. What does it look like?"
+  },
+  {
+    "time": "46:48",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "No. What? Come on, Michael."
+  },
+  {
+    "time": "46:51",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Let's say— again, I do forget that the Ralph psychic lance comes out of my forehead. It's not from my hands, so I just like— I just T-pose out of nowhere, like, goes right out."
+  },
+  {
+    "time": "47:02",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Is this another spell we need to like make up a guy? Like, it's Sven's psychic lance, don't sue."
+  },
+  {
+    "time": "47:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh yeah, yeah, maybe it's Ralph's psychic lance. Yeah. We love Ralph's psychic glance."
+  },
+  {
+    "time": "47:16",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Right off root 4."
+  },
+  {
+    "time": "47:17",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "But yeah, it goes, it hits it right in his damn little mole nose. Cool. Damn. And, uh, I'll try to shove it. Why not? Why not?"
+  },
+  {
+    "time": "47:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Where'd all these spells come from?"
+  },
+  {
+    "time": "47:30",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's a strength save. Shove its ass. I shove it 5 feet back."
+  },
+  {
+    "time": "47:34",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Oh man. Oh man."
+  },
+  {
+    "time": "47:37",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "This guy's in trouble now."
+  },
+  {
+    "time": "47:39",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Okay, so it dives into the ground. Oh, hey, it's running. And it goes right under the ground and swims through it like it was water. Oh, wow. And it goes underneath you guys. Oh, no. And it pops up right in the middle of you. Ah! And it attempts to grind up Selene. Grind up me. Yeah."
+  },
+  {
+    "time": "48:05",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Why would you do that?"
+  },
+  {
+    "time": "48:06",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That is barely cocked, but I'm going to say it's cocked because it was a 1. Okay."
+  },
+  {
+    "time": "48:11",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It was not, Michael."
+  },
+  {
+    "time": "48:12",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Take the roll. Okay. 13 to hit. Does that hit Selene?"
+  },
+  {
+    "time": "48:19",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "No, it doesn't, actually. For once."
+  },
+  {
+    "time": "48:21",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It's not good for me because I really can't do anything else."
+  },
+  {
+    "time": "48:26",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, you did great, Michael."
+  },
+  {
+    "time": "48:27",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I know, it's great."
+  },
+  {
+    "time": "48:29",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "It did such a good job. It did everything it could."
+  },
+  {
+    "time": "48:31",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "No, you did great. Stop it. You're a patron. I'm so scared of it. Stop it. No, I mean. Stop, you guys. It's Chuck's turn."
+  },
+  {
+    "time": "48:37",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Go on, Chuck. Yeah, it wasn't a lot that happened there, and— He tried."
+  },
+  {
+    "time": "48:42",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's having a tough time."
+  },
+  {
+    "time": "48:43",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "He went underground. Yeah. It's been hit by 3 rats."
+  },
+  {
+    "time": "48:47",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It's been hit with a psychic lance. Ralph's psychic lance. Yeah. It's— a lot of things have been hit upon it."
+  },
+  {
+    "time": "48:54",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's had a hard day. Its body."
+  },
+  {
+    "time": "48:55",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, okay, it's been tough."
+  },
+  {
+    "time": "48:56",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, it's been a tough day. I'm going to cast Inflict Wounds on it. D'oh. One of my rare spells I get to cast. I don't want wounds."
+  },
+  {
+    "time": "49:03",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "What? Tough around here?"
+  },
+  {
+    "time": "49:06",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Ah, Michael, can I— well, actually, a 15 to hit. To hit."
+  },
+  {
+    "time": "49:11",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I don't think that's enough to hit its armored class."
+  },
+  {
+    "time": "49:14",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I don't love you. That's okay though. Sorry. What else can I do though? Sorry, I'm like your mole."
+  },
+  {
+    "time": "49:22",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Useless. Get +2, I guess that would help. Can you do that? Can I do that?"
+  },
+  {
+    "time": "49:30",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Do you have Flash of Genius or whatever the fuck it's called? Nika? I do."
+  },
+  {
+    "time": "49:32",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, you can have it. Give it to me. It's +3. Take it."
+  },
+  {
+    "time": "49:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah, Michael."
+  },
+  {
+    "time": "49:37",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Michael, you look like an idiot."
+  },
+  {
+    "time": "49:40",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That hits then. Yay! Woo! 4 to 10. My father never misses."
+  },
+  {
+    "time": "49:46",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Thank you, Nika."
+  },
+  {
+    "time": "49:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And thank you for being Johnny on the gun. 20. 20 necrotic damage, Michael DiMauro, as I touch it and shoot out yucky energy into it. Okay. All right. Then I'll use my fun little hobgoblin power to give Screeetch advantage and to give us some temporary hit points. Ooh."
+  },
+  {
+    "time": "50:11",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Okay, you do notice that after you hit it, it sparks start coming out of its central core. Oh. And its eyes get all crackly and extra red and it's like, There's like a noise."
+  },
+  {
+    "time": "50:27",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, it's intimidating. It's enraged phase."
+  },
+  {
+    "time": "50:29",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Phase 2, phase 2."
+  },
+  {
+    "time": "50:31",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "All right, get ready. Save your cooldowns. Bachmann, we each get 11 temp HP."
+  },
+  {
+    "time": "50:36",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That's so crazy. I know, isn't that crazy?"
+  },
+  {
+    "time": "50:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You have advantage on your next attack roll."
+  },
+  {
+    "time": "50:42",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "There's like a high-pitched whine and it's getting higher and higher."
+  },
+  {
+    "time": "50:46",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's like building. I also put my body in between the mole and some of the whine. I don't know. For some reason, I care about property in this instance."
+  },
+  {
+    "time": "50:54",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "That's such an old generation, a dad thing to do."
+  },
+  {
+    "time": "50:57",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I want to be told a good job by a certain father. That's fair."
+  },
+  {
+    "time": "51:01",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "And it is an investment."
+  },
+  {
+    "time": "51:03",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It is an investment for sure. Wine's expensive. Mm-hmm."
+  },
+  {
+    "time": "51:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Scratch."
+  },
+  {
+    "time": "51:08",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I don't like that."
+  },
+  {
+    "time": "51:10",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Sorry. It autocorrected when I typed it, and it says Scratch instead of Screech."
+  },
+  {
+    "time": "51:16",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "When you typed it into your brain?"
+  },
+  {
+    "time": "51:18",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "But Scratch is great because that's like one of the greatest names for the devil. Old Scratch."
+  },
+  {
+    "time": "51:24",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Old Scratch, yeah. You're young Scratch."
+  },
+  {
+    "time": "51:26",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You're young Scratch. Yes. Young Master Scratch. The Adventures of Young Scratch."
+  },
+  {
+    "time": "51:32",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Young Scratch."
+  },
+  {
+    "time": "51:33",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Scratchik."
+  },
+  {
+    "time": "51:33",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "If I wanted to make an unarmed attack, would I have to put away a weapon? Is there like an action to like—"
+  },
+  {
+    "time": "51:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's not an action to like drop it."
+  },
+  {
+    "time": "51:41",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, you just drop it."
+  },
+  {
+    "time": "51:42",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Oh yeah, I'll drop it. I'll pick it up later. Okay. So yeah, I'm going to attack with my short sword, which is not a short sword. It's claws."
+  },
+  {
+    "time": "51:50",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "21 to hit. That hits. Okay, okay."
+  },
+  {
+    "time": "51:53",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I'll use my bonus action to do Flurry of Blows. So I'm gonna drop my sword and just punch it in its mouth."
+  },
+  {
+    "time": "52:03",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Hell yeah, punch the fuck out of it. Oh my gosh, fun."
+  },
+  {
+    "time": "52:07",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "So you slice it and then punch it?"
+  },
+  {
+    "time": "52:09",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, I've just never spent a Focus Point, so I feel like I probably should. Yeah, yeah, spend one, spend one to hit it twice."
+  },
+  {
+    "time": "52:15",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Wait, are you a monk? Partially."
+  },
+  {
+    "time": "52:17",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah. On my mother's side."
+  },
+  {
+    "time": "52:18",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Michael, he's a lot of things. Since when?"
+  },
+  {
+    "time": "52:20",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "This was 2 levels ago, right?"
+  },
+  {
+    "time": "52:22",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "No, I'm Monk 3 right now. Hmm. Oh. I'm Rogue 4, Fighter 2, Monk 3, Ranger 4. I don't understand why we keep forgetting this. It's pretty straightforward. That is going to be 20 to hit."
+  },
+  {
+    "time": "52:34",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. I think you can, if you have one hand open, you can flurry of blows it."
+  },
+  {
+    "time": "52:40",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "That was my understanding too. Yeah, I'm punching with the same hand."
+  },
+  {
+    "time": "52:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "What about flurry of kicks, says the chat."
+  },
+  {
+    "time": "52:45",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "What about flurry of stabs?"
+  },
+  {
+    "time": "52:46",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I don't want to say who said it."
+  },
+  {
+    "time": "52:48",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Michael, I saw that and I was going to ask, would you allow kicks instead of punches?"
+  },
+  {
+    "time": "52:54",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I think legally, probably-ish. I don't give a shit."
+  },
+  {
+    "time": "52:57",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I feel like a blow can come from a leg."
+  },
+  {
+    "time": "52:59",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's unarmed strikes. Yeah. Right, a foot."
+  },
+  {
+    "time": "53:02",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah. What's more unarmed than a leg?"
+  },
+  {
+    "time": "53:04",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's very true. That's so true."
+  },
+  {
+    "time": "53:13",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Well, that second hit is an 11, Michael."
+  },
+  {
+    "time": "53:17",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "11 misses. Oh my God. Suck. All right. Well, all that for nothing."
+  },
+  {
+    "time": "53:21",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You kick into the air."
+  },
+  {
+    "time": "53:22",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Not all of it. I did two unarmed strikes. The first one hit."
+  },
+  {
+    "time": "53:25",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Okay. Okay."
+  },
+  {
+    "time": "53:26",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Viper Alistair says headbutt him. And the idea of headbutting a robot, like, get fucked. Like, I'm dead. Oh, no. I hit the drills. I came home with a concussion. Tell my wife I love her."
+  },
+  {
+    "time": "53:36",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, it's 15, Michael. Great roll."
+  },
+  {
+    "time": "53:38",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Not my best work. All right, great. Are you done?"
+  },
+  {
+    "time": "53:41",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Mm-hmm."
+  },
+  {
+    "time": "53:42",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "R'Oarc. Okay."
+  },
+  {
+    "time": "53:44",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You're up. This thing is smoking and it sounds like it's ticking. What? It's got energy popping and sparking out of it and its core is vibrating."
+  },
+  {
+    "time": "53:57",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "So I should get right up next to it, give it a lick. Blech. And punch it. Shocked you? I'm going to do again an Eldritch Blast. 'cause it worked well last time and I can do it from a ways away. I rolled a 14 again, so I got a 21. That hits. Thank you so much, Michael. Wait a minute. It hits with 3 bolts, but do I have to roll each time or does it hit?"
+  },
+  {
+    "time": "54:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "For Eldritch Blast, you do. Okay, sorry. 'Cause you can choose different targets if you want."
+  },
+  {
+    "time": "54:29",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Mm, okay, so I didn't do that, Michael, and I definitely got 2. I rolled the damage for 3. Hits. So, um, why don't you see if you actually hit 3 times? Well, I'm gonna do that for this one, but I just wanted to be honest with you about the last one."
+  },
+  {
+    "time": "54:43",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Oh, you mean the first time?"
+  },
+  {
+    "time": "54:45",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, the first time, because I'm sure someone will listen to it and they'll—"
+  },
+  {
+    "time": "54:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "well, I didn't hear it. Yeah, I heard clunk and then clunk."
+  },
+  {
+    "time": "54:54",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Um, okay, then I got a 15."
+  },
+  {
+    "time": "54:59",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Total?"
+  },
+  {
+    "time": "55:00",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, that misses. Wow. That's fucking rude. Okay, well then I guess the 10 will miss also. So 1."
+  },
+  {
+    "time": "55:07",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "I'm glad I didn't tell you the first time. Jesus. Thank God."
+  },
+  {
+    "time": "55:10",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Jesus. You cheated again. I'm real glad I cheated the first time."
+  },
+  {
+    "time": "55:14",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Thank God we had you actually roll it."
+  },
+  {
+    "time": "55:17",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I got an 11 damage. Okay."
+  },
+  {
+    "time": "55:21",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It like just goes, huh? I don't have feelings, but I do feel embarrassed for you."
+  },
+  {
+    "time": "55:29",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "R'Oarc does look at Screech being 27 different classes and all of these different skills and then, \"What? What?\" It's crazy."
+  },
+  {
+    "time": "55:41",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "You can multiclass. It's easy. I have."
+  },
+  {
+    "time": "55:43",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I have. I think that's actually her problem."
+  },
+  {
+    "time": "55:47",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Exactly."
+  },
+  {
+    "time": "55:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Her stats are all over the fucking place."
+  },
+  {
+    "time": "55:51",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "But that's my turn. That's it."
+  },
+  {
+    "time": "55:53",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Selene. Okay. Don't want to set the cellar on fire."
+  },
+  {
+    "time": "56:00",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Oh, did you incapacitate him with your psychic glance last turn?"
+  },
+  {
+    "time": "56:03",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah. Oh, wait. Uh, yes. So he's prone."
+  },
+  {
+    "time": "56:09",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "That's why he missed his attack. Right."
+  },
+  {
+    "time": "56:10",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Because he was incapacitated."
+  },
+  {
+    "time": "56:13",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "That's right. Right. Right."
+  },
+  {
+    "time": "56:16",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "So does that change with what would hit him based off what I hit him with? Mm-mm. Okay, fine, Michael."
+  },
+  {
+    "time": "56:23",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Okay. I mean, I think I may just, like, psychic lance him again. It's a great spell. Because the other— the only other thing I could think of is to do my Maximilian's earthen grasp. It's like, that doesn't do a lot of damage. And like, I— this— this mole is the master of the earth. I don't think that I can out-mole a mole. You know what I mean? That's just hubris to think I can do that. I better keep just shooting pupa. Pupillar lasers at this guy. That's kind of my zone, fire and pupillar lasers."
+  },
+  {
+    "time": "56:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And the incapacitating aspect of the lance makes it one of the best spells."
+  },
+  {
+    "time": "56:54",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yes, agreed. At our level. Yeah, so okay, well, let's, I'm trying to save my spell slots and not use all my shit up. You don't need them. Okay, I'm gonna do it, I'm gonna cast it at a 4th level again. You don't need them. I might, and that's an intelligence save once again, Michael. Yeah, Michael."
+  },
+  {
+    "time": "57:14",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "20. 9. Oh no, that doesn't get it."
+  },
+  {
+    "time": "57:19",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Does not do it. God damn it. Okay, let's roll 7d6 again."
+  },
+  {
+    "time": "57:25",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You can tell me this guy's incapacitated again."
+  },
+  {
+    "time": "57:28",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, he's incapacitated again, and he gets hit this time. We'll never say it. Yeah, 23 psychic damage is also upon him."
+  },
+  {
+    "time": "57:34",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "God damn, fuck me."
+  },
+  {
+    "time": "57:35",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "That's a lot. I'm just— again, T-pose. It comes out like it's like skinny, almost like meow."
+  },
+  {
+    "time": "57:45",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Yeah, it just vibrates and shudders on its turn, I guess, because it's incapacitated. Nice job. I'm Chuck. You're up."
+  },
+  {
+    "time": "57:54",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Okay, I'm up."
+  },
+  {
+    "time": "57:55",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "This thing looks rough."
+  },
+  {
+    "time": "57:57",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It looks rough. Thanks, God. I'm Chuck. It's time to fuck. I'm going to have sex with them all. Let's praise the Lord and be all right. I'm going to Inflict Wounds again, Michael DiMauro. Okay. That's my friend, Screetch. 24. Hits. Yes! You touch him. Yeah, I'm shooting so much spooky anti-life juice into this mole. I don't know why I upcast this one when it's clearly fucked up, but—"
+  },
+  {
+    "time": "58:34",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Here we go again on my own."
+  },
+  {
+    "time": "58:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "37."
+  },
+  {
+    "time": "58:40",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Oh my God, 35. What the fuck? To hit?"
+  },
+  {
+    "time": "58:44",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, I— that was 24 to hit. Just kidding. I'm kidding."
+  },
+  {
+    "time": "58:49",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Michael, Michael, what does it look like when you kill it?"
+  },
+  {
+    "time": "58:53",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm just like shooting so much negative necrotic anti-life energy into it, and then probably the only thing alive inside of it being the baby mole, I presume, uh, just pops or something."
+  },
+  {
+    "time": "59:06",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "You hear, you hear a pop on the inside."
+  },
+  {
+    "time": "59:08",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "It goes scanners mode."
+  },
+  {
+    "time": "59:08",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Ew. You hear a pop and sizzle."
+  },
+  {
+    "time": "59:10",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Ew, I think I popped the thing inside of it."
+  },
+  {
+    "time": "59:13",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "And the whine, the high-pitched whining stops."
+  },
+  {
+    "time": "59:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "And just in case, I want to push it down one of the holes it made."
+  },
+  {
+    "time": "59:21",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yeah, we got to push it down in there. Put a big rock on top of it."
+  },
+  {
+    "time": "59:23",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "I want to slurp down one of those dead rats."
+  },
+  {
+    "time": "59:25",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "They're gone. There's just one big, large dead rat, though. You can eat that. You can eat one large dead rat."
+  },
+  {
+    "time": "59:31",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Doesn't change that I want to."
+  },
+  {
+    "time": "59:34",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It is one of them. That's true."
+  },
+  {
+    "time": "59:36",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "They look so juicy. Michael, I write a note. What? How long has it been since the rats were here? I.e., how long can it be till we catch— Oh, the spell is the next day, right?"
+  },
+  {
+    "time": "59:46",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "It's once per day."
+  },
+  {
+    "time": "59:47",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "It's at dawn. It's at dawn specifically. New rats at dawn."
+  },
+  {
+    "time": "59:50",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Okay. Yeah. And it's about 4:00 PM right now."
+  },
+  {
+    "time": "59:53",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, Michael, I would like to set an alarm for dawn."
+  },
+  {
+    "time": "59:57",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "On what? His nanites."
+  },
+  {
+    "time": "59:58",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Hey, Michael, set an alarm for dawn tomorrow."
+  },
+  {
+    "time": "01:00:02",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "She's asking, like, she wants a wake-up call, like in a hotel."
+  },
+  {
+    "time": "01:00:05",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. Well, in this case, the wake-up call is Scratch throwing a rat at you."
+  },
+  {
+    "time": "01:00:10",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Stop saying Scratch."
+  },
+  {
+    "time": "01:00:12",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Okay, y'all, I really need to go get that bell. I think I'm going to get another warning slip if I don't go get it."
+  },
+  {
+    "time": "01:00:19",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "What bell?"
+  },
+  {
+    "time": "01:00:21",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "The one in the town center. Let me open up the showender. It's the OT checkpoint on Lantern Street. I'm gonna get it."
+  },
+  {
+    "time": "01:00:29",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Have you told us about this?"
+  },
+  {
+    "time": "01:00:30",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Yeah, 3 times. But I'm not gonna ring it, even though I said previously I was gonna ring it. I won't do that because I'm not supposed to."
+  },
+  {
+    "time": "01:00:39",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Okay. All right, well, maybe we'll see that next week."
+  },
+  {
+    "time": "01:00:43",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Yes. Perhaps."
+  },
+  {
+    "time": "01:00:44",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "The bell up the stairs. Another. Mayhaps."
+  },
+  {
+    "time": "01:00:47",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's haunting the narrative. Will she ever get to touch the bell? Will I get the bell? The only way that I know to get the bell is to go to dieharddice.com and check out some of their mighty fine wares. We love Die Hard Dice, folks. You hear it every week, you tune it out, you're mad, you hate it, but maybe this week you deserve— you deserve a treat. I'm sure some of you deserve a treat though. Yeah, give in to the capitalistic vices to make yourself feel good. Also get a milkshake too, fuck it. You deserve both. You can do both. Why not? On Tuesday and every single Tuesday, we give away some beautiful Die Hard dice. And if you use the code DRAGONS when you check out, we get 10%. You get 10% off. We get a kissy. And then we get an extra kissy if you get our special dice. Oh, yeah."
+  },
+  {
+    "time": "01:01:39",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Do that. Because if you get any of the dice, you definitely want the Dracona Rita because they are so beautiful."
+  },
+  {
+    "time": "01:01:43",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "They're really good, though, too. You know, they've lasted longer than any dice I have."
+  },
+  {
+    "time": "01:01:48",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I use them all the time. They still look brand new. They're beautiful."
+  },
+  {
+    "time": "01:01:52",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Hell yeah. You're like the kiwi strawberry. Yeah, yeah, yeah. Oh, I don't like fruit milk. Someone in the chat earlier asked about my cantrips. I actually have, like, a lot of cantrips because those are, like, free."
+  },
+  {
+    "time": "01:02:02",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "I mean, obviously free for me."
+  },
+  {
+    "time": "01:02:03",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I have Chill Touch, Firebolt, Mage Hand, Mind Sliver, Prestidigitation, Ray of Frost, and Shocking Grasp. You have Fireball? Firebolt. Firebolt. Bolt. Well, I have Fireball. I have Fireball also. What? But not as a cantrip. I have Firebolt."
+  },
+  {
+    "time": "01:02:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "No, Firebolt. That's why she casts it so much. That's why she casts it so much. I just love fire."
+  },
+  {
+    "time": "01:02:22",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Hey, do you want to get in touch with us? We're on Blue Sky. We're @D&D Podcast. We're also on Instagram @greedingsadventurers. And you can find me on my Patreon where I'm making a video game that we talked about earlier at Thrifty Crafts or on Blue Sky or those other places."
+  },
+  {
+    "time": "01:02:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "You can follow me on Blue Sky and get all the hot updates on projects and so forth."
+  },
+  {
+    "time": "01:02:46",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "@TimLanning. Also, do you have a World of Warcraft guild?"
+  },
+  {
+    "time": "01:02:50",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "I'm being somewhat serious. I'm interested in exploring my raiding options. I got a Restoration Druid. Hit me up. Hit me up. I'm unsure if I want to leave my guild or not, but, you know, might as well ask."
+  },
+  {
+    "time": "01:03:04",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You can explore options. Explore options. Maybe there's a good option out there."
+  },
+  {
+    "time": "01:03:06",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Yeah. Is there drama in the guild? No. That wasn't convincing. No, the drama's me. I don't like some of them."
+  },
+  {
+    "time": "01:03:14",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Oh, yeah."
+  },
+  {
+    "time": "01:03:14",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's not like they're— Yeah. And I can't tell if it's just me being cantankerous because they are annoying, but I don't hang out with a lot of annoying gamers. So maybe I have shorter shoes. Yeah, right. And maybe everyone's like that, right? I don't know."
+  },
+  {
+    "time": "01:03:31",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "You can follow me on Blue Sky @JenniferCheek. And Tim, when's our—"
+  },
+  {
+    "time": "01:03:35",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "when's Trip Fares? I was waiting for you because you wanted to do some updates. Oh, I'm ready. Oh, okay."
+  },
+  {
+    "time": "01:03:42",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "I'm ready to go. So. I feel like, hopefully by the time this is out, sure, we'll have it started."
+  },
+  {
+    "time": "01:03:48",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Sure. Fuck it."
+  },
+  {
+    "time": "01:03:49",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You can find me @neekahoward or @theneekahoward or whatever variation of that. Maybe throw an underscore in there. And if you like naked adults, then you should go look at my naked adult pictures on my pages. If you like it, you know where you can find it. It's in all of my things. Please go look at it and buy her things."
+  },
+  {
+    "time": "01:04:16",
+    "speaker": "Jennifer",
+    "speakerClass": "speaker-jennifer",
+    "text": "Please go look at it."
+  },
+  {
+    "time": "01:04:17",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "Please look at me. Do you like this?"
+  },
+  {
+    "time": "01:04:22",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "Do you like this? You can find me at the Mike Bachmann, just vibing. Where do we see you naked?"
+  },
+  {
+    "time": "01:04:29",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "You doing Game Crimes later? Not tonight."
+  },
+  {
+    "time": "01:04:32",
+    "speaker": "Bachmann",
+    "speakerClass": "speaker-michael",
+    "text": "We're going to do Game Crimes on Monday. Go get a snack, stick around for 24 and a half hours, and then hop into the Game Crimes."
+  },
+  {
+    "time": "01:04:39",
+    "speaker": "Tim",
+    "speakerClass": "speaker-tim",
+    "text": "It's worth it."
+  },
+  {
+    "time": "01:04:42",
+    "speaker": "Nika",
+    "speakerClass": "speaker-nika",
+    "text": "Damn. Okay, cool. Well, didn't get your fill of action and adventure? Well then, in this episode of Greenens Adventures, then check out these other geekly shows like Dear Internet, the D20 Day Show: Wayward Shores, No Page Unturned, and Taverns and Caverns. If you love the work that Vince does on the show, then check out Hikikomori, a podcast of weird and strange stories from Japan. Want to support the show? The best way is to join our Patreon where you get ad-free episodes and so much much more. Join now at patreon.com/dndpodcast. After you finish taking care of your pussy rats, head on over to wherever you listen to podcasts to leave us a 5-star rating and review. New episodes come out every Monday, so go subscribe, get your quest log filled, and get ready for things to get dicey."
+  },
+  {
+    "time": "01:05:22",
+    "speaker": "Michael",
+    "speakerClass": "speaker-michael",
+    "text": "Thank you everybody, until next week, keep it dicey."
+  }
+]
