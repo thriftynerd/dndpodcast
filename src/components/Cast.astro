@@ -114,4 +114,17 @@ const cast = [
     font-weight: 500;
     color: #e8c875;
   }
+
+  /* === Responsive breakpoints === */
+  /* Tablet: drop from 3 to 2 columns when 3-up gets too cramped */
+  @media (max-width: 900px) {
+    .cast { padding: 60px 24px 0; }
+    .cast-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  }
+  /* Phone: drop to a single column. 660px is when 2-up cards get
+     too narrow for the bio + name combination to read well. */
+  @media (max-width: 660px) {
+    .cast-grid { grid-template-columns: 1fr; gap: 14px; }
+    .cast-body { padding: 20px 22px 24px; }
+  }
 </style>
