@@ -1,6 +1,8 @@
 ---
 import type { MentionItem } from '../lib/rss';
 
+const PATREON_URL = 'https://patreon.com/dndpodcast';
+
 interface Props {
   mentions: MentionItem[];
 }
@@ -24,13 +26,14 @@ const { mentions } = Astro.props;
     <div class="side-eyebrow" style="color: var(--gold);">New listener?</div>
     <div class="side-title">600+ episodes is a lot.</div>
     <div class="side-body">Don't try to start with episode 182. We promise it doesn't help. Try our hand-picked entry points.</div>
+    {/* TODO: link to /begin-your-adventure when that page exists */}
     <a class="new-listener-cta" href="#">Begin your adventure →</a>
   </div>
   <div class="side-block">
     <div class="side-eyebrow">Support the show</div>
     <div class="side-title">Become a patron</div>
     <div class="side-body">Tales from the Foaming Tankard, ad-free episodes, monthly outtakes, patron Discord. Tiers from $3/month.</div>
-    <a class="new-listener-cta" style="color: var(--green);" href="#">Join the Patreon →</a>
+    <a class="new-listener-cta" style="color: var(--green);" href={PATREON_URL} target="_blank" rel="noopener">Join the Patreon →</a>
   </div>
 </aside>
 
@@ -57,7 +60,7 @@ const { mentions } = Astro.props;
   .mention-note { display: block; grid-column: 2; font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
 
   .new-listener { background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(151,196,89,0.04)); border-color: rgba(212,175,55,0.25); }
-  .new-listener-cta { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--gold); font-weight: 600; }
+  .new-listener-cta { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--gold); font-weight: 600; text-decoration: none; }
 
   @media (max-width: 1024px) {
     .ep-sidebar { position: static; }

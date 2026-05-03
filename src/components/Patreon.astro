@@ -1,3 +1,7 @@
+---
+const PATREON_URL = 'https://patreon.com/dndpodcast';
+---
+
 <section class="patreon">
   <div class="patreon-inner">
     <div class="tankard-card">
@@ -21,7 +25,7 @@
         <span class="patreon-perk">Patron Discord</span>
       </div>
       <div class="patreon-cta-side">
-        <span class="patreon-cta-btn">Become a patron <span style="opacity:0.7">→</span></span>
+        <a class="patreon-cta-btn" href={PATREON_URL} target="_blank" rel="noopener">Become a patron <span style="opacity:0.7">→</span></a>
         <span class="patreon-stat">Tiers from $3/month. Cancel any time, no hard feelings.</span>
       </div>
     </div>
@@ -48,7 +52,7 @@
   .patreon-perks { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
   .patreon-perk { font-size: 13px; color: #e8c875; padding: 7px 14px; border-radius: 999px; background: rgba(212,175,55,0.08); border: 0.5px solid rgba(212,175,55,0.3); }
   .patreon-cta-side { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
-  .patreon-cta-btn { background: #d4af37; color: #1a1408; padding: 16px 28px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 6px 24px rgba(212,175,55,0.2); }
+  .patreon-cta-btn { background: #d4af37; color: #1a1408; padding: 16px 28px; border-radius: 8px; font-size: 15px; font-weight: 700; cursor: pointer; transition: transform 0.15s, box-shadow 0.15s; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 6px 24px rgba(212,175,55,0.2); text-decoration: none; }
   .patreon-cta-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(212,175,55,0.35); }
   .patreon-stat { font-size: 13px; color: rgba(212,175,55,0.65); font-style: italic; font-family: "Cormorant Garamond", Georgia, serif; }
 

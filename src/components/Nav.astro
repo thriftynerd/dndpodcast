@@ -10,7 +10,9 @@ const isActive = (matchers: string[]) =>
     <img class="brand-mark-img" src="/images/logo-white.png" alt="Greetings, Adventurers!" />
   </a>
   <div class="nav-items">
-    <a href="/#livestream" class="nav-link">Watch</a>
+    {isActive(['/episodes'])
+      ? <span class="active">Episodes</span>
+      : <a href="/episodes" class="nav-link">Episodes</a>}
 
     {isActive(['/cast'])
       ? <span class="active">Cast</span>
