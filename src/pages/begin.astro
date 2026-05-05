@@ -4,15 +4,17 @@ import { loadEpisodes } from '../lib/rss';
 
 const episodes = await loadEpisodes();
 
-// Stats are pulled live from the RSS feed so the page never goes stale.
+// ============== STATS ==============
 const totalEpisodes = episodes.length;
 const totalSeconds = episodes.reduce((sum, ep) => sum + (ep.durationSeconds || 0), 0);
 const totalHours = Math.round(totalSeconds / 3600);
 
-const c2Episodes = episodes.filter((ep) => ep.kind === 'c2');
-const c2Count = c2Episodes.length;
+// TODO: rss.ts classifier is unreliable for kind detection because Acast tags
+// many C1 episodes as `bonus`. Until the classifier is fixed (or the upstream
+// Acast tagging is corrected), we hardcode the C2 count to a sensible value.
+// Last known: C2 Episode 182 ran April 2026.
+const c2Count = 182;
 
-// Spell out the hero number for that headline.
 const numberWord = (n: number): string => {
   const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
   const teens = ['ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen'];
@@ -31,7 +33,7 @@ const numberWord = (n: number): string => {
 };
 const heroCountWord = numberWord(totalEpisodes);
 
-// Episode lookups by slug substring — robust to RSS classifier quirks.
+// ============== EPISODE LOOKUPS ==============
 const findBySlug = (needle: string) =>
   episodes.find((ep) => ep.slug === needle || ep.slug.includes(needle));
 
@@ -40,8 +42,8 @@ const c1First = episodes.find((ep) => ep.kind === 'c1' && ep.episodeNumber === 1
 
 const okayBye = findBySlug('okay-bye');
 const kevimp = findBySlug('sweeties-day');
-// TODO: confirm the actual slug for the Bananas Foster intro episode
-const bananaFoster = findBySlug('bananas-foster') || findBySlug('banana-foster');
+// Bananas Foster intro: bonus-episode-159-monkey-business
+const bananaFoster = findBySlug('monkey-business');
 
 const href = (ep: (typeof episodes)[number] | undefined) =>
   ep ? `/episodes/${ep.slug}` : '/episodes';
@@ -67,7 +69,7 @@ const bananaFosterHref = href(bananaFoster);
       </div>
     </section>
 
-    {/* ============== AUDIO PRIMER (placeholder for now) ============== */}
+    {/* ============== AUDIO PRIMER ============== */}
     <section class="b-primer">
       <div class="b-primer-inner">
         <div class="b-primer-eyebrow">Welcome to Drunkeros</div>
@@ -97,7 +99,7 @@ const bananaFosterHref = href(bananaFoster);
       </div>
     </section>
 
-    {/* ============== PATHS ============== */}
+    {/* ============== PATHS — THREE WAYS IN ============== */}
     <section class="b-paths">
       <div class="b-paths-inner">
         <div class="b-paths-header">
@@ -107,98 +109,153 @@ const bananaFosterHref = href(bananaFoster);
 
         <div class="b-paths-grid">
 
-          {/* PATH 1: MOST START HERE */}
-          <div class="b-path b-path-recommended">
-            <div class="b-path-recommended-flag">Most start here</div>
-            <div class="b-path-num">Path 1</div>
-            <h3 class="b-path-title">Most start here</h3>
-            <p class="b-path-body">
-              Campaign 2 was designed as a clean entry point. A new crew on the other side of the world from Campaign 1, some time later. T'Chuck, Selene, Screetch, and R'Oarc start in the mountain village of Rimeford and find themselves running a resistance against a magic-banning empire.
-            </p>
-            <div class="b-path-meta">
-              <div class="b-path-meta-item">
-                <div class="b-path-meta-num">{c2Count}</div>
-                <div class="b-path-meta-lbl">Episodes</div>
+          {/* ============== PATH 1: CHARACTER SELECT ============== */}
+          <article class="b-path b-path-1">
+            <div class="b-path-1-flag">Most start here</div>
+
+            {/* Character lineup — four full-body portraits */}
+            <div class="b-path-1-roster">
+              <div class="b-roster-character">
+                <div class="b-roster-portrait">
+                  <img src="/images/c2/tchuck.webp" alt="T'Chuck" loading="lazy" />
+                </div>
+                <div class="b-roster-name">T'Chuck</div>
               </div>
-              <div class="b-path-meta-item">
-                <div class="b-path-meta-num">2022</div>
-                <div class="b-path-meta-lbl">Started</div>
+              <div class="b-roster-character">
+                <div class="b-roster-portrait">
+                  <img src="/images/c2/selene.webp" alt="Selene Von Esper" loading="lazy" />
+                </div>
+                <div class="b-roster-name">Selene</div>
               </div>
-              <div class="b-path-meta-item">
-                <div class="b-path-meta-num">Live</div>
-                <div class="b-path-meta-lbl">Status</div>
+              <div class="b-roster-character">
+                <div class="b-roster-portrait">
+                  <img src="/images/c2/screetch.webp" alt="Screetch Echo" loading="lazy" />
+                </div>
+                <div class="b-roster-name">Screetch</div>
+              </div>
+              <div class="b-roster-character">
+                <div class="b-roster-portrait">
+                  <img src="/images/c2/roarc.webp" alt="R'Oarc" loading="lazy" />
+                </div>
+                <div class="b-roster-name">R'Oarc</div>
               </div>
             </div>
-            <a class="b-path-cta" href={c2FirstHref}>
-              <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><polygon points="3,2 3,10 10,6" fill="currentColor"/></svg>
-              Start C2 Episode 1
-            </a>
-          </div>
 
-          {/* PATH 2: THREE SAMPLES */}
-          <div class="b-path">
-            <div class="b-path-num">Path 2</div>
-            <h3 class="b-path-title">Three samples</h3>
-            <p class="b-path-body">
-              Three short, mostly self-contained arcs, picked to show you what kind of show this is.
-            </p>
-            <ul class="b-samples">
-              <li class="b-sample">
-                <div class="b-sample-meta">
-                  <span class="b-sample-tag">2 episodes</span>
-                </div>
-                <a class="b-sample-title" href={bananaFosterHref}>Bananas Foster</a>
-                <p class="b-sample-body">
-                  The PC that was so hateful the DM killed him after two episodes.
-                </p>
-              </li>
-              <li class="b-sample">
-                <div class="b-sample-meta">
-                  <span class="b-sample-tag">2 episodes · Holiday special</span>
-                </div>
-                <a class="b-sample-title" href={kevimpHref}>Sweeties Day &amp; Volcanic Mansion Alone</a>
-                <p class="b-sample-body">
-                  Reverse Home Alone. The party tries to break into the volcanic mansion of a fire-elemental house imp named Kevimp McBallister, who responds by setting elaborate traps and shooting them with a magic BB gun. C1 Episodes 342–343. One reviewer said they almost rear-ended someone laughing.
-                </p>
-              </li>
-              <li class="b-sample">
-                <div class="b-sample-meta">
-                  <span class="b-sample-tag">1 episode</span>
-                </div>
-                <a class="b-sample-title" href={okayByeHref}>"Okay, Bye!"</a>
-                <p class="b-sample-body">
-                  C1 Episode 122. We will not describe what happens.
-                </p>
-              </li>
-            </ul>
-          </div>
+            {/* Title strip overlaid at top of roster */}
+            <div class="b-path-1-strip">
+              <div class="b-path-num">Path 1</div>
+              <h3 class="b-path-1-title">Most start here</h3>
+            </div>
 
-          {/* PATH 3: THE FULL SAGA */}
-          <div class="b-path">
-            <div class="b-path-num">Path 3</div>
-            <h3 class="b-path-title">The full saga</h3>
-            <p class="b-path-body">
-              For the completionists, the truck drivers, and our hyperfixation buddies. Episode one is from 2012, when we were called <em>Drunks and Dragons</em> and rolling 4th edition because 5e wasn't out yet. We switch to 5e around episode 126 but roleplay is roleplay. Some of our best stuff is in the early run!
-            </p>
-            <div class="b-path-meta">
-              <div class="b-path-meta-item">
-                <div class="b-path-meta-num">{totalEpisodes}</div>
-                <div class="b-path-meta-lbl">Episodes</div>
+            {/* Body */}
+            <div class="b-path-1-body">
+              <p class="b-path-body-text">
+                Campaign 2 was designed as a clean entry point. A new crew on the other side of the world from Campaign 1, some time later. They start in the mountain village of Rimeford and find themselves running a resistance against a magic-banning empire.
+              </p>
+              <div class="b-path-meta">
+                <div class="b-path-meta-item">
+                  <div class="b-path-meta-num">{c2Count}</div>
+                  <div class="b-path-meta-lbl">Episodes</div>
+                </div>
+                <div class="b-path-meta-item">
+                  <div class="b-path-meta-num">2022</div>
+                  <div class="b-path-meta-lbl">Started</div>
+                </div>
+                <div class="b-path-meta-item">
+                  <div class="b-path-meta-num">Live</div>
+                  <div class="b-path-meta-lbl">Status</div>
+                </div>
               </div>
-              <div class="b-path-meta-item">
-                <div class="b-path-meta-num">{totalHours}h</div>
-                <div class="b-path-meta-lbl">Run time</div>
+              <a class="b-path-cta" href={c2FirstHref}>
+                <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><polygon points="3,2 3,10 10,6" fill="currentColor"/></svg>
+                Start C2 Episode 1
+              </a>
+            </div>
+          </article>
+
+          {/* ============== PATH 2: THREE POSTERS ============== */}
+          <article class="b-path b-path-2">
+            <div class="b-path-2-header">
+              <div class="b-path-num">Path 2</div>
+              <h3 class="b-path-2-title">Three samples</h3>
+              <p class="b-path-2-sub">
+                Three short, mostly self-contained arcs, picked to show you what kind of show this is.
+              </p>
+            </div>
+
+            <div class="b-path-2-posters">
+              <a class="b-poster" href={bananaFosterHref} style="--poster-bg: #f5d96f;">
+                <div class="b-poster-image" style="background-image: url('/images/begin/sample-banana-foster.jpg');"></div>
+                <div class="b-poster-scrim"></div>
+                <div class="b-poster-content">
+                  <div class="b-poster-tag">2 episodes</div>
+                  <div class="b-poster-title">Bananas Foster</div>
+                  <div class="b-poster-sub">The PC that was so hateful the DM killed him after two episodes.</div>
+                  <div class="b-poster-credit">Art by <a href="https://bridgitconnell.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Bridgit Connell</a></div>
+                </div>
+              </a>
+
+              <a class="b-poster" href={kevimpHref} style="--poster-bg: #1a2620;">
+                <div class="b-poster-image b-poster-image-light" style="background-image: url('/images/begin/sample-kevimp.webp');"></div>
+                <div class="b-poster-scrim"></div>
+                <div class="b-poster-content">
+                  <div class="b-poster-tag">2 episodes · Holiday</div>
+                  <div class="b-poster-title">Sweeties Day &amp; Volcanic Mansion Alone</div>
+                  <div class="b-poster-sub">Reverse Home Alone. The party tries to break into the volcanic mansion of a fire-elemental house imp.</div>
+                  <div class="b-poster-credit">Art by <a href="https://ko-fi.com/killurmonkey" target="_blank" rel="noopener" onclick="event.stopPropagation()">Killurmonkey</a></div>
+                </div>
+              </a>
+
+              <a class="b-poster" href={okayByeHref} style="--poster-bg: #d4c39a;">
+                <div class="b-poster-image" style="background-image: url('/images/begin/sample-okay-bye.jpg');"></div>
+                <div class="b-poster-scrim"></div>
+                <div class="b-poster-content">
+                  <div class="b-poster-tag">1 episode</div>
+                  <div class="b-poster-title">"Okay, Bye!"</div>
+                  <div class="b-poster-sub">C1 Episode 122. We will not describe what happens.</div>
+                  <div class="b-poster-credit">Art by <a href="https://www.dylanekren.com/" target="_blank" rel="noopener" onclick="event.stopPropagation()">Dylan Ekren</a></div>
+                </div>
+              </a>
+            </div>
+          </article>
+
+          {/* ============== PATH 3: CINEMATIC ROSTER ============== */}
+          <article class="b-path b-path-3">
+            <div class="b-path-3-image">
+              <img src="/images/begin/path-3-roster.jpg" alt="A vast roster of characters from twelve years of Drunkeros" loading="lazy" />
+              <div class="b-path-3-image-overlay"></div>
+              <div class="b-path-3-image-credit">Art by <a href="https://ko-fi.com/killurmonkey" target="_blank" rel="noopener">Killurmonkey</a></div>
+            </div>
+            <div class="b-path-3-content">
+              <div class="b-path-3-text">
+                <div class="b-path-num">Path 3</div>
+                <h3 class="b-path-3-title">The full saga</h3>
+                <p class="b-path-body-text">
+                  For the completionists, the truck drivers, and our hyperfixation buddies. Episode one is from 2012, when we were called <em>Drunks and Dragons</em> and rolling 4th edition because 5e wasn't out yet. We switch to 5e around episode 126 but roleplay is roleplay. Some of our best stuff is in the early run.
+                </p>
               </div>
-              <div class="b-path-meta-item">
-                <div class="b-path-meta-num">2012</div>
-                <div class="b-path-meta-lbl">Started</div>
+              <div class="b-path-3-side">
+                <div class="b-path-meta">
+                  <div class="b-path-meta-item">
+                    <div class="b-path-meta-num">{totalEpisodes}</div>
+                    <div class="b-path-meta-lbl">Episodes</div>
+                  </div>
+                  <div class="b-path-meta-item">
+                    <div class="b-path-meta-num">{totalHours}h</div>
+                    <div class="b-path-meta-lbl">Run time</div>
+                  </div>
+                  <div class="b-path-meta-item">
+                    <div class="b-path-meta-num">2012</div>
+                    <div class="b-path-meta-lbl">Started</div>
+                  </div>
+                </div>
+                <a class="b-path-cta b-path-cta-secondary" href={c1FirstHref}>
+                  <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><polygon points="3,2 3,10 10,6" fill="currentColor"/></svg>
+                  Start at episode one
+                </a>
               </div>
             </div>
-            <a class="b-path-cta b-path-cta-secondary" href={c1FirstHref}>
-              <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden="true"><polygon points="3,2 3,10 10,6" fill="currentColor"/></svg>
-              Start at episode one
-            </a>
-          </div>
+          </article>
 
         </div>
       </div>
@@ -243,7 +300,7 @@ const bananaFosterHref = href(bananaFoster);
       <div class="b-final-inner">
         <h2 class="b-final-title">Just listen to one.</h2>
         <p class="b-final-body">
-          Unless you are a coward. 
+          Unless you are a coward.
         </p>
         <div class="b-final-actions">
           <a class="btn-p" href={c2FirstHref}>
@@ -376,56 +433,41 @@ const bananaFosterHref = href(bananaFoster);
     font-weight: 700; color: #f5f0e0;
     letter-spacing: 0.005em; line-height: 1.05;
   }
+
+  /* Asymmetric grid: top row 50/50, bottom row full width */
   .b-paths-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "p1 p2"
+      "p3 p3";
     gap: 18px;
-    align-items: stretch;
   }
+  .b-path-1 { grid-area: p1; }
+  .b-path-2 { grid-area: p2; }
+  .b-path-3 { grid-area: p3; }
+
   .b-path {
     background: var(--surface);
     border-radius: 14px;
     border: 0.5px solid var(--border);
-    padding: 32px 30px;
-    display: flex; flex-direction: column;
     position: relative;
     transition: transform 0.2s, border-color 0.2s;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
   }
   .b-path:hover {
     transform: translateY(-3px);
     border-color: rgba(151,196,89,0.3);
   }
-  .b-path-recommended {
-    border-color: rgba(151,196,89,0.4);
-    background: linear-gradient(180deg, rgba(151,196,89,0.04) 0%, var(--surface) 50%);
-  }
-  .b-path-recommended-flag {
-    position: absolute;
-    top: -10px; left: 24px;
-    background: var(--green); color: #0a0f0c;
-    padding: 4px 12px; border-radius: 999px;
-    font-size: 10px; letter-spacing: 0.18em;
-    font-weight: 700; text-transform: uppercase;
-  }
+
+  /* Shared elements */
   .b-path-num {
     font-family: 'Cinzel', Georgia, serif;
     font-size: 11px; letter-spacing: 0.32em;
     color: var(--gold); font-weight: 600;
-    text-transform: uppercase; margin-bottom: 10px;
-  }
-  .b-path-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 26px; font-weight: 700;
-    color: var(--text); line-height: 1.2;
-    margin-bottom: 14px;
-    letter-spacing: -0.005em;
-  }
-  .b-path-body {
-    font-size: 14.5px; color: var(--text-2);
-    line-height: 1.6; margin-bottom: 22px;
-  }
-  .b-path-body em {
-    color: var(--gold); font-style: italic;
+    text-transform: uppercase;
   }
   .b-path-meta {
     display: grid;
@@ -447,7 +489,6 @@ const bananaFosterHref = href(bananaFoster);
     margin-top: 6px; font-weight: 500; text-transform: uppercase;
   }
   .b-path-cta {
-    margin-top: auto;
     background: var(--green); color: #0a0f0c;
     padding: 13px 18px; border-radius: 8px;
     font-size: 14px; font-weight: 600;
@@ -461,43 +502,323 @@ const bananaFosterHref = href(bananaFoster);
     border: 0.5px solid rgba(212,175,55,0.4);
   }
   .b-path-cta-secondary:hover { background: rgba(212,175,55,0.2); }
+  .b-path-body-text {
+    font-size: 15px; color: var(--text-2);
+    line-height: 1.6; margin-bottom: 22px;
+  }
+  .b-path-body-text em {
+    color: var(--gold); font-style: italic;
+  }
 
-  /* ============== SAMPLES (within Path 2) ============== */
-  .b-samples {
-    list-style: none; padding: 0;
-    margin: 0 0 22px 0;
-    display: flex; flex-direction: column; gap: 18px;
+  /* ============== PATH 1: CHARACTER ROSTER ============== */
+  .b-path-1 {
+    border-color: rgba(151,196,89,0.4);
   }
-  .b-sample {
-    padding-bottom: 18px;
-    border-bottom: 0.5px solid var(--border);
+  .b-path-1-flag {
+    position: absolute;
+    top: 16px; left: 16px;
+    background: var(--green); color: #0a0f0c;
+    padding: 5px 14px; border-radius: 999px;
+    font-size: 10px; letter-spacing: 0.2em;
+    font-weight: 700; text-transform: uppercase;
+    z-index: 5;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   }
-  .b-sample:last-child {
-    border-bottom: none; padding-bottom: 0;
+
+  /* The four-up character roster
+     Pure black background, no internal dividers — characters merge into shared space */
+  .b-path-1-roster {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+    background: #000;
+    aspect-ratio: 3/2;
+    overflow: hidden;
   }
-  .b-sample-meta { margin-bottom: 6px; }
-  .b-sample-tag {
+  .b-roster-character {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .b-roster-character::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.85) 100%);
+    pointer-events: none;
+    z-index: 2;
+  }
+  /* Dividers removed — black backgrounds merge naturally */
+  .b-roster-character + .b-roster-character::after {
+    content: none;
+  }
+  .b-roster-portrait {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .b-roster-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    display: block;
+    transition: transform 0.5s ease;
+  }
+  .b-path-1:hover .b-roster-portrait img {
+    transform: scale(1.04);
+  }
+  .b-roster-name {
+    position: absolute;
+    bottom: 12px; left: 0; right: 0;
+    text-align: center;
+    z-index: 4;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #f5f0e0;
+    letter-spacing: 0.04em;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6);
+  }
+
+  /* Title strip overlaid at top — lighter gradient so character heads show through */
+  .b-path-1-strip {
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    z-index: 4;
+    padding: 56px 30px 30px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.35) 50%, transparent 100%);
+    pointer-events: none;
+  }
+  .b-path-1-strip .b-path-num {
+    margin-bottom: 8px;
+    display: block;
+  }
+  .b-path-1-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(1.7rem, 2.4vw, 2.1rem);
+    font-weight: 700;
+    color: #f5f0e0;
+    letter-spacing: 0.005em;
+    line-height: 1.05;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+    margin: 0;
+  }
+
+  /* Body content below the roster */
+  .b-path-1-body {
+    padding: 28px 30px 30px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  .b-path-1-body .b-path-cta {
+    margin-top: auto;
+  }
+
+  /* ============== PATH 2: THREE POSTERS ============== */
+  .b-path-2-header {
+    padding: 30px 30px 22px;
+  }
+  .b-path-2-header .b-path-num {
+    margin-bottom: 8px;
+    display: block;
+  }
+  .b-path-2-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(1.7rem, 2.4vw, 2.1rem);
+    font-weight: 700;
+    color: #f5f0e0;
+    letter-spacing: 0.005em;
+    line-height: 1.05;
+    margin-bottom: 12px;
+  }
+  .b-path-2-sub {
+    font-size: 14.5px;
+    color: var(--text-2);
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .b-path-2-posters {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 0 16px 16px;
+  }
+
+  .b-poster {
+    position: relative;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 16/9;
+    background: var(--poster-bg, var(--bg-2));
+    transition: transform 0.25s ease;
+  }
+  .b-poster:hover {
+    transform: scale(1.02);
+  }
+  .b-poster:hover .b-poster-image {
+    transform: scale(1.06);
+  }
+  .b-poster-image {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+  }
+  /* Some art (Kevimp) is line art on light — needs special treatment */
+  .b-poster-image-light {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #f4f1e8;
+  }
+  .b-poster-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg,
+        rgba(0,0,0,0) 0%,
+        rgba(0,0,0,0.1) 40%,
+        rgba(0,0,0,0.7) 75%,
+        rgba(0,0,0,0.92) 100%);
+    pointer-events: none;
+  }
+  .b-poster-content {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    padding: 16px 18px 14px;
+    z-index: 2;
+  }
+  .b-poster-tag {
     display: inline-block;
-    font-size: 9.5px; letter-spacing: 0.22em;
-    color: var(--gold); font-weight: 600;
+    font-size: 9px; letter-spacing: 0.22em;
+    color: var(--gold); font-weight: 700;
     text-transform: uppercase;
     padding: 3px 8px;
-    border: 0.5px solid rgba(212,175,55,0.3);
+    border: 0.5px solid rgba(212,175,55,0.5);
     border-radius: 4px;
-    background: rgba(212,175,55,0.06);
+    background: rgba(0,0,0,0.5);
+    backdrop-filter: blur(4px);
+    margin-bottom: 8px;
   }
-  .b-sample-title {
-    display: block;
+  .b-poster-title {
     font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 18px; font-weight: 600;
-    color: var(--text); text-decoration: none;
-    margin-bottom: 6px;
-    transition: color 0.15s;
+    font-size: 19px;
+    font-weight: 700;
+    color: #f5f0e0;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.9);
   }
-  .b-sample-title:hover { color: var(--green); }
-  .b-sample-body {
-    font-size: 13.5px; color: var(--text-3);
-    line-height: 1.55; margin: 0;
+  .b-poster-sub {
+    font-size: 12.5px;
+    color: rgba(245,240,224,0.85);
+    line-height: 1.4;
+    text-shadow: 0 1px 6px rgba(0,0,0,0.9);
+    margin-bottom: 8px;
+  }
+  .b-poster-credit {
+    font-size: 10px;
+    color: rgba(245,240,224,0.55);
+    letter-spacing: 0.04em;
+  }
+  .b-poster-credit a {
+    color: rgba(245,240,224,0.85);
+    text-decoration: none;
+    border-bottom: 0.5px dotted rgba(245,240,224,0.35);
+    transition: color 0.15s, border-color 0.15s;
+  }
+  .b-poster-credit a:hover {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+  }
+
+  /* ============== PATH 3: CINEMATIC FULL-WIDTH ============== */
+  .b-path-3 { overflow: hidden; }
+  .b-path-3-image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 21/9;
+    overflow: hidden;
+    background: #f4eddc;
+  }
+  .b-path-3-image img {
+    width: 100%; height: 100%; object-fit: cover;
+    display: block;
+    transition: transform 0.6s;
+  }
+  .b-path-3:hover .b-path-3-image img {
+    transform: scale(1.02);
+  }
+  .b-path-3-image-overlay {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, transparent 60%, rgba(20,26,22,0.4) 100%);
+    pointer-events: none;
+  }
+  .b-path-3-image-credit {
+    position: absolute;
+    bottom: 12px; right: 16px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.85);
+    background: rgba(0,0,0,0.55);
+    padding: 4px 10px;
+    border-radius: 4px;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+  }
+  .b-path-3-image-credit a {
+    color: var(--gold);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  .b-path-3-image-credit a:hover {
+    text-decoration: underline;
+  }
+  .b-path-3-content {
+    padding: 36px 40px 36px;
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(280px, 1fr);
+    gap: 40px;
+    align-items: start;
+  }
+  .b-path-3-text .b-path-num {
+    margin-bottom: 12px;
+    display: block;
+  }
+  .b-path-3-title {
+    font-family: 'Cinzel', Georgia, serif;
+    font-size: clamp(1.8rem, 2.6vw, 2.3rem);
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.1;
+    margin-bottom: 16px;
+  }
+  .b-path-3-text .b-path-body-text {
+    font-size: 16px;
+    line-height: 1.65;
+    margin-bottom: 0;
+  }
+  .b-path-3-side {
+    display: flex;
+    flex-direction: column;
+  }
+  .b-path-3-side .b-path-meta {
+    margin-bottom: 16px;
   }
 
   /* ============== CONTEXT (3 cards) ============== */
@@ -591,8 +912,24 @@ const bananaFosterHref = href(bananaFoster);
     border: 0.5px solid rgba(255,255,255,0.3);
   }
 
+  /* ============== RESPONSIVE ============== */
+  @media (max-width: 1100px) {
+    .b-path-1-roster { aspect-ratio: 5/3; }
+  }
   @media (max-width: 980px) {
-    .b-paths-grid { grid-template-columns: 1fr; }
+    .b-paths-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "p1"
+        "p2"
+        "p3";
+    }
+    .b-path-1-roster { aspect-ratio: 16/9; }
+    .b-path-3-content {
+      grid-template-columns: 1fr;
+      gap: 24px;
+      padding: 28px 28px 28px;
+    }
     .b-context-grid { grid-template-columns: 1fr; }
   }
   @media (max-width: 720px) {
@@ -603,5 +940,12 @@ const bananaFosterHref = href(bananaFoster);
     .b-final { padding: 60px 24px; }
     .b-primer-audio { flex-direction: column; text-align: left; gap: 14px; }
     .b-primer-audio-icon { align-self: flex-start; }
+    .b-path-1-roster { aspect-ratio: 4/5; }
+    .b-path-1-body { padding: 22px 22px 22px; }
+    .b-path-2-header { padding: 24px 22px 18px; }
+    .b-path-2-posters { padding: 0 12px 12px; gap: 10px; }
+    .b-poster-content { padding: 12px 14px 12px; }
+    .b-poster-title { font-size: 16px; }
+    .b-path-3-image { aspect-ratio: 16/9; }
   }
 </style>
