@@ -1,33 +1,148 @@
+/* ============================================================
+   GREETINGS, ADVENTURERS! — GLOBAL STYLES
+   ============================================================
+   Design tokens for the whole site. Components reference these
+   variables instead of hardcoding values, so retheming and
+   global type changes are a single-file edit.
+   ============================================================ */
+
+
 /* Reset */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* Design tokens. Change values here to retheme the whole site. */
+
+/* ============================================================
+   DESIGN TOKENS
+   ============================================================ */
+
 :root {
+
+  /* ---------- COLORS ---------- */
+
   --bg: #0a0f0c;
   --bg-2: #050805;
   --surface: #141a16;
   --surface-2: #1d2520;
   --border: rgba(255, 255, 255, 0.08);
   --border-2: rgba(255, 255, 255, 0.18);
+
   --text: #f0ebe0;
   --text-2: #c5c1b3;
   --text-3: #a8a59c;
   --text-4: #6b6b65;
+
   --green: #97C459;
   --green-d: #639922;
   --gold: #d4af37;
   --gold-d: #a88828;
   --twitch: #9146FF;
+
   --c2-purple: #6b3aa8;
---c2-magenta: #c5408a;
---c2-cyan: #5fb8d6;
---c2-gold: #e6c052;
+  --c2-magenta: #c5408a;
+  --c2-cyan: #5fb8d6;
+  --c2-gold: #e6c052;
+
+
+  /* ---------- TYPOGRAPHY ---------- */
+
+  /* Font families. Keep these as separate variables so we can swap one
+     family across the site without touching components. */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --font-display: "Cinzel", Georgia, serif;
+  --font-editorial: "Cormorant Garamond", Georgia, serif;
+
+  /* Type scale.
+     Use clamp() for headings so they shrink gracefully on mobile.
+     Use fixed sizes for body and small text — readability wins.
+
+     Naming convention: bigger = bigger number. --t-1 is the biggest. */
+
+  /* Display headings — Cinzel territory */
+  --t-display-1: clamp(3rem, 6vw, 5.5rem);     /* hero / page-defining (e.g., "Welcome to Drunkeros.") */
+  --t-display-2: clamp(2.5rem, 4.5vw, 4rem);   /* secondary heroes / big moments */
+
+  /* Heading hierarchy */
+  --t-h1: clamp(2.5rem, 4.5vw, 3.75rem);       /* page titles ("In this episode") */
+  --t-h2: clamp(2rem, 3.5vw, 3rem);            /* section headers ("Latest episodes") */
+  --t-h3: clamp(1.5rem, 2.4vw, 2rem);          /* subsection / large card titles */
+  --t-h4: clamp(1.25rem, 1.8vw, 1.5rem);       /* small card titles, emphasis */
+
+  /* Body */
+  --t-body-lg: 19px;        /* lead paragraphs, hero subtext */
+  --t-body: 18px;           /* default body */
+  --t-body-sm: 16px;        /* card body, secondary descriptions */
+  --t-meta: 15px;           /* dates, durations, metadata lines */
+  --t-small: 14px;          /* eyebrow labels, tag pills (was 11-12, bumped up) */
+  --t-tiny: 12px;           /* disclaimers, breadcrumbs, very small UI */
+
+  /* Mobile bumps. Body and meta hold up fine; tiny needs a slight bump. */
+  --t-body-lg-mobile: 18px;
+  --t-body-mobile: 17px;
+  --t-body-sm-mobile: 15px;
+
+  /* Line heights */
+  --lh-tight: 1.05;         /* big display headings */
+  --lh-snug: 1.2;           /* card titles, secondary headings */
+  --lh-normal: 1.5;          /* card body */
+  --lh-relaxed: 1.65;        /* long-form paragraphs */
+
+  /* Letter spacing — most type is default (0), but eyebrows and Cinzel headings need tracking */
+  --ls-eyebrow: 0.28em;     /* "AT THE TABLE" style labels */
+  --ls-display: 0.005em;    /* Cinzel display — tiny positive tracking helps it breathe */
+  --ls-tight: -0.005em;     /* Cormorant card titles — slight tightening */
+
+  /* Font weights — keep semantic naming */
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
 }
 
-/* Base */
+
+/* ============================================================
+   BASE
+   ============================================================ */
+
 html, body {
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: var(--lh-normal);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Reset default heading styles — we set them per-component using vars */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Default link styling — components override as needed */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Images shouldn't overflow their containers by default */
+img, picture, video {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* ============================================================
+   UTILITY CLASSES (use sparingly — prefer per-component scoping)
+   ============================================================ */
+
+/* Eyebrow label — small caps with tracking. Used above many section titles.
+   Components can use this directly OR define their own to override color. */
+.eyebrow {
+  font-size: var(--t-small);
+  letter-spacing: var(--ls-eyebrow);
+  font-weight: var(--fw-semibold);
+  text-transform: uppercase;
+  color: var(--green);
 }

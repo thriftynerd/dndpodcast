@@ -10,18 +10,20 @@ const { mentions } = Astro.props;
 ---
 
 <aside class="ep-sidebar">
-  <div class="side-block">
-    <div class="side-eyebrow">In this episode</div>
-    <ul class="mention-list">
-      {mentions.map((m) => (
-        <li class="mention-item">
-          <span class={`mention-tag mention-${m.type}`}>{m.type}</span>
-          <a class="mention-name" href={m.href}>{m.name}</a>
-          <span class="mention-note">{m.note}</span>
-        </li>
-      ))}
-    </ul>
-  </div>
+  {mentions.length > 0 && (
+    <div class="side-block">
+      <div class="side-eyebrow">Mentioned</div>
+      <ul class="mention-list">
+        {mentions.map((m) => (
+          <li class="mention-item">
+            <span class={`mention-tag mention-${m.type}`}>{m.type}</span>
+            <a class="mention-name" href={m.href}>{m.name}</a>
+            <span class="mention-note">{m.note}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  )}
   <div class="side-block new-listener">
     <div class="side-eyebrow" style="color: var(--gold);">New listener?</div>
     <div class="side-title">600+ episodes is a lot.</div>

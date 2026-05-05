@@ -13,10 +13,18 @@ const { cast } = Astro.props;
   <div class="ep-cast-grid">
     {cast.map((member) => (
       <div class="ep-cast-card">
-        <div class={`ep-cast-avatar ${member.avatarClass}`}>{member.initials}</div>
+        {member.portrait ? (
+          <div class="ep-cast-avatar ep-cast-avatar-portrait">
+            <img src={member.portrait} alt={`${member.player} portrait`} loading="lazy" />
+          </div>
+        ) : (
+          <div class={`ep-cast-avatar ep-cast-avatar-initials ${member.avatarClass}`}>
+            <span>{member.initials}</span>
+          </div>
+        )}
         <div class="ep-cast-info">
-          <div class="ep-cast-player">{member.player}</div>
           <div class="ep-cast-char">{member.role}</div>
+          <div class="ep-cast-player">{member.player}</div>
         </div>
       </div>
     ))}
@@ -24,23 +32,140 @@ const { cast } = Astro.props;
 </div>
 
 <style>
-  .ep-section { margin-bottom: 50px; }
-  .ep-section-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 12px; }
-  .ep-section-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 700; line-height: 1.1; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 22px; }
+  .ep-section { margin-bottom: 64px; }
 
-  .ep-cast-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
-  .ep-cast-card { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 10px; transition: border-color 0.2s; }
-  .ep-cast-card:hover { border-color: rgba(151,196,89,0.3); }
-  .ep-cast-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: "Cormorant Garamond", Georgia, serif; font-weight: 600; font-size: 16px; color: rgba(245,240,224,0.85); flex-shrink: 0; letter-spacing: 0.02em; }
+  .ep-section-eyebrow {
+    font-size: var(--t-small);
+    letter-spacing: var(--ls-eyebrow);
+    color: var(--green);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+  }
+
+  .ep-section-title {
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: var(--fw-bold);
+    line-height: var(--lh-tight);
+    color: #f5f0e0;
+    letter-spacing: var(--ls-display);
+    margin-bottom: 32px;
+  }
+
+  /* Cards: at least 320px wide, max 3 across at desktop */
+  .ep-cast-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 16px;
+  }
+
+  /* The card is a horizontal flex container with the avatar bleeding
+     to the left edge (no padding on the left), and text content
+     padded normally on the right. Card is overflow:hidden so the
+     avatar's corners clip cleanly to the card's rounded corners. */
+  .ep-cast-card {
+    display: flex;
+    align-items: stretch;          /* avatar stretches full card height */
+    gap: 0;                        /* no gap — avatar is flush with text column */
+    padding: 0;                    /* no padding — avatar bleeds to all three edges */
+    background: var(--surface);
+    border: 0.5px solid var(--border);
+    border-radius: 14px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+    min-height: 120px;
+  }
+  .ep-cast-card:hover {
+    border-color: rgba(151, 196, 89, 0.35);
+    transform: translateY(-2px);
+  }
+
+  /* Avatar: rectangular, fixed width, full card height. Bleeds to top,
+     bottom, and left edges. */
+  .ep-cast-avatar {
+    width: 120px;
+    flex-shrink: 0;
+    overflow: hidden;
+    position: relative;
+  }
+  .ep-cast-avatar-portrait {
+    background: var(--bg-2);
+  }
+  .ep-cast-avatar-portrait img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  /* Initials variant — color block with initials centered */
+  .ep-cast-avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .ep-cast-avatar-initials span {
+    font-family: var(--font-editorial);
+    font-weight: var(--fw-semibold);
+    font-size: 36px;
+    color: rgba(245, 240, 224, 0.85);
+    letter-spacing: 0.02em;
+  }
+
+  /* Color blocks for the initials fallback */
   .avatar-michael { background: #2a3326; }
   .avatar-tim { background: #2a2333; }
   .avatar-jen { background: #332a23; }
   .avatar-bach { background: #1f3329; }
   .avatar-nika { background: #331f1f; }
-  .ep-cast-player { font-size: 14px; font-weight: 600; color: var(--text); }
-  .ep-cast-char { font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
+  .avatar-strom { background: #28201d; }
+  .avatar-vince { background: #1d2520; }
+  .avatar-default { background: #1d2520; }
+
+  /* Text content area: padded normally inside the card */
+  .ep-cast-info {
+    flex: 1;
+    min-width: 0;
+    padding: 20px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  /* Character name leads — Cormorant at a real size. */
+  .ep-cast-char {
+    font-family: var(--font-editorial);
+    font-size: var(--t-h4);
+    font-weight: var(--fw-semibold);
+    color: var(--text);
+    line-height: var(--lh-snug);
+    margin-bottom: 4px;
+    letter-spacing: var(--ls-tight);
+  }
+  .ep-cast-player {
+    font-size: var(--t-meta);
+    color: var(--text-3);
+    font-weight: var(--fw-medium);
+    letter-spacing: 0.01em;
+  }
 
   @media (max-width: 900px) {
-    .ep-cast-grid { grid-template-columns: 1fr; }
+    .ep-cast-grid {
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+    .ep-cast-card {
+      min-height: 100px;
+    }
+    .ep-cast-avatar {
+      width: 100px;
+    }
+    .ep-cast-avatar-initials span {
+      font-size: 30px;
+    }
+    .ep-cast-info {
+      padding: 16px 18px;
+    }
   }
 </style>

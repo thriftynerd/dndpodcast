@@ -11,8 +11,8 @@ import EpisodeSidebar from '../../components/EpisodeSidebar.astro';
 import EpisodeNav from '../../components/EpisodeNav.astro';
 
 import { loadEpisodes, getNeighbors, type Episode } from '../../lib/rss';
+import type { LineupEntry } from '../../data/lineups';
 
-// Optional: per-slug transcript files. We'll look for one but treat missing as fine.
 import { existsSync, readFileSync } from 'node:fs';
 import { resolve } from 'node:path';
 
@@ -31,8 +31,7 @@ interface Props {
 const { episode: ep } = Astro.props;
 const { prev, next } = await getNeighbors(ep.slug);
 
-// Try to load a transcript JSON if one exists for this slug.
-// Path: src/data/transcripts/[slug].json
+// ============== TRANSCRIPT ==============
 let transcript: any[] = [];
 let transcriptStatus = '';
 const transcriptPath = resolve(process.cwd(), `src/data/transcripts/${ep.slug}.json`);
@@ -52,16 +51,70 @@ if (existsSync(transcriptPath)) {
   }
 }
 
-// Default cast lineup. When you need per-episode lineups (e.g., bonus episodes),
-// extend this with a lookup keyed by ep.slug or ep.kind.
-const defaultCast = [
-  { player: 'Mike Bachmann', initials: 'MB', role: 'as Screech Echo', avatarClass: 'avatar-bach' },
-  { player: 'Jennifer Cheek', initials: 'JC', role: 'as Selene Von Esper', avatarClass: 'avatar-jen' },
-  { player: 'Nika Howard', initials: 'NH', role: "as R'Oarc", avatarClass: 'avatar-nika' },
-  { player: 'Tim Lanning', initials: 'TL', role: "as T'Chuck", avatarClass: 'avatar-tim' },
-  { player: 'Michael DiMauro', initials: 'MD', role: 'Dungeon Master', avatarClass: 'avatar-michael' },
-];
+// ============== LINEUP → CAST CONVERSION ==============
+// Convert ep.lineup data into the shape EpisodeCast.astro expects.
+// The lineup is per-episode, so different episodes correctly show different
+// cast members based on who was actually playing that week.
+//
+// If no lineup data exists (no parser hit, no manual override), we render
+// nothing — better an honest gap than wrong attribution.
 
+// Map player names to fallback avatar CSS classes (used when no portrait set)
+const AVATAR_CLASSES: Record<string, string> = {
+  'Mike Bachmann': 'avatar-bach',
+  'Michael Bachmann': 'avatar-bach',
+  'Bachmann': 'avatar-bach',
+  'Jennifer Cheek': 'avatar-jen',
+  'Nika Howard': 'avatar-nika',
+  'Tim Lanning': 'avatar-tim',
+  'Michael DiMauro': 'avatar-michael',
+  'Steven Strom': 'avatar-strom',
+  'Vince Kenny': 'avatar-vince',
+};
+
+// "Mike Bachmann" → "MB", "Michael DiMauro" → "MD"
+function initialsFor(player: string): string {
+  return player
+    .split(/\s+/)
+    .map((part) => part.charAt(0))
+    .filter(Boolean)
+    .slice(0, 2)
+    .join('')
+    .toUpperCase();
+}
+
+// Build the role label that displays under each cast member's name.
+// "Dungeon Master", "as Tum Darkblade", "as Tum Darkblade · final appearance"
+function buildRole(entry: LineupEntry): string {
+  if (entry.role === 'dm') return 'Dungeon Master';
+
+  const base = entry.character ? `as ${entry.character}` : '';
+  const flags: string[] = [];
+  if (entry.firstAppearance) flags.push('first appearance');
+  if (entry.finalAppearance) flags.push('final appearance');
+  if (entry.absent) flags.push('absent');
+  if (entry.guest) flags.push('guest');
+
+  if (flags.length > 0) {
+    return `${base}${base ? ' · ' : ''}${flags.join(' · ')}`;
+  }
+  return base;
+}
+
+// Convert lineup → cast props. Skip absent players for now.
+const castFromLineup = (ep.lineup ?? [])
+  .filter((entry) => !entry.absent)
+  .map((entry) => ({
+    player: entry.player,
+    initials: initialsFor(entry.player),
+    role: buildRole(entry),
+    avatarClass: AVATAR_CLASSES[entry.player] ?? 'avatar-default',
+    portrait: entry.portrait,
+  }));
+
+const hasLineup = castFromLineup.length > 0;
+
+// ============== METADATA ==============
 const showNotes = ep.description ? [ep.description] : [];
 
 const campaignLabel =
@@ -70,6 +123,10 @@ const campaignLabel =
   'Bonus';
 const campaignHref = ep.kind === 'c1' ? '/campaign-1' : ep.kind === 'c2' ? '/campaign-2' : '/episodes';
 const breadcrumbCurrent = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : 'Bonus';
+
+// Pick the DM out of the lineup for the hero
+const dmEntry = (ep.lineup ?? []).find((e) => e.role === 'dm');
+const dmName = dmEntry?.player ?? 'Michael DiMauro';
 
 const prevLink = prev ? {
   href: `/episodes/${prev.slug}`,
@@ -82,8 +139,6 @@ const nextLink = next ? {
   title: next.title,
 } : undefined;
 
-// For the sidebar mentions list. Until we have real per-episode mention data,
-// pass an empty array — sidebar handles this gracefully (or we can add a 'no mentions yet' fallback later).
 const mentions: any[] = [];
 ---
 
@@ -103,14 +158,14 @@ const mentions: any[] = [];
     releaseDate={ep.releaseDate}
     duration={ep.duration}
     season={`Season ${ep.season}`}
-    dm="Michael DiMauro"
+    dm={dmName}
   />
 
   <PlayerBand showId={ep.acastShowId} episodeId={ep.acastEpisodeId} />
 
   <section class="ep-body">
     <div class="ep-content">
-      <EpisodeCast cast={defaultCast} />
+      {hasLineup && <EpisodeCast cast={castFromLineup} />}
       <ShowNotes paragraphs={showNotes} />
       {transcript.length > 0 && (
         <Transcript segments={transcript} status={transcriptStatus} />

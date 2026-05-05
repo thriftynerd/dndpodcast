@@ -14,72 +14,72 @@ export interface LineupEntry {
   player: string;        // "Tim Lanning"
   character?: string;    // "T'Chuck" — omit for DM
   role?: 'dm' | 'pc';    // defaults to 'pc' if character is set
+
+  // Optional portrait image path. When set, EpisodeCast renders the image
+  // in place of player initials. When unset, falls back to initials —
+  // which is also the deliberate treatment for some characters (e.g., Junpei).
+  portrait?: string;
+
   absent?: boolean;      // someone normally on the show but missing this week
   guest?: boolean;       // a guest player not part of the regular cast
 
   // Character status flags — for episode pages to surface
   // "★ first appearance" or "★ final appearance" badges.
-  firstAppearance?: boolean;     // first time this character appears
-  finalAppearance?: boolean;     // last time this character appears (death, retirement, departure)
+  firstAppearance?: boolean;
+  finalAppearance?: boolean;
 
   note?: string;         // optional editorial note ("substituting for...", "departs with the githyanki")
 }
 
 // ============== PRESETS ==============
-// Reusable lineup templates. Spread one into a slug entry to start from a preset:
-//   'c1-15-some-slug': [...C1_FOUNDING],
-// Then modify or add flags as needed for that specific episode.
 
 // Episodes 1–29: the original four-PC lineup, before Tum's death.
 export const C1_FOUNDING: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm' },
-  { player: 'Tim Lanning', character: 'Tum Darkblade' },
-  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf' },
-  { player: 'Mike Bachmann', character: 'Thom the Dragonborn' },
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+  { player: 'Tim Lanning', character: 'Tum Darkblade', portrait: '/images/characters/tum-darkblade.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
+  { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
+  // Junpei deliberately has no portrait. The fallback to initials renders
+  // identically to any character we don't have art for. Don't change this.
   { player: 'Steven Strom', character: 'Junpei Iori' },
 ];
 
-// Episodes 31: Tim has lost Tum, Steven still around playing Junpei
-// (Junpei's final episode is here too — he departs with the githyanki)
+// Episode 31: Tum is gone, Steven still around playing Junpei (final episode).
 export const C1_TRIO_PLUS_JUNPEI: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm' },
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
   // Tim's next character TBD — confirm and fill in
-  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf' },
-  { player: 'Mike Bachmann', character: 'Thom the Dragonborn' },
+  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
+  { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
   { player: 'Steven Strom', character: 'Junpei Iori' },
 ];
 
-// Episodes 32 onward: post-Steven era, three-PC lineup
-// TODO: confirm Tim's next character. Until then, this is a partial preset.
+// Episodes 32 onward: post-Steven era.
 export const C1_POST_STEVEN: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm' },
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
   // Tim's next character TBD
-  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf' },
-  { player: 'Mike Bachmann', character: 'Thom the Dragonborn' },
+  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
+  { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
 ];
 
 // PLACEHOLDER — once Nika joins (around ep 81 per build brief)
 export const C1_QUINTET: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm' },
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
   // TODO: Tim's character at this point in C1
   { player: 'Jennifer Cheek', character: 'Aludra Wyrmsbane' },
   { player: 'Mike Bachmann', character: 'Thom Vidalis' },
   { player: 'Nika Howard', character: 'Jaela' },
 ];
 
-// C2 standard lineup
+// C2 standard lineup. Uses the existing /images/c2/*.webp art.
 export const C2_STANDARD: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm' },
-  { player: 'Tim Lanning', character: "T'Chuck" },
-  { player: 'Jennifer Cheek', character: 'Selene Von Esper' },
-  { player: 'Mike Bachmann', character: 'Screetch Echo' },
-  { player: 'Nika Howard', character: "R'Oarc" },
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+  { player: 'Tim Lanning', character: "T'Chuck", portrait: '/images/c2/tchuck.webp' },
+  { player: 'Jennifer Cheek', character: 'Selene Von Esper', portrait: '/images/c2/selene.webp' },
+  { player: 'Mike Bachmann', character: 'Screetch Echo', portrait: '/images/c2/screetch.webp' },
+  { player: 'Nika Howard', character: "R'Oarc", portrait: '/images/c2/roarc.webp' },
 ];
 
 // ============== HELPERS ==============
-// Marker functions for character status flags. Take a base lineup entry and
-// return a copy with the flag set, so we don't have to hand-construct
-// overrides for episodes that mostly match a preset but with one flag.
 
 const markFirst = (entry: LineupEntry, character?: string): LineupEntry => {
   if (!character || entry.character === character) {
@@ -109,29 +109,31 @@ const C1_EPISODE_30: LineupEntry[] = C1_FOUNDING.map((entry) =>
 );
 
 // Episode 31 — Junpei Iori's final episode (departs with the githyanki).
-// Tim's row is open — Tum is dead and Tim's next character isn't here yet.
 const C1_EPISODE_31: LineupEntry[] = C1_TRIO_PLUS_JUNPEI.map((entry) =>
   markFinal(entry, 'Junpei Iori', 'Goes off with the githyanki'),
 );
 
 // ============== OVERRIDES ==============
-// Slug-keyed map. Slugs match what rss.ts builds, e.g.
-// 'c1-1-so-it-begins' or 'c2-182-big-bad-bread-wars'.
+// IMPORTANT: slug keys must match exactly what rss.ts buildSlug() produces.
+// If a title is "Episode 1" in Acast, the slug is `c1-1-episode-1`, not
+// `c1-1-so-it-begins`. The override key has to match that exactly or the
+// entry is ignored.
 
 export const LINEUP_OVERRIDES: Record<string, LineupEntry[]> = {
 
   // ============== CAMPAIGN 1 — FOUNDING ERA (Episodes 1–30) ==============
-  // The original four-PC lineup. Tim plays Tum Darkblade, who dies in ep 30.
-  // Steven Strom plays Junpei Iori, who departs in ep 31.
 
   // Episode 1 — first appearance of all four characters
-  // TODO: confirm exact slug once Acast title cleanup lands
-  'c1-1-so-it-begins': C1_EPISODE_1,
+  // Title in Acast is currently "Episode 1", so slug is c1-1-episode-1
+  'c1-1-episode-1': C1_EPISODE_1,
 
-  // Episodes 2–15 — standard founding lineup, slugs from RSS
+  // Early episodes with placeholder titles ("Episode 2", "Episode 3"...)
+  // and parser-unfriendly truncated descriptions
   'c1-2-episode-2': [...C1_FOUNDING],
   'c1-3-episode-3': [...C1_FOUNDING],
   'c1-4-episode-4': [...C1_FOUNDING],
+
+  // Episodes 5–15 — slugs from RSS, lineup is standard founding
   'c1-5-a-brief-respite': [...C1_FOUNDING],
   'c1-6-the-return-of-the-eight-legged-freaks': [...C1_FOUNDING],
   'c1-7-the-next-level': [...C1_FOUNDING],
@@ -143,14 +145,14 @@ export const LINEUP_OVERRIDES: Record<string, LineupEntry[]> = {
   'c1-13-a-dwarf-dragonborn-and-a-githyanki-walk-into-a-bar': [...C1_FOUNDING],
   'c1-14-dreams-of-dragons': [...C1_FOUNDING],
   'c1-15-a-pirates-life-for-me': [...C1_FOUNDING],
+
   // TODO: episodes 16-29 — same lineup, slugs to confirm
 
   // Episode 30 — Tum Darkblade's final episode (he dies)
-  // TODO: confirm episode 30's actual slug once title cleanup lands
+  // TODO: confirm episode 30's actual slug
   'c1-30-tum-final-episode': C1_EPISODE_30,
 
   // Episode 31 — Junpei Iori's final episode (departs with the githyanki).
-  // Tim's row is open — needs his next character once confirmed.
   // TODO: confirm episode 31's actual slug
   'c1-31-junpei-final-episode': C1_EPISODE_31,
 

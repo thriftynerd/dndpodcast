@@ -82,6 +82,7 @@ export interface CastMember {
   initials: string;
   role: string;          // "as Screech Echo" or "Dungeon Master"
   avatarClass: string;
+  portrait?: string; 
 }
 
 export interface MentionItem {
