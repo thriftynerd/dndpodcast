@@ -115,46 +115,47 @@ const C1_EPISODE_31: LineupEntry[] = C1_TRIO_PLUS_JUNPEI.map((entry) =>
 
 // ============== OVERRIDES ==============
 // IMPORTANT: slug keys must match exactly what rss.ts buildSlug() produces.
-// If a title is "Episode 1" in Acast, the slug is `c1-1-episode-1`, not
-// `c1-1-so-it-begins`. The override key has to match that exactly or the
-// entry is ignored.
+// If you rename an episode in the RSS feed, the slug changes here too —
+// stale keys are silently ignored, which means the page will fall back to
+// whatever the parser can scrape from the description (often broken).
+//
+// To verify a key, look at the URL of the rendered episode page in dev.
 
 export const LINEUP_OVERRIDES: Record<string, LineupEntry[]> = {
 
   // ============== CAMPAIGN 1 — FOUNDING ERA (Episodes 1–30) ==============
 
-  // Episode 1 — first appearance of all four characters
-  // Title in Acast is currently "Episode 1", so slug is c1-1-episode-1
-  'c1-1-episode-1': C1_EPISODE_1,
+  // Episode 1 — "So it Begins!" — confirmed slug from dev
+  'c1-1-so-it-begins': C1_EPISODE_1,
 
-  // Early episodes with placeholder titles ("Episode 2", "Episode 3"...)
-  // and parser-unfriendly truncated descriptions
-  'c1-2-episode-2': [...C1_FOUNDING],
-  'c1-3-episode-3': [...C1_FOUNDING],
-  'c1-4-episode-4': [...C1_FOUNDING],
+  // TODO: episodes 2–15 keys below were written against the OLD slugs (when
+  // titles were placeholder "Episode 2", "Episode 3", etc.). After the RSS
+  // cleanup the titles changed, which means these slugs are likely stale.
+  // Click through each episode in dev and update the key to match the URL.
+  // The lineup data itself is fine — it's just the keys that need updating.
 
-  // Episodes 5–15 — slugs from RSS, lineup is standard founding
-  'c1-5-a-brief-respite': [...C1_FOUNDING],
-  'c1-6-the-return-of-the-eight-legged-freaks': [...C1_FOUNDING],
-  'c1-7-the-next-level': [...C1_FOUNDING],
-  'c1-8-robot-no-feel-love': [...C1_FOUNDING],
-  'c1-9-thokas-takes-a-header': [...C1_FOUNDING],
-  'c1-10-the-long-hallway': [...C1_FOUNDING],
-  'c1-11-an-intense-headache': [...C1_FOUNDING],
-  'c1-12-not-quite-through-the-woods': [...C1_FOUNDING],
-  'c1-13-a-dwarf-dragonborn-and-a-githyanki-walk-into-a-bar': [...C1_FOUNDING],
-  'c1-14-dreams-of-dragons': [...C1_FOUNDING],
-  'c1-15-a-pirates-life-for-me': [...C1_FOUNDING],
+  'c1-2-episode-2': [...C1_FOUNDING],                                              // TODO: confirm slug
+  'c1-3-episode-3': [...C1_FOUNDING],                                              // TODO: confirm slug
+  'c1-4-episode-4': [...C1_FOUNDING],                                              // TODO: confirm slug
+  'c1-5-a-brief-respite': [...C1_FOUNDING],                                        // TODO: confirm slug
+  'c1-6-the-return-of-the-eight-legged-freaks': [...C1_FOUNDING],                  // TODO: confirm slug
+  'c1-7-the-next-level': [...C1_FOUNDING],                                         // TODO: confirm slug
+  'c1-8-robot-no-feel-love': [...C1_FOUNDING],                                     // TODO: confirm slug
+  'c1-9-thokas-takes-a-header': [...C1_FOUNDING],                                  // TODO: confirm slug
+  'c1-10-the-long-hallway': [...C1_FOUNDING],                                      // TODO: confirm slug
+  'c1-11-an-intense-headache': [...C1_FOUNDING],                                   // TODO: confirm slug
+  'c1-12-not-quite-through-the-woods': [...C1_FOUNDING],                           // TODO: confirm slug
+  'c1-13-a-dwarf-dragonborn-and-a-githyanki-walk-into-a-bar': [...C1_FOUNDING],    // TODO: confirm slug
+  'c1-14-dreams-of-dragons': [...C1_FOUNDING],                                     // TODO: confirm slug
+  'c1-15-a-pirates-life-for-me': [...C1_FOUNDING],                                 // TODO: confirm slug
 
   // TODO: episodes 16-29 — same lineup, slugs to confirm
 
   // Episode 30 — Tum Darkblade's final episode (he dies)
-  // TODO: confirm episode 30's actual slug
-  'c1-30-tum-final-episode': C1_EPISODE_30,
+  'c1-30-tum-final-episode': C1_EPISODE_30,                                        // TODO: confirm slug
 
   // Episode 31 — Junpei Iori's final episode (departs with the githyanki).
-  // TODO: confirm episode 31's actual slug
-  'c1-31-junpei-final-episode': C1_EPISODE_31,
+  'c1-31-junpei-final-episode': C1_EPISODE_31,                                     // TODO: confirm slug
 
   // ============== CAMPAIGN 1 — POST-STEVEN ERA (Episodes 32+) ==============
   // TODO: pick up here once Tim's next-character details are confirmed.

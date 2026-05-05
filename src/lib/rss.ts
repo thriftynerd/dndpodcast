@@ -156,6 +156,20 @@ function stripHtml(html: string): string {
     .trim();
 }
 
+// Strip lead-in phrases that the greedy capture sucks up. Without this,
+// a description like "Join us on our adventure as Tum Darkblade (Tim Lanning)"
+// captures the whole run instead of just "Tum Darkblade". We split on the
+// last occurrence of common lead-ins and take what comes after.
+function cleanCharacterName(raw: string): string {
+  let s = raw.trim();
+  const leadIns = [' as ', ' with ', ' featuring ', ' starring ', ' including '];
+  for (const lead of leadIns) {
+    const idx = s.toLowerCase().lastIndexOf(lead);
+    if (idx >= 0) s = s.slice(idx + lead.length);
+  }
+  return s.trim();
+}
+
 function slugify(s: string): string {
   return s
     .toLowerCase()
@@ -291,7 +305,7 @@ function extractLineupFromDescription(description: string): LineupEntry[] {
 
   let match: RegExpExecArray | null;
   while ((match = re.exec(description)) !== null) {
-    const characterName = match[1].trim();
+    const characterName = cleanCharacterName(match[1]);
     const playerName = match[2].trim();
 
     // Filter out matches where the parenthesized name isn't a known player
