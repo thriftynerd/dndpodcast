@@ -2,6 +2,7 @@
 import { XMLParser } from 'fast-xml-parser';
 import { existsSync, readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
+import { LINEUP_OVERRIDES, type LineupEntry } from '../data/lineups';
 
 const FEED_URL = 'https://feeds.acast.com/public/shows/greetings-adventurers';
 const CACHE_PATH = resolve(process.cwd(), '.cache/feed.xml');
@@ -15,7 +16,7 @@ export interface Episode {
   // identifiers
   guid: string;             // Acast episode GUID, stable id
   slug: string;             // URL slug like 'c2-182-big-bad-bread-wars'
-  acastEpisodeId: string;   // extracted from audio URL or guid for embeds
+  acastEpisodeId: string;   // for embed URL
   acastShowId: string;      // for embed URL
 
   // display
@@ -32,6 +33,11 @@ export interface Episode {
   releaseDate: string;      // human-readable "April 20, 2026"
 
   kind: EpisodeKind;
+
+  // attribution — who played what
+  // Auto-extracted from description text where possible, manually overridden
+  // via src/data/lineups.ts where parsing fails or is incomplete.
+  lineup: LineupEntry[];
 }
 
 // ---------- fetching with cache ----------
@@ -47,7 +53,6 @@ async function fetchFeedXml(): Promise<string> {
   console.log('[rss] fetching feed from', FEED_URL);
   const res = await fetch(FEED_URL);
   if (!res.ok) {
-    // If fetch fails but we have a stale cache, use it
     if (existsSync(CACHE_PATH)) {
       console.warn('[rss] fetch failed, using stale cache');
       return readFileSync(CACHE_PATH, 'utf-8');
@@ -68,8 +73,6 @@ async function fetchFeedXml(): Promise<string> {
 const parser = new XMLParser({
   ignoreAttributes: false,
   attributeNamePrefix: '@_',
-  // Many RSS fields can have either a string value or an attribute-bearing object.
-  // This keeps things consistent.
   parseAttributeValue: false,
   trimValues: true,
 });
@@ -78,7 +81,7 @@ export interface CastMember {
   player: string;
   initials: string;
   role: string;          // "as Screech Echo" or "Dungeon Master"
-  avatarClass: string;   // 'avatar-bach' | 'avatar-jen' | 'avatar-michael' | 'avatar-nika' | 'avatar-tim'
+  avatarClass: string;
 }
 
 export interface MentionItem {
@@ -117,6 +120,13 @@ interface RssItem {
   'itunes:image'?: { '@_href': string };
   'itunes:episodeType'?: string;
   'itunes:title'?: string;
+  // Acast-specific tags. These give us the IDs directly without
+  // having to regex-parse them out of the audio URL — the audio URL
+  // sometimes contains URL-encoded WordPress permalinks instead of the
+  // hex episode IDs, which broke the embed.
+  'acast:episodeId'?: string;
+  'acast:showId'?: string;
+  'acast:episodeUrl'?: string;
 }
 
 interface RssChannel {
@@ -148,10 +158,10 @@ function stripHtml(html: string): string {
 function slugify(s: string): string {
   return s
     .toLowerCase()
-    .replace(/['']/g, '')              // strip apostrophes
-    .replace(/[^a-z0-9]+/g, '-')       // non-alphanumeric to dashes
-    .replace(/^-+|-+$/g, '')           // trim leading/trailing dashes
-    .slice(0, 80);                     // cap length
+    .replace(/[''`]/g, '')              // strip apostrophes (straight + curly)
+    .replace(/[^a-z0-9]+/g, '-')        // non-alphanumeric to dashes
+    .replace(/^-+|-+$/g, '')            // trim leading/trailing dashes
+    .slice(0, 80);                      // cap length
 }
 
 function parseDuration(raw: string | number | undefined): { seconds: number; display: string } {
@@ -160,14 +170,11 @@ function parseDuration(raw: string | number | undefined): { seconds: number; dis
 
   let seconds = 0;
   if (/^\d+$/.test(s)) {
-    // pure seconds
     seconds = parseInt(s, 10);
   } else if (/^\d+:\d+:\d+$/.test(s)) {
-    // HH:MM:SS
     const [h, m, sec] = s.split(':').map(Number);
     seconds = h * 3600 + m * 60 + sec;
   } else if (/^\d+:\d+$/.test(s)) {
-    // MM:SS
     const [m, sec] = s.split(':').map(Number);
     seconds = m * 60 + sec;
   }
@@ -182,7 +189,6 @@ function isoDateFromPubDate(pubDate: string | undefined): string {
   if (!pubDate) return '';
   const d = new Date(pubDate);
   if (isNaN(d.getTime())) return '';
-  // YYYY-MM-DD in UTC, keeps date stable regardless of viewer timezone
   return d.toISOString().slice(0, 10);
 }
 
@@ -194,13 +200,10 @@ function humanReleaseDate(iso: string): string {
 
 function detectKind(title: string, episodeType: string | undefined, season: number, episodeNumber: number | null): EpisodeKind {
   const t = title.toLowerCase();
-  // Acast's itunes:episodeType can be 'full', 'bonus', or 'trailer'
   if (episodeType === 'bonus' || episodeType === 'trailer') return 'bonus';
   if (t.includes('bonus')) return 'bonus';
-  // Heuristic: season 1 = c1 (Drunks and Dragons era), season 2 = c2
   if (season === 1) return 'c1';
   if (season === 2) return 'c2';
-  // Default for unmarked episodes
   return episodeNumber == null ? 'bonus' : 'c2';
 }
 
@@ -210,9 +213,13 @@ function extractGuidString(guid: RssItem['guid']): string {
   return guid['#text'] || '';
 }
 
-// Acast audio URLs look like:
-// https://sphinx.acast.com/p/open/s/{showId}/e/{episodeId}/media.mp3
-function extractAcastIds(audioUrl: string): { showId: string; episodeId: string } {
+// Fallback for the rare episode that's missing the dedicated acast:episodeId
+// and acast:showId tags. Acast audio URLs USED to look like:
+//   https://sphinx.acast.com/p/open/s/{showId}/e/{episodeId}/media.mp3
+// But early-imported episodes use URL-encoded WordPress permalinks in the
+// `e/` segment instead of hex IDs, so this fallback only works for newer
+// episodes. Most episodes should hit the acast:episodeId tag path instead.
+function extractAcastIdsFromUrl(audioUrl: string): { showId: string; episodeId: string } {
   const m = audioUrl.match(/\/s\/([a-f0-9]+)\/e\/([a-f0-9]+)\//i);
   if (m) return { showId: m[1], episodeId: m[2] };
   return { showId: '', episodeId: '' };
@@ -223,6 +230,95 @@ function buildSlug(kind: EpisodeKind, episodeNumber: number | null, title: strin
   if (kind === 'bonus') return `bonus-${titleSlug}`;
   if (episodeNumber == null) return `${kind}-${titleSlug}`;
   return `${kind}-${episodeNumber}-${titleSlug}`;
+}
+
+// Strip leading "Episode N -", "Ep N:", "C1 Episode N -" type prefixes
+// that some episodes have in their titles. The prefix is redundant because
+// we already have episode number + kind tags as separate fields.
+function cleanTitle(raw: string): string {
+  if (!raw) return '';
+  let t = raw.trim();
+  // "C1 Episode 122 - Title" or "C2 Episode 5: Title"
+  t = t.replace(/^C[12]\s+(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
+  // "Episode 122 - Title" or "Episode 122: Title" or "Ep 122 - Title"
+  t = t.replace(/^(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
+  // "Bonus Episode 159 - Title"
+  t = t.replace(/^Bonus\s+(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
+  return t.trim();
+}
+
+// ---------- lineup extraction ----------
+
+// Many early episodes follow a description template like:
+//   "The adventure continues with Tum Darkblade (Tim Lanning),
+//    Thom the Dragonborn (Mike Bachmann), Junpei Iori (Steven Strom)
+//    and Aludra (Jennifer Cheek)."
+//
+// This regex pulls "Character Name (Player Name)" pairs out of any text.
+// Returns lineup entries in description order. May return empty array if
+// the description doesn't follow this format — that's expected, especially
+// for C2 episodes and bonus content where descriptions are written
+// differently. The lineups.ts override file fills those gaps.
+const PLAYER_RE = /([A-Z][\w''. ]+?)\s*\(([\w'' .]+?)\)/g;
+
+// Known player names to validate matches against. Without this guard, any
+// "Word (Word)" pattern in a description would be treated as character/player —
+// e.g. "Drunkeros (the world)" would falsely match. We only accept matches
+// where the parenthesized name is one of the cast.
+const KNOWN_PLAYERS = new Set([
+  'Tim Lanning',
+  'Mike Bachmann',
+  'Michael Bachmann',
+  'Bachmann',
+  'Jennifer Cheek',
+  'Steven Strom',
+  'Nika Howard',
+  'Michael DiMauro',
+  'Vince Kenny',
+]);
+
+function extractLineupFromDescription(description: string): LineupEntry[] {
+  if (!description) return [];
+
+  const found: LineupEntry[] = [];
+  const seen = new Set<string>();
+
+  // We deliberately do not reset PLAYER_RE.lastIndex here because we
+  // construct a new regex on each call — but JS RegExp with /g requires
+  // resetting if the same instance is reused. So we make a fresh one:
+  const re = new RegExp(PLAYER_RE.source, 'g');
+
+  let match: RegExpExecArray | null;
+  while ((match = re.exec(description)) !== null) {
+    const characterName = match[1].trim();
+    const playerName = match[2].trim();
+
+    // Filter out matches where the parenthesized name isn't a known player
+    if (!KNOWN_PLAYERS.has(playerName)) continue;
+
+    // Filter out duplicates — the same description sometimes mentions a
+    // character twice (e.g. once in setup paragraph, once in cast list)
+    const key = `${characterName}::${playerName}`;
+    if (seen.has(key)) continue;
+    seen.add(key);
+
+    found.push({
+      player: playerName,
+      character: characterName,
+    });
+  }
+
+  return found;
+}
+
+// Combine parser output + manual overrides. Override wins where present.
+// Override is keyed by slug; if there's an entry for this episode, it
+// fully replaces the parsed lineup (so you can fix wrong/missing entries
+// without fighting the parser).
+function resolveLineup(slug: string, parsedLineup: LineupEntry[]): LineupEntry[] {
+  const override = LINEUP_OVERRIDES[slug];
+  if (override) return override;
+  return parsedLineup;
 }
 
 // ---------- main entry point ----------
@@ -241,8 +337,20 @@ export async function loadEpisodes(): Promise<Episode[]> {
 
   const episodes: Episode[] = items.map((item) => {
     const audioUrl = item.enclosure?.['@_url'] || '';
-    const { showId, episodeId } = extractAcastIds(audioUrl);
-    const guid = extractGuidString(item.guid) || episodeId;
+
+    // Read Acast IDs directly from the dedicated tags. This is the fix for
+    // the broken-embed bug — old episodes have URL-encoded WordPress
+    // permalinks in the audio URL where the regex used to look for hex IDs.
+    const acastEpisodeId = item['acast:episodeId'] || '';
+    const acastShowId = item['acast:showId'] || '';
+    // Fallback to URL parsing only if the dedicated tags are missing
+    const fallback = (!acastEpisodeId || !acastShowId)
+      ? extractAcastIdsFromUrl(audioUrl)
+      : { showId: '', episodeId: '' };
+    const finalShowId = acastShowId || fallback.showId;
+    const finalEpisodeId = acastEpisodeId || fallback.episodeId;
+
+    const guid = extractGuidString(item.guid) || finalEpisodeId;
 
     const episodeNumber =
       item['itunes:episode'] != null ? Number(item['itunes:episode']) : null;
@@ -257,17 +365,22 @@ export async function loadEpisodes(): Promise<Episode[]> {
 
     const artUrl = item['itunes:image']?.['@_href'] || channel['itunes:image']?.['@_href'] || '';
 
-    const kind = detectKind(item.title, item['itunes:episodeType'], season, episodeNumber);
+    const cleanedTitle = cleanTitle(item.title);
+    const kind = detectKind(cleanedTitle, item['itunes:episodeType'], season, episodeNumber);
+    const slug = buildSlug(kind, episodeNumber, cleanedTitle);
+
+    const parsedLineup = extractLineupFromDescription(description);
+    const lineup = resolveLineup(slug, parsedLineup);
 
     return {
       guid,
-      slug: buildSlug(kind, episodeNumber, item.title),
-      acastEpisodeId: episodeId,
-      acastShowId: showId,
+      slug,
+      acastEpisodeId: finalEpisodeId,
+      acastShowId: finalShowId,
 
       episodeNumber: Number.isFinite(episodeNumber) ? episodeNumber : null,
       season,
-      title: item.title,
+      title: cleanedTitle,
       description,
       descriptionHtml,
       artUrl,
@@ -277,6 +390,7 @@ export async function loadEpisodes(): Promise<Episode[]> {
       date,
       releaseDate,
       kind,
+      lineup,
     };
   });
 
