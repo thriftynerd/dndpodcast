@@ -1,5 +1,5 @@
 ---
-import type { TranscriptSegment } from '../data/episode-182';
+import type { TranscriptSegment } from '../lib/rss';
 
 interface Props {
   segments: TranscriptSegment[];
@@ -41,8 +41,8 @@ const { segments, status } = Astro.props;
 
 <style>
   .ep-section { margin-bottom: 50px; }
-  .ep-section-eyebrow { font-size: 12px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 12px; }
-  .ep-section-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.5rem, 2.4vw, 2rem); font-weight: 700; line-height: 1.1; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 22px; }
+  .ep-section-eyebrow { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--green); font-weight: var(--fw-semibold); margin-bottom: 12px; text-transform: uppercase; }
+  .ep-section-title { font-family: var(--font-display); font-size: var(--t-h2); font-weight: var(--fw-bold); line-height: var(--lh-tight); color: #f5f0e0; letter-spacing: var(--ls-display); margin-bottom: 22px; }
 
   #transcript { scroll-margin-top: 140px; }
 
@@ -50,12 +50,12 @@ const { segments, status } = Astro.props;
   .transcript-toolbar { display: flex; align-items: center; justify-content: space-between; padding: 16px 22px; border-bottom: 0.5px solid var(--border); gap: 16px; flex-wrap: wrap; }
   .transcript-search { display: flex; align-items: center; gap: 10px; background: var(--bg-2); border: 0.5px solid var(--border); border-radius: 7px; padding: 8px 14px; flex: 1; min-width: 200px; max-width: 360px; }
   .transcript-search svg { color: var(--text-4); flex-shrink: 0; }
-  .transcript-search input { background: transparent; border: none; outline: none; color: var(--text); font-size: 14px; flex: 1; font-family: inherit; }
+  .transcript-search input { background: transparent; border: none; outline: none; color: var(--text); font-size: var(--t-small); flex: 1; font-family: inherit; }
   .transcript-search input::placeholder { color: var(--text-4); }
-  .transcript-toolbar-meta { font-size: 12px; color: var(--text-3); display: flex; gap: 14px; align-items: center; }
+  .transcript-toolbar-meta { font-size: var(--t-tiny); color: var(--text-3); display: flex; gap: 14px; align-items: center; }
   .transcript-tog { display: flex; align-items: center; gap: 6px; cursor: pointer; }
   .transcript-tog input { accent-color: var(--green); }
-  .transcript-status { font-size: 11px; letter-spacing: 0.2em; color: var(--gold); font-weight: 600; padding: 4px 10px; border-radius: 999px; background: rgba(212,175,55,0.1); border: 0.5px solid rgba(212,175,55,0.3); }
+  .transcript-status { font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow); color: var(--gold); font-weight: var(--fw-semibold); padding: 4px 10px; border-radius: 999px; background: rgba(212,175,55,0.1); border: 0.5px solid rgba(212,175,55,0.3); }
   .transcript-body { padding: 8px 22px 24px; max-height: 600px; overflow-y: auto; }
   .transcript-body::-webkit-scrollbar { width: 8px; }
   .transcript-body::-webkit-scrollbar-track { background: transparent; }
@@ -63,9 +63,9 @@ const { segments, status } = Astro.props;
   .t-segment { display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 16px; padding: 12px 0; border-top: 0.5px solid rgba(255,255,255,0.04); }
   .t-segment:first-child { border-top: none; }
   .t-segment.t-incharacter { background: linear-gradient(90deg, rgba(212,175,55,0.04), transparent 60%); border-left: 2px solid rgba(212,175,55,0.4); padding-left: 14px; margin-left: -14px; border-radius: 0 6px 6px 0; }
-  .t-time { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace; font-size: 11.5px; color: var(--text-4); padding-top: 2px; letter-spacing: 0.02em; }
-  .t-line { font-size: 14.5px; line-height: 1.65; color: var(--text-2); }
-  .t-speaker { font-weight: 700; margin-right: 6px; font-size: 13px; }
+  .t-time { font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, monospace; font-size: var(--t-tiny); color: var(--text-4); padding-top: 2px; letter-spacing: 0.02em; }
+  .t-line { font-size: var(--t-body-sm); line-height: var(--lh-relaxed); color: var(--text-2); }
+  .t-speaker { font-weight: var(--fw-bold); margin-right: 6px; font-size: var(--t-small); }
   .speaker-michael { color: #c9d4a8; }
   .speaker-tim { color: #c4a8d4; }
   .speaker-jen { color: #d4c0a8; }
@@ -76,7 +76,7 @@ const { segments, status } = Astro.props;
   .t-text { color: var(--text-2); }
   .t-text em { color: var(--text); font-style: italic; }
   .transcript-fade { background: linear-gradient(180deg, transparent, var(--surface) 90%); padding: 32px 22px 18px; text-align: center; margin-top: -50px; position: relative; }
-  .transcript-fade-btn { background: var(--surface-2); color: var(--text); padding: 9px 22px; border-radius: 7px; font-size: 13px; font-weight: 500; border: 0.5px solid var(--border-2); cursor: pointer; transition: background 0.2s; }
+  .transcript-fade-btn { background: var(--surface-2); color: var(--text); padding: 9px 22px; border-radius: 7px; font-size: var(--t-small); font-weight: var(--fw-medium); border: 0.5px solid var(--border-2); cursor: pointer; transition: background 0.2s; }
   .transcript-fade-btn:hover { background: rgba(255,255,255,0.06); }
 </style>
 

@@ -27,18 +27,18 @@
   .world::before { content: ''; position: absolute; left: -10%; top: 30%; width: 50%; height: 60%; background: radial-gradient(ellipse, rgba(107,58,168,0.06) 0%, transparent 70%); pointer-events: none; }
   .world-inner { max-width: 1280px; margin: 0 auto; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 80px; align-items: start; position: relative; }
   .world-aside { position: sticky; top: 100px; }
-  .sec-eyebrow { font-size: 13px; letter-spacing: 0.3em; color: var(--green); font-weight: 600; margin-bottom: 14px; }
-  .sec-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2rem, 3.6vw, 3.2rem); font-weight: 700; line-height: 1.05; color: #f5f0e0; letter-spacing: 0.005em; }
+  .sec-eyebrow { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--green); font-weight: var(--fw-semibold); margin-bottom: 14px; text-transform: uppercase; }
+  .sec-title { font-family: var(--font-display); font-size: var(--t-h2); font-weight: var(--fw-bold); line-height: var(--lh-tight); color: #f5f0e0; letter-spacing: var(--ls-display); }
   .world-stat-grid { margin-top: 32px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
   .world-stat { padding: 18px 16px; background: var(--surface); border-radius: 8px; border: 0.5px solid var(--border); }
-  .world-stat-num { font-family: "Cinzel", Georgia, serif; font-size: 22px; font-weight: 700; color: var(--gold); line-height: 1; }
-  .world-stat-lbl { font-size: 11px; letter-spacing: 0.18em; color: var(--text-3); margin-top: 8px; font-weight: 500; text-transform: uppercase; }
-  .world-content p { font-size: 17px; color: var(--text-2); line-height: 1.7; margin-bottom: 22px; }
-  .world-content p:first-of-type::first-letter { font-family: "Cormorant Garamond", Georgia, serif; font-size: 4em; float: left; line-height: 0.85; padding: 6px 14px 0 0; color: var(--gold); font-weight: 600; }
+  .world-stat-num { font-family: var(--font-display); font-size: var(--t-h4); font-weight: var(--fw-bold); color: var(--gold); line-height: 1; letter-spacing: var(--ls-display); }
+  .world-stat-lbl { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--text-3); margin-top: 8px; font-weight: var(--fw-medium); text-transform: uppercase; }
+  .world-content p { font-size: var(--t-body); color: var(--text-2); line-height: var(--lh-relaxed); margin-bottom: 22px; }
+  .world-content p:first-of-type::first-letter { font-family: var(--font-editorial); font-size: 4em; float: left; line-height: 0.85; padding: 6px 14px 0 0; color: var(--gold); font-weight: var(--fw-semibold); }
   .world-content em { color: #e8c875; font-style: italic; }
   .world-pull { margin: 28px 0; padding: 22px 28px; border-left: 2px solid var(--c2-magenta); background: rgba(197,64,138,0.06); border-radius: 0 6px 6px 0; }
-  .world-pull-text { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 19px; color: #f0ebe0; line-height: 1.5; }
-  .world-pull-attr { font-size: 12px; letter-spacing: 0.2em; color: var(--text-3); margin-top: 10px; font-weight: 500; }
+  .world-pull-text { font-family: var(--font-editorial); font-style: italic; font-size: var(--t-body-lg); color: #f0ebe0; line-height: var(--lh-normal); }
+  .world-pull-attr { font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow); color: var(--text-3); margin-top: 10px; font-weight: var(--fw-medium); text-transform: uppercase; }
 
   @media (max-width: 1024px) {
     .world-aside { position: static; }

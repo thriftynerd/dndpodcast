@@ -26,18 +26,18 @@
   .com-card.patreon { border-color: rgba(212,175,55,0.25); }
   .com-card.discord { border-color: rgba(88,101,242,0.3); }
   .com-card.youtube { border-color: rgba(255,0,0,0.25); }
-  .com-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: 12px; letter-spacing: 0.22em; font-weight: 600; }
-  .com-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 20px; font-weight: 700; color: var(--text); margin-top: 2px; }
-  .com-sub { font-size: 14px; color: var(--text-3); line-height: 1.55; flex: 1; margin: 4px 0 6px; }
-  .com-cta { font-size: 14px; font-weight: 600; }
+  .com-eyebrow { display: inline-flex; align-items: center; gap: 8px; font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); font-weight: var(--fw-semibold); }
+  .com-title { font-family: var(--font-editorial); font-size: var(--t-h4); font-weight: var(--fw-bold); color: var(--text); margin-top: 2px; }
+  .com-sub { font-size: var(--t-body-sm); color: var(--text-3); line-height: var(--lh-normal); flex: 1; margin: 4px 0 6px; }
+  .com-cta { font-size: var(--t-small); font-weight: var(--fw-semibold); }
   .com-live-dot { width: 8px; height: 8px; border-radius: 50%; background: #ff3030; animation: pulse 2s infinite; }
   @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
 
   /* Font system override from mockup */
-  .com-title { font-weight: 600; }
+  .com-title { font-weight: var(--fw-semibold); }
 
   /* Readability pass override from mockup */
-  .com-sub { font-style: normal; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  .com-sub { font-style: normal; font-family: var(--font-sans); }
 
   @media (max-width: 900px) {
     .com { grid-template-columns: 1fr; padding: 40px 24px; }

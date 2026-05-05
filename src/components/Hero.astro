@@ -137,10 +137,10 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
     display: flex;
     align-items: center;
     gap: 14px;
-    font-size: 13px;
-    letter-spacing: 0.28em;
+    font-size: var(--t-small);
+    letter-spacing: var(--ls-eyebrow);
     color: var(--green);
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     margin-bottom: 24px;
     text-transform: uppercase;
   }
@@ -150,19 +150,20 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
     background: var(--green);
   }
   .hero-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(2.75rem, 5.5vw, 5.5rem);
-    line-height: 0.95;
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: var(--t-display-1);
+    line-height: var(--lh-tight);
+    font-weight: var(--fw-bold);
     color: #f5f0e0;
-    letter-spacing: 0.01em;
+    letter-spacing: var(--ls-display);
     margin-bottom: 14px;
     text-shadow: 0 2px 24px rgba(0,0,0,0.55);
   }
   .hero-altname {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-editorial);
     font-style: italic;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
+    /* TODO: review type system mapping — small italic Cormorant tagline below display */
     font-size: clamp(0.95rem, 1.15vw, 1.1rem);
     color: var(--gold);
     margin-bottom: 22px;
@@ -170,9 +171,9 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
     text-shadow: 0 1px 6px rgba(0,0,0,0.6);
   }
   .hero-tag {
-    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
+    font-size: var(--t-body-lg);
     color: #d8d4c5;
-    line-height: 1.55;
+    line-height: var(--lh-normal);
     max-width: 95%;
     margin-bottom: 36px;
     text-shadow: 0 1px 8px rgba(0,0,0,0.6);
@@ -188,8 +189,8 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
   .btn-s {
     padding: 14px 24px;
     border-radius: 8px;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: var(--t-meta);
+    font-weight: var(--fw-semibold);
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -219,12 +220,13 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
   }
   .stat { display: flex; flex-direction: column; }
   .stat-num {
-    font-family: 'Cinzel', Georgia, serif;
+    font-family: var(--font-display);
+    /* Stat numbers — bespoke Cinzel scale, leaving as-is */
     font-size: clamp(1.75rem, 2.4vw, 2.4rem);
-    font-weight: 700;
+    font-weight: var(--fw-bold);
     color: var(--gold);
     line-height: 1;
-    letter-spacing: 0.005em;
+    letter-spacing: var(--ls-display);
   }
   /* Run time stat needs to shrink a touch since it has more characters */
   .run-time {
@@ -233,11 +235,11 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
     white-space: nowrap;
   }
   .stat-lbl {
-    font-size: 12px;
-    letter-spacing: 0.18em;
+    font-size: var(--t-tiny);
+    letter-spacing: var(--ls-eyebrow);
     color: var(--text-3);
     margin-top: 7px;
-    font-weight: 500;
+    font-weight: var(--fw-medium);
     text-transform: uppercase;
   }
   .stat-div {

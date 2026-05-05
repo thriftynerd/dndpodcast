@@ -60,17 +60,17 @@ const { campaign, episodeNumber, title, description, artUrl, releaseDate, durati
   .ep-art { width: 100%; aspect-ratio: 1; border-radius: 14px; overflow: hidden; box-shadow: 0 30px 70px rgba(0,0,0,0.5), 0 0 0 0.5px rgba(255,255,255,0.06); background: #1a1410; }
   .ep-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .ep-info { display: flex; flex-direction: column; padding-top: 8px; }
-  .ep-num-prefix { font-family: "Cinzel", Georgia, serif; font-size: 11px; letter-spacing: 0.2em; color: var(--gold); font-weight: 600; margin-bottom: 8px; }
-  .ep-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2rem, 4vw, 3.4rem); line-height: 1; font-weight: 700; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 18px; }
-  .ep-desc { font-family: "Cormorant Garamond", Georgia, serif; font-size: 19px; color: var(--text-2); line-height: 1.55; font-weight: 500; max-width: 95%; margin-bottom: 28px; }
+  .ep-num-prefix { font-family: var(--font-display); font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--gold); font-weight: var(--fw-semibold); margin-bottom: 8px; }
+  .ep-title { font-family: var(--font-display); font-size: var(--t-h1); line-height: var(--lh-tight); font-weight: var(--fw-bold); color: #f5f0e0; letter-spacing: var(--ls-display); margin-bottom: 18px; }
+  .ep-desc { font-family: var(--font-editorial); font-size: var(--t-body-lg); color: var(--text-2); line-height: var(--lh-normal); font-weight: var(--fw-medium); max-width: 95%; margin-bottom: 28px; }
   .ep-meta-row { display: flex; gap: 22px; padding: 14px 0; border-top: 0.5px solid var(--border-2); border-bottom: 0.5px solid var(--border-2); margin-bottom: 28px; flex-wrap: wrap; }
   .ep-meta { display: flex; flex-direction: column; gap: 3px; }
-  .ep-meta-lbl { font-size: 10px; letter-spacing: 0.2em; color: var(--text-4); font-weight: 600; text-transform: uppercase; }
-  .ep-meta-val { font-size: 14px; color: var(--text); font-weight: 500; }
+  .ep-meta-lbl { font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow); color: var(--text-4); font-weight: var(--fw-semibold); text-transform: uppercase; }
+  .ep-meta-val { font-size: var(--t-meta); color: var(--text); font-weight: var(--fw-medium); }
   .ep-actions { display: flex; gap: 10px; flex-wrap: wrap; }
-  .btn-primary { background: var(--green); color: #0a0f0c; padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 600; display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: transform 0.15s; text-decoration: none; }
+  .btn-primary { background: var(--green); color: #0a0f0c; padding: 12px 22px; border-radius: 8px; font-size: var(--t-small); font-weight: var(--fw-semibold); display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: transform 0.15s; text-decoration: none; }
   .btn-primary:hover { transform: translateY(-1px); }
-  .btn-secondary { background: var(--surface); color: var(--text); padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 0.5px solid var(--border-2); display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: background 0.2s; text-decoration: none; }
+  .btn-secondary { background: var(--surface); color: var(--text); padding: 12px 22px; border-radius: 8px; font-size: var(--t-small); font-weight: var(--fw-medium); border: 0.5px solid var(--border-2); display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: background 0.2s; text-decoration: none; }
   .btn-secondary:hover { background: var(--surface-2); }
 
   @media (max-width: 900px) {

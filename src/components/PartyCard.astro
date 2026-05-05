@@ -39,16 +39,16 @@ const { id, player, name, title, tagline, bullets, image, alt, accentColor } = A
   .party-glow { position: absolute; inset: 0; background: radial-gradient(ellipse at center, var(--glow) 0%, transparent 65%); opacity: 0.35; mix-blend-mode: screen; transition: opacity 0.4s; pointer-events: none; }
   .party-art { position: relative; z-index: 2; width: 100%; height: 100%; max-width: 480px; object-fit: contain; padding: 30px 20px 0; transition: transform 0.5s ease; filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4)); }
   .party-meta { padding: 28px 32px 32px; background: linear-gradient(180deg, transparent, rgba(0,0,0,0.4) 30%); position: relative; z-index: 3; }
-  .party-player { font-size: 11px; letter-spacing: 0.26em; color: var(--text-3); font-weight: 600; text-transform: uppercase; margin-bottom: 8px; }
-  .party-name { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.6rem, 2.4vw, 2.2rem); font-weight: 700; color: #f8f3e3; line-height: 1.05; margin-bottom: 10px; letter-spacing: 0.005em; text-shadow: 0 0 30px var(--accent); }
-  .party-title { font-family: "Cormorant Garamond", Georgia, serif; font-style: italic; font-size: 16px; color: var(--text-2); line-height: 1.4; margin-bottom: 14px; }
-  .party-tagline { font-family: "Cormorant Garamond", Georgia, serif; font-size: 18px; font-weight: 600; color: var(--accent); margin-bottom: 18px; padding-bottom: 16px; border-bottom: 0.5px solid var(--border-2); }
+  .party-player { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--text-3); font-weight: var(--fw-semibold); text-transform: uppercase; margin-bottom: 8px; }
+  .party-name { font-family: var(--font-display); font-size: var(--t-h3); font-weight: var(--fw-bold); color: #f8f3e3; line-height: var(--lh-tight); margin-bottom: 10px; letter-spacing: var(--ls-display); text-shadow: 0 0 30px var(--accent); }
+  .party-title { font-family: var(--font-editorial); font-style: italic; font-size: var(--t-body-sm); color: var(--text-2); line-height: var(--lh-normal); margin-bottom: 14px; }
+  .party-tagline { font-family: var(--font-editorial); font-size: var(--t-body); font-weight: var(--fw-semibold); color: var(--accent); margin-bottom: 18px; padding-bottom: 16px; border-bottom: 0.5px solid var(--border-2); }
   .party-bullets { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 7px; }
-  .party-bullets li { position: relative; padding-left: 16px; font-size: 14px; color: var(--text-2); line-height: 1.5; }
-  .party-bullets li::before { content: '·'; position: absolute; left: 4px; top: 0; color: var(--gold); font-weight: 700; font-size: 18px; line-height: 1.2; }
+  .party-bullets li { position: relative; padding-left: 16px; font-size: var(--t-body-sm); color: var(--text-2); line-height: var(--lh-normal); }
+  .party-bullets li::before { content: '·'; position: absolute; left: 4px; top: 0; color: var(--gold); font-weight: var(--fw-bold); font-size: 18px; line-height: 1.2; }
 
   /* Readability pass override from mockup */
-  .party-title { font-style: normal; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  .party-title { font-style: normal; font-family: var(--font-sans); }
 
   @media (max-width: 1024px) {
     .party-card { min-height: auto; }

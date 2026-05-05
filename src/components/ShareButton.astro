@@ -4,13 +4,13 @@
 </button>
 
 <style>
-  .btn-secondary { background: var(--surface); color: var(--text); padding: 12px 22px; border-radius: 8px; font-size: 14px; font-weight: 500; border: 0.5px solid var(--border-2); display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: background 0.2s; font-family: inherit; }
+  .btn-secondary { background: var(--surface); color: var(--text); padding: 12px 22px; border-radius: 8px; font-size: var(--t-small); font-weight: var(--fw-medium); border: 0.5px solid var(--border-2); display: inline-flex; align-items: center; gap: 9px; cursor: pointer; transition: background 0.2s; font-family: inherit; }
   .btn-secondary:hover { background: var(--surface-2); }
 
   :global(.share-toast) {
     position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(20px);
     background: var(--surface-2); color: var(--text); padding: 12px 22px; border-radius: 10px;
-    border: 0.5px solid rgba(151,196,89,0.4); font-size: 14px; font-weight: 500;
+    border: 0.5px solid rgba(151,196,89,0.4); font-size: var(--t-small); font-weight: var(--fw-medium);
     display: flex; align-items: center; gap: 10px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.5);
     opacity: 0; pointer-events: none; transition: opacity 0.25s, transform 0.25s; z-index: 1000;

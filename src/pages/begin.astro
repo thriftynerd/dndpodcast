@@ -344,23 +344,23 @@ const bananaFosterHref = href(bananaFoster);
     text-align: center;
   }
   .b-hero-eyebrow {
-    font-size: 13px; letter-spacing: 0.28em;
-    color: var(--gold); font-weight: 600;
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow);
+    color: var(--gold); font-weight: var(--fw-semibold);
     text-transform: uppercase; margin-bottom: 22px;
   }
   .b-hero-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(2.5rem, 5.5vw, 5rem);
-    line-height: 0.98; font-weight: 700;
-    color: #f5f0e0; letter-spacing: 0.005em;
+    font-family: var(--font-display);
+    font-size: var(--t-display-1);
+    line-height: var(--lh-tight); font-weight: var(--fw-bold);
+    color: #f5f0e0; letter-spacing: var(--ls-display);
     margin-bottom: 22px;
     text-shadow: 0 2px 24px rgba(0,0,0,0.6);
   }
   .b-hero-tag {
-    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-family: var(--font-editorial);
     font-style: italic;
-    font-size: clamp(1.05rem, 1.4vw, 1.3rem);
-    color: #d8d4c5; line-height: 1.55;
+    font-size: var(--t-body-lg);
+    color: #d8d4c5; line-height: var(--lh-normal);
     max-width: 600px; margin: 0 auto;
     text-shadow: 0 1px 8px rgba(0,0,0,0.6);
   }
@@ -369,23 +369,23 @@ const bananaFosterHref = href(bananaFoster);
   .b-primer { padding: 70px 40px; background: var(--bg); }
   .b-primer-inner { max-width: 900px; margin: 0 auto; }
   .b-primer-eyebrow {
-    font-size: 13px; letter-spacing: 0.28em;
-    color: var(--green); font-weight: 600;
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow);
+    color: var(--green); font-weight: var(--fw-semibold);
     text-transform: uppercase; margin-bottom: 14px;
   }
   .b-primer-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700; color: #f5f0e0;
-    letter-spacing: 0.005em; line-height: 1.05;
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: var(--fw-bold); color: #f5f0e0;
+    letter-spacing: var(--ls-display); line-height: var(--lh-tight);
     margin-bottom: 28px;
   }
   .b-primer-body {
-    font-size: 17px; color: var(--text-2);
-    line-height: 1.65; margin-bottom: 18px;
+    font-size: var(--t-body); color: var(--text-2);
+    line-height: var(--lh-relaxed); margin-bottom: 18px;
   }
   .b-primer-body em {
-    color: var(--gold); font-style: italic; font-weight: 500;
+    color: var(--gold); font-style: italic; font-weight: var(--fw-medium);
   }
   .b-primer-audio {
     margin-top: 36px; padding: 22px 26px;
@@ -402,16 +402,16 @@ const bananaFosterHref = href(bananaFoster);
   }
   .b-primer-audio-body { flex: 1; }
   .b-primer-audio-eyebrow {
-    font-size: 10px; letter-spacing: 0.24em; color: var(--gold);
-    font-weight: 600; text-transform: uppercase; margin-bottom: 4px;
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--gold);
+    font-weight: var(--fw-semibold); text-transform: uppercase; margin-bottom: 4px;
   }
   .b-primer-audio-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 19px; font-weight: 600;
-    color: var(--text); margin-bottom: 4px;
+    font-family: var(--font-editorial);
+    font-size: var(--t-h4); font-weight: var(--fw-semibold);
+    color: var(--text); margin-bottom: 4px; letter-spacing: var(--ls-tight);
   }
   .b-primer-audio-sub {
-    font-size: 13.5px; color: var(--text-3); line-height: 1.5;
+    font-size: var(--t-body-sm); color: var(--text-3); line-height: var(--lh-normal);
   }
 
   /* ============== PATHS ============== */
@@ -423,15 +423,15 @@ const bananaFosterHref = href(bananaFoster);
   .b-paths-header { text-align: center; margin-bottom: 50px; }
   .b-paths-header .sec-eyebrow {
     display: inline-block;
-    font-size: 13px; letter-spacing: 0.28em;
-    color: var(--green); font-weight: 600;
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow);
+    color: var(--green); font-weight: var(--fw-semibold);
     text-transform: uppercase; margin-bottom: 14px;
   }
   .b-paths-header h2 {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700; color: #f5f0e0;
-    letter-spacing: 0.005em; line-height: 1.05;
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: var(--fw-bold); color: #f5f0e0;
+    letter-spacing: var(--ls-display); line-height: var(--lh-tight);
   }
 
   /* Asymmetric grid: top row 50/50, bottom row full width */
@@ -464,9 +464,9 @@ const bananaFosterHref = href(bananaFoster);
 
   /* Shared elements */
   .b-path-num {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 11px; letter-spacing: 0.32em;
-    color: var(--gold); font-weight: 600;
+    font-family: var(--font-display);
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow);
+    color: var(--gold); font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
   .b-path-meta {
@@ -479,19 +479,20 @@ const bananaFosterHref = href(bananaFoster);
     margin-bottom: 22px;
   }
   .b-path-meta-item { text-align: center; }
+  /* Stat number — bespoke 18px, leaving as-is per stat-block guidance */
   .b-path-meta-num {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: 18px; font-weight: 700;
-    color: var(--gold); line-height: 1;
+    font-family: var(--font-display);
+    font-size: 18px; font-weight: var(--fw-bold);
+    color: var(--gold); line-height: 1; letter-spacing: var(--ls-display);
   }
   .b-path-meta-lbl {
-    font-size: 10px; letter-spacing: 0.18em; color: var(--text-3);
-    margin-top: 6px; font-weight: 500; text-transform: uppercase;
+    font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow); color: var(--text-3);
+    margin-top: 6px; font-weight: var(--fw-medium); text-transform: uppercase;
   }
   .b-path-cta {
     background: var(--green); color: #0a0f0c;
     padding: 13px 18px; border-radius: 8px;
-    font-size: 14px; font-weight: 600;
+    font-size: var(--t-small); font-weight: var(--fw-semibold);
     display: inline-flex; align-items: center; justify-content: center;
     gap: 9px; text-decoration: none;
     transition: transform 0.15s;
@@ -503,8 +504,8 @@ const bananaFosterHref = href(bananaFoster);
   }
   .b-path-cta-secondary:hover { background: rgba(212,175,55,0.2); }
   .b-path-body-text {
-    font-size: 15px; color: var(--text-2);
-    line-height: 1.6; margin-bottom: 22px;
+    font-size: var(--t-body-sm); color: var(--text-2);
+    line-height: var(--lh-relaxed); margin-bottom: 22px;
   }
   .b-path-body-text em {
     color: var(--gold); font-style: italic;
@@ -519,8 +520,8 @@ const bananaFosterHref = href(bananaFoster);
     top: 16px; left: 16px;
     background: var(--green); color: #0a0f0c;
     padding: 5px 14px; border-radius: 999px;
-    font-size: 10px; letter-spacing: 0.2em;
-    font-weight: 700; text-transform: uppercase;
+    font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow);
+    font-weight: var(--fw-bold); text-transform: uppercase;
     z-index: 5;
     box-shadow: 0 4px 16px rgba(0,0,0,0.4);
   }
@@ -579,9 +580,9 @@ const bananaFosterHref = href(bananaFoster);
     bottom: 12px; left: 0; right: 0;
     text-align: center;
     z-index: 4;
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 14px;
-    font-weight: 600;
+    font-family: var(--font-sans);
+    font-size: var(--t-small);
+    font-weight: var(--fw-semibold);
     color: #f5f0e0;
     letter-spacing: 0.04em;
     text-shadow: 0 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.6);
@@ -601,12 +602,12 @@ const bananaFosterHref = href(bananaFoster);
     display: block;
   }
   .b-path-1-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.7rem, 2.4vw, 2.1rem);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: var(--t-h3);
+    font-weight: var(--fw-bold);
     color: #f5f0e0;
-    letter-spacing: 0.005em;
-    line-height: 1.05;
+    letter-spacing: var(--ls-display);
+    line-height: var(--lh-tight);
     text-shadow: 0 2px 12px rgba(0,0,0,0.7);
     margin: 0;
   }
@@ -631,18 +632,18 @@ const bananaFosterHref = href(bananaFoster);
     display: block;
   }
   .b-path-2-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.7rem, 2.4vw, 2.1rem);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: var(--t-h3);
+    font-weight: var(--fw-bold);
     color: #f5f0e0;
-    letter-spacing: 0.005em;
-    line-height: 1.05;
+    letter-spacing: var(--ls-display);
+    line-height: var(--lh-tight);
     margin-bottom: 12px;
   }
   .b-path-2-sub {
-    font-size: 14.5px;
+    font-size: var(--t-body-sm);
     color: var(--text-2);
-    line-height: 1.55;
+    line-height: var(--lh-normal);
     margin: 0;
   }
 
@@ -704,8 +705,9 @@ const bananaFosterHref = href(bananaFoster);
   }
   .b-poster-tag {
     display: inline-block;
-    font-size: 9px; letter-spacing: 0.22em;
-    color: var(--gold); font-weight: 700;
+    /* TODO: review type system mapping — sub-tiny pill at 9px */
+    font-size: 9px; letter-spacing: var(--ls-eyebrow);
+    color: var(--gold); font-weight: var(--fw-bold);
     text-transform: uppercase;
     padding: 3px 8px;
     border: 0.5px solid rgba(212,175,55,0.5);
@@ -715,23 +717,24 @@ const bananaFosterHref = href(bananaFoster);
     margin-bottom: 8px;
   }
   .b-poster-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 19px;
-    font-weight: 700;
+    font-family: var(--font-editorial);
+    font-size: var(--t-h4);
+    font-weight: var(--fw-bold);
     color: #f5f0e0;
-    line-height: 1.2;
+    line-height: var(--lh-snug);
     margin-bottom: 5px;
     text-shadow: 0 2px 12px rgba(0,0,0,0.9);
+    letter-spacing: var(--ls-tight);
   }
   .b-poster-sub {
-    font-size: 12.5px;
+    font-size: var(--t-small);
     color: rgba(245,240,224,0.85);
-    line-height: 1.4;
+    line-height: var(--lh-normal);
     text-shadow: 0 1px 6px rgba(0,0,0,0.9);
     margin-bottom: 8px;
   }
   .b-poster-credit {
-    font-size: 10px;
+    font-size: var(--t-tiny);
     color: rgba(245,240,224,0.55);
     letter-spacing: 0.04em;
   }
@@ -773,7 +776,7 @@ const bananaFosterHref = href(bananaFoster);
   .b-path-3-image-credit {
     position: absolute;
     bottom: 12px; right: 16px;
-    font-size: 11px;
+    font-size: var(--t-tiny);
     color: rgba(255,255,255,0.85);
     background: rgba(0,0,0,0.55);
     padding: 4px 10px;
@@ -784,7 +787,7 @@ const bananaFosterHref = href(bananaFoster);
   .b-path-3-image-credit a {
     color: var(--gold);
     text-decoration: none;
-    font-weight: 500;
+    font-weight: var(--fw-medium);
   }
   .b-path-3-image-credit a:hover {
     text-decoration: underline;
@@ -801,16 +804,17 @@ const bananaFosterHref = href(bananaFoster);
     display: block;
   }
   .b-path-3-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(1.8rem, 2.6vw, 2.3rem);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: var(--fw-bold);
     color: var(--text);
-    line-height: 1.1;
+    line-height: var(--lh-snug);
     margin-bottom: 16px;
+    letter-spacing: var(--ls-display);
   }
   .b-path-3-text .b-path-body-text {
-    font-size: 16px;
-    line-height: 1.65;
+    font-size: var(--t-body-sm);
+    line-height: var(--lh-relaxed);
     margin-bottom: 0;
   }
   .b-path-3-side {
@@ -827,15 +831,15 @@ const bananaFosterHref = href(bananaFoster);
   .b-context-header { text-align: center; margin-bottom: 44px; }
   .b-context-header .sec-eyebrow {
     display: inline-block;
-    font-size: 13px; letter-spacing: 0.28em;
-    color: var(--green); font-weight: 600;
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow);
+    color: var(--green); font-weight: var(--fw-semibold);
     text-transform: uppercase; margin-bottom: 14px;
   }
   .b-context-header h2 {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700; color: #f5f0e0;
-    letter-spacing: 0.005em; line-height: 1.05;
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: var(--fw-bold); color: #f5f0e0;
+    letter-spacing: var(--ls-display); line-height: var(--lh-tight);
   }
   .b-context-grid {
     display: grid;
@@ -849,19 +853,19 @@ const bananaFosterHref = href(bananaFoster);
     padding: 28px 30px;
   }
   .b-context-card-eyebrow {
-    font-size: 11px; letter-spacing: 0.26em;
-    color: var(--gold); font-weight: 600;
+    font-size: var(--t-small); letter-spacing: var(--ls-eyebrow);
+    color: var(--gold); font-weight: var(--fw-semibold);
     text-transform: uppercase; margin-bottom: 10px;
   }
   .b-context-card-title {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 22px; font-weight: 600;
-    color: var(--text); line-height: 1.2;
-    margin-bottom: 12px;
+    font-family: var(--font-editorial);
+    font-size: var(--t-h4); font-weight: var(--fw-semibold);
+    color: var(--text); line-height: var(--lh-snug);
+    margin-bottom: 12px; letter-spacing: var(--ls-tight);
   }
   .b-context-card-body {
-    font-size: 14.5px; color: var(--text-2);
-    line-height: 1.6; margin: 0;
+    font-size: var(--t-body-sm); color: var(--text-2);
+    line-height: var(--lh-relaxed); margin: 0;
   }
   .b-context-card-body a {
     color: var(--green);
@@ -882,15 +886,15 @@ const bananaFosterHref = href(bananaFoster);
     text-align: center;
   }
   .b-final-title {
-    font-family: 'Cinzel', Georgia, serif;
-    font-size: clamp(2rem, 3.5vw, 3rem);
-    font-weight: 700; color: #f5f0e0;
-    letter-spacing: 0.005em; line-height: 1.05;
+    font-family: var(--font-display);
+    font-size: var(--t-h2);
+    font-weight: var(--fw-bold); color: #f5f0e0;
+    letter-spacing: var(--ls-display); line-height: var(--lh-tight);
     margin-bottom: 18px;
   }
   .b-final-body {
-    font-size: 17px; color: #d8d4c5;
-    line-height: 1.6; margin-bottom: 32px;
+    font-size: var(--t-body); color: #d8d4c5;
+    line-height: var(--lh-relaxed); margin-bottom: 32px;
   }
   .b-final-actions {
     display: flex; gap: 12px;
@@ -898,7 +902,7 @@ const bananaFosterHref = href(bananaFoster);
   }
   .btn-p, .btn-s {
     padding: 14px 24px; border-radius: 8px;
-    font-size: 15px; font-weight: 600;
+    font-size: var(--t-meta); font-weight: var(--fw-semibold);
     display: inline-flex; align-items: center; gap: 10px;
     cursor: pointer; text-decoration: none;
   }
@@ -945,7 +949,7 @@ const bananaFosterHref = href(bananaFoster);
     .b-path-2-header { padding: 24px 22px 18px; }
     .b-path-2-posters { padding: 0 12px 12px; gap: 10px; }
     .b-poster-content { padding: 12px 14px 12px; }
-    .b-poster-title { font-size: 16px; }
+    .b-poster-title { font-size: var(--t-body-sm); }
     .b-path-3-image { aspect-ratio: 16/9; }
   }
 </style>

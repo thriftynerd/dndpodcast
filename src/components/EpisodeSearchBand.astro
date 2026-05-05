@@ -20,15 +20,15 @@
   .search-box { display: flex; align-items: center; gap: 12px; background: var(--surface); border: 0.5px solid var(--border-2); border-radius: 8px; padding: 10px 16px; flex: 1; min-width: 280px; max-width: 480px; transition: border-color 0.2s; }
   .search-box:focus-within { border-color: rgba(151,196,89,0.5); }
   .search-box svg { color: var(--text-4); flex-shrink: 0; }
-  .search-box input { background: transparent; border: none; outline: none; color: var(--text); font-size: 14px; flex: 1; font-family: inherit; }
+  .search-box input { background: transparent; border: none; outline: none; color: var(--text); font-size: var(--t-small); flex: 1; font-family: inherit; }
   .search-box input::placeholder { color: var(--text-4); }
 
   .filter-pills { display: flex; gap: 6px; }
-  .fp { padding: 8px 14px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 999px; color: var(--text-3); font-size: 13px; font-weight: 500; cursor: pointer; transition: all 0.2s; font-family: inherit; }
+  .fp { padding: 8px 14px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 999px; color: var(--text-3); font-size: var(--t-small); font-weight: var(--fw-medium); cursor: pointer; transition: all 0.2s; font-family: inherit; }
   .fp:hover { color: var(--text); border-color: var(--border-2); }
   .fp.active { background: rgba(151,196,89,0.12); color: var(--green); border-color: rgba(151,196,89,0.4); }
 
-  .search-results-count { font-size: 13px; color: var(--text-3); margin-left: auto; }
+  .search-results-count { font-size: var(--t-small); color: var(--text-3); margin-left: auto; }
 
   @media (max-width: 900px) {
     .search-band { padding: 18px 24px; position: static; }

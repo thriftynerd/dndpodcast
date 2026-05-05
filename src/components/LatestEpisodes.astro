@@ -50,9 +50,9 @@ function badgeFor(ep: typeof episodes[number]): string {
   .sec { padding: 80px 40px; background: var(--bg); }
   .sec-inner { max-width: 1280px; margin: 0 auto; }
   .sec-hd { display: flex; align-items: flex-end; justify-content: space-between; margin-bottom: 40px; gap: 20px; flex-wrap: wrap; }
-  .sec-eyebrow { font-size: 13px; letter-spacing: 0.28em; color: var(--green); font-weight: 600; margin-bottom: 10px; }
-  .sec-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: clamp(2rem, 3.5vw, 3rem); font-weight: 700; color: #f5f0e0; line-height: 1.05; }
-  .sec-link { font-size: 14px; color: var(--text-3); text-decoration: none; transition: color 0.2s; }
+  .sec-eyebrow { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--green); font-weight: var(--fw-semibold); margin-bottom: 10px; }
+  .sec-title { font-family: var(--font-editorial); font-size: var(--t-h2); font-weight: var(--fw-bold); color: #f5f0e0; line-height: var(--lh-tight); }
+  .sec-link { font-size: var(--t-small); color: var(--text-3); text-decoration: none; transition: color 0.2s; }
   .sec-link:hover { color: var(--green); }
 
   .eps { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
@@ -60,17 +60,17 @@ function badgeFor(ep: typeof episodes[number]): string {
   .ep-card:hover { transform: translateY(-3px); border-color: rgba(151,196,89,0.3); }
   .ep-art { width: 100%; aspect-ratio: 16/9; position: relative; overflow: hidden; background: var(--bg-2); }
   .ep-art img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s; }
-  .ep-art-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: "Cinzel", Georgia, serif; color: var(--text-4); font-size: 24px; font-weight: 700; letter-spacing: 0.08em; }
+  .ep-art-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; font-family: var(--font-display); color: var(--text-4); font-size: var(--t-h4); font-weight: var(--fw-bold); letter-spacing: 0.08em; }
   .ep-card:hover .ep-art img { transform: scale(1.04); }
-  .ep-num-badge { position: absolute; top: 14px; left: 14px; background: rgba(10,15,12,0.85); color: var(--green); padding: 5px 12px; border-radius: 5px; font-size: 12px; font-weight: 600; letter-spacing: 0.1em; backdrop-filter: blur(4px); }
+  .ep-num-badge { position: absolute; top: 14px; left: 14px; background: rgba(10,15,12,0.85); color: var(--green); padding: 5px 12px; border-radius: 5px; font-size: var(--t-tiny); font-weight: var(--fw-semibold); letter-spacing: 0.1em; backdrop-filter: blur(4px); }
   .ep-play { position: absolute; bottom: 14px; right: 14px; width: 42px; height: 42px; border-radius: 50%; background: rgba(10,15,12,0.88); color: var(--green); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(4px); }
   .ep-body { padding: 20px 22px; }
-  .ep-name { font-family: "Cormorant Garamond", Georgia, serif; font-size: 18px; font-weight: 700; color: var(--text); line-height: 1.3; margin-bottom: 8px; }
-  .ep-meta { font-size: 13px; color: var(--text-3); }
+  .ep-name { font-family: var(--font-editorial); font-size: var(--t-h4); font-weight: var(--fw-bold); color: var(--text); line-height: var(--lh-snug); margin-bottom: 8px; letter-spacing: var(--ls-tight); }
+  .ep-meta { font-size: var(--t-meta); color: var(--text-3); }
 
   /* Font system override from mockup */
-  .sec-title { font-family: "Cinzel", Georgia, serif; letter-spacing: 0.005em; }
-  .ep-name { font-weight: 600; }
+  .sec-title { font-family: var(--font-display); letter-spacing: var(--ls-display); }
+  .ep-name { font-weight: var(--fw-semibold); }
 
   @media (max-width: 900px) {
     .sec { padding: 50px 24px; }

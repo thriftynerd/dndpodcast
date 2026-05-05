@@ -43,25 +43,25 @@ const { mentions } = Astro.props;
 
   .side-block { background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; padding: 22px 24px; margin-bottom: 18px; }
   .side-block:last-child { margin-bottom: 0; }
-  .side-eyebrow { font-size: 11px; letter-spacing: 0.26em; color: var(--green); font-weight: 600; text-transform: uppercase; margin-bottom: 14px; }
-  .side-title { font-family: "Cormorant Garamond", Georgia, serif; font-size: 19px; font-weight: 600; color: var(--text); margin-bottom: 14px; }
-  .side-body { font-size: 14px; color: var(--text-2); line-height: 1.55; }
+  .side-eyebrow { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--green); font-weight: var(--fw-semibold); text-transform: uppercase; margin-bottom: 14px; }
+  .side-title { font-family: var(--font-editorial); font-size: var(--t-h4); font-weight: var(--fw-semibold); color: var(--text); margin-bottom: 14px; letter-spacing: var(--ls-tight); }
+  .side-body { font-size: var(--t-body-sm); color: var(--text-2); line-height: var(--lh-normal); }
 
   .mention-list { list-style: none; padding: 0; margin: 0; }
   .mention-item { padding: 11px 0; border-top: 0.5px solid rgba(255,255,255,0.04); display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 12px; align-items: baseline; }
   .mention-item:first-child { border-top: none; padding-top: 4px; }
-  .mention-tag { font-size: 10px; letter-spacing: 0.18em; font-weight: 600; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; text-align: center; }
+  .mention-tag { font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow); font-weight: var(--fw-semibold); text-transform: uppercase; padding: 3px 8px; border-radius: 4px; text-align: center; }
   .mention-character { background: rgba(151,196,89,0.12); color: var(--green); }
   .mention-location { background: rgba(212,175,55,0.12); color: var(--gold); }
   .mention-faction { background: rgba(211,90,90,0.12); color: #d35a5a; }
   .mention-event { background: rgba(168,127,199,0.14); color: #c5a5d6; }
-  .mention-item { font-size: 14px; }
-  .mention-name { font-size: 14px; color: var(--text); font-weight: 500; transition: color 0.2s; cursor: pointer; }
+  .mention-item { font-size: var(--t-small); }
+  .mention-name { font-size: var(--t-body-sm); color: var(--text); font-weight: var(--fw-medium); transition: color 0.2s; cursor: pointer; }
   .mention-name:hover { color: var(--green); }
-  .mention-note { display: block; grid-column: 2; font-size: 12.5px; color: var(--text-3); margin-top: 2px; }
+  .mention-note { display: block; grid-column: 2; font-size: var(--t-tiny); color: var(--text-3); margin-top: 2px; }
 
   .new-listener { background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(151,196,89,0.04)); border-color: rgba(212,175,55,0.25); }
-  .new-listener-cta { display: inline-block; margin-top: 10px; font-size: 13px; color: var(--gold); font-weight: 600; text-decoration: none; }
+  .new-listener-cta { display: inline-block; margin-top: 10px; font-size: var(--t-small); color: var(--gold); font-weight: var(--fw-semibold); text-decoration: none; }
 
   @media (max-width: 1024px) {
     .ep-sidebar { position: static; }

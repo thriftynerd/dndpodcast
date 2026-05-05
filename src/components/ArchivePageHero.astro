@@ -24,12 +24,13 @@ const { episodeCount, totalHours, campaignCount, yearStarted } = Astro.props;
 
 <style>
   .page-hero { padding: 70px 40px 40px; max-width: 1280px; margin: 0 auto; text-align: center; }
-  .page-hero-eyebrow { font-size: 13px; letter-spacing: 0.32em; color: var(--green); font-weight: 600; margin-bottom: 18px; }
-  .page-hero-title { font-family: "Cinzel", Georgia, serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; font-weight: 700; color: #f5f0e0; letter-spacing: 0.005em; margin-bottom: 28px; }
+  .page-hero-eyebrow { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--green); font-weight: var(--fw-semibold); margin-bottom: 18px; text-transform: uppercase; }
+  .page-hero-title { font-family: var(--font-display); font-size: var(--t-display-2); line-height: var(--lh-tight); font-weight: var(--fw-bold); color: #f5f0e0; letter-spacing: var(--ls-display); margin-bottom: 28px; }
   .page-hero-stats { display: inline-flex; align-items: center; gap: 28px; padding: 22px 36px; background: var(--surface); border: 0.5px solid var(--border); border-radius: 12px; flex-wrap: wrap; justify-content: center; }
   .phs { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-  .phs-num { font-family: "Cinzel", Georgia, serif; font-size: clamp(1.4rem, 2vw, 1.9rem); font-weight: 700; color: var(--gold); line-height: 1; letter-spacing: 0.005em; }
-  .phs-lbl { font-size: 11px; letter-spacing: 0.18em; color: var(--text-3); font-weight: 500; text-transform: uppercase; }
+  /* Stat number — bespoke clamp, leaving size as-is per stat-block guidance */
+  .phs-num { font-family: var(--font-display); font-size: clamp(1.4rem, 2vw, 1.9rem); font-weight: var(--fw-bold); color: var(--gold); line-height: 1; letter-spacing: var(--ls-display); }
+  .phs-lbl { font-size: var(--t-small); letter-spacing: var(--ls-eyebrow); color: var(--text-3); font-weight: var(--fw-medium); text-transform: uppercase; }
   .phs-div { width: 1px; height: 32px; background: var(--border-2); }
 
   @media (max-width: 900px) {

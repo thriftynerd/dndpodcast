@@ -99,10 +99,10 @@
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    font-size: 11px;
-    letter-spacing: 0.28em;
+    font-size: var(--t-small);
+    letter-spacing: var(--ls-eyebrow);
     color: #ff9090;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
   .tw-eyebrow-pulse {
@@ -114,23 +114,23 @@
     animation: pulse 2.4s infinite;
   }
   .tw-headline {
-    font-family: "Cinzel", Georgia, serif;
-    font-size: clamp(22px, 2.4vw, 30px);
-    font-weight: 700;
+    font-family: var(--font-display);
+    font-size: var(--t-h3);
+    font-weight: var(--fw-bold);
     color: #fff;
-    line-height: 1.15;
-    letter-spacing: 0.005em;
+    line-height: var(--lh-snug);
+    letter-spacing: var(--ls-display);
     margin: 0;
   }
   .tw-sub {
-    font-size: 14.5px;
+    font-size: var(--t-body-sm);
     color: #d8c8ff;
-    line-height: 1.6;
+    line-height: var(--lh-relaxed);
     margin: 0;
   }
   .tw-sub a {
     color: #fff;
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     text-decoration: underline;
     text-decoration-color: rgba(255,255,255,0.4);
     text-underline-offset: 3px;
@@ -161,24 +161,25 @@
     border-color: #fff;
   }
   .tw-coupon-label {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+    font-family: var(--font-sans);
+    /* TODO: review type system mapping — sub-tiny micro-label inside coupon UI */
     font-size: 9.5px;
     letter-spacing: 0.22em;
     color: rgba(255,255,255,0.65);
-    font-weight: 600;
+    font-weight: var(--fw-semibold);
     text-transform: uppercase;
   }
   .tw-coupon-code {
     font-family: "Courier New", monospace;
-    font-size: 13px;
-    font-weight: 700;
+    font-size: var(--t-small);
+    font-weight: var(--fw-bold);
     letter-spacing: 0.06em;
     color: #fff;
   }
   .tw-coupon-discount {
-    font-size: 12px;
+    font-size: var(--t-tiny);
     color: rgba(255,255,255,0.85);
-    font-weight: 500;
+    font-weight: var(--fw-medium);
   }
   .tw-coupon-toast {
     position: absolute;
@@ -189,8 +190,8 @@
     color: #5c16c5;
     padding: 6px 12px;
     border-radius: 5px;
-    font-size: 12px;
-    font-weight: 700;
+    font-size: var(--t-tiny);
+    font-weight: var(--fw-bold);
     letter-spacing: 0.04em;
     opacity: 0;
     pointer-events: none;
@@ -213,8 +214,8 @@
     color: #5c16c5;
     padding: 12px 22px;
     border-radius: 7px;
-    font-size: 14px;
-    font-weight: 700;
+    font-size: var(--t-small);
+    font-weight: var(--fw-bold);
     display: inline-flex;
     align-items: center;
     gap: 9px;
@@ -231,8 +232,8 @@
     padding: 12px 22px;
     border-radius: 7px;
     border: 0.5px solid rgba(255,255,255,0.3);
-    font-size: 14px;
-    font-weight: 600;
+    font-size: var(--t-small);
+    font-weight: var(--fw-semibold);
     display: inline-flex;
     align-items: center;
     gap: 8px;
