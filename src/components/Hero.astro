@@ -5,10 +5,8 @@ const episodes = await loadEpisodes();
 
 // Episodes are sorted newest-first
 const latest = episodes[0];
-const oldest = episodes[episodes.length - 1];
 
 const latestHref = latest ? `/episodes/${latest.slug}` : '#';
-const firstHref = oldest ? `/episodes/${oldest.slug}` : '#';
 
 // Exact episode count
 const episodeCount = episodes.length;
@@ -54,7 +52,7 @@ const formatNum = (n: number) => n.toLocaleString('en-US');
           </svg>
           Latest episode
         </a>
-        <a class="btn-s" href={firstHref}>Start from the beginning</a>
+        <a class="btn-s" href="/begin">Find your way in</a>
       </div>
 
       <div class="stats">
