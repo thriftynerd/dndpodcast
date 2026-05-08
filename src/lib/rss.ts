@@ -253,12 +253,14 @@ function buildSlug(kind: EpisodeKind, episodeNumber: number | null, title: strin
 function cleanTitle(raw: string): string {
   if (!raw) return '';
   let t = raw.trim();
-  // "C1 Episode 122 - Title" or "C2 Episode 5: Title"
-  t = t.replace(/^C[12]\s+(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
+// "Campaign 2: Episode 167 - Title" / "C2 Episode 5: Title" / "Campaign Two Ep 12 — Title"
+t = t.replace(/^(Campaign\s+(One|Two|[12])|C[12])\s*[:\s]?\s*(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
   // "Episode 122 - Title" or "Episode 122: Title" or "Ep 122 - Title"
   t = t.replace(/^(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
   // "Bonus Episode 159 - Title"
   t = t.replace(/^Bonus\s+(Episode|Ep\.?)\s+\d+\s*[-–—:]\s*/i, '');
+  // "Title - C2: E182" — trailing campaign/episode tag
+  t = t.replace(/\s*[-–—]\s*C[12]\s*[:\s]?\s*E\d+\s*$/i, '');
   return t.trim();
 }
 
