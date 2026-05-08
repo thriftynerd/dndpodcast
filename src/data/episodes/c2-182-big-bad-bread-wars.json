@@ -1,0 +1,55 @@
+{
+  "slug": "c2-182-big-bad-bread-wars",
+  "campaign": "c2",
+  "episode_number": 182,
+  "title": "Big Bad Bread Wars",
+  "publish_date": "2026-04-20",
+  "duration": "1h 24m",
+
+  "recap": "The party heads to Selene's family wedding feast, but with the collar registration deadline a day away, even a wedding feels like a powder keg. After scouting the Slab and recruiting a flour-covered baker (elf wife, half-elf kids in hiding) into the resistance, the gang sneaks into the public feast on the back of a perfectly timed bread-cart disaster from Marty \"Old Man\" Breadbasket. Inside, R'oarc wins a Womple Wine drinking contest against Brunda Kegbreaker and, shockingly, makes a friend instead of a corpse. The mood breaks when Selene spots Pip, a halfling from her childhood, already collared and running a dart booth. Selene is rattled. The party pushes toward the guarded pavilion where Darius and Farholde's worst people are waiting. What's in there will have to wait.",
+
+  "show_notes": "Picking up right after the bell heist, except they didn't actually have to heist anything. Meat Chunk, one of Screetch's ex-wife-adjacent thieves from the Echo Chamber, has already lifted the small warning bell and presents it to R'oarc as a gift. Comes with a string attached, in the good way. Ring it whenever the party needs the Echo Chamber and they will come running.\n\nWhich is great, because the party has to figure out what to do with the few hours before Selene's family wedding feast. The collar registration deadline is tomorrow. Selene clocks the obvious: a feast packed with nobles and Farholde's worst is the best chance to gather intel, find allies, or set things in motion before things explode.\n\nA swing through the Slab proves how grim things have gotten. People are already lining up for collars, a day early, like it's a sale. Some look resigned, some are \"beating the rush,\" a couple of protestors get jabbed and chased off. The party follows one of them, a flour-covered baker whose elf wife is hiding in the woods with their half-elf kids, because the kids are going to outlive him by centuries and Farholde is no longer a safe place for them. T'chuck reads him as sincere. The party reveals they are with the resistance and asks him to round up some \"rowdy dudes\" for tomorrow. Word goes out to Ratma. New cell, just like that.\n\nThen it's off to the feast, and the wardrobe gets weird. Selene in a dramatic crimson dress. R'oarc in a pink ruffly thing with all of her armor still underneath, spikes very much intact. T'chuck dressed like a fancy cartoon villain. Screetch is wearing, by his own description, sweatpants, Crocs, and a shirt that says \"I wish I was a bat right now.\"\n\nThe feast turns out to be less a stuffy dinner and more of a district-wide festival, which is great for the disguised murder hobos in attendance. A fancy pavilion for the powerful people, a public area with games, jugglers, fire-blowers, turkey legs, sausages, ale, and the signature orange Womple Wine that will become extremely relevant in a minute.\n\nT'chuck tries to bluff the entrance by claiming Darius personally invited them. The guard is buying none of it, until Marty \"Old Man\" Breadbasket's cart of warm bread comes trundling in fully out of control and overturns by the line. The crowd swarms the bread. The guard, distracted by bread, lets the party slip past. Breadvantage.\n\nOld Man Breadbasket then becomes the episode. He's recently an orphan, allegedly. The table spends real time debating whether adults can be orphans. Screetch takes it personally on account of the bakery he apparently owns. Theories accumulate that Marty is connected to Old Man Wuk somehow, like there's a whole cosmic layer of Old Man entities just watching this campaign play out. We will let this hang.\n\nInside the festival, R'oarc gets pulled into a Womple Wine drinking contest by Brunda Kegbreaker, a stocky dwarven woman who has already broken several other challengers. Several Constitution saves and one burned Lucky later, Brunda passes out before the final round. R'oarc wins by default. The prize is either 10 gold or becoming best friends with Brunda. R'oarc, in a development that surprises everyone at the table including herself, picks friendship. She arranges water, bread, and an Uber carriage home. T'chuck gives her a hug. R'oarc retracts specific spikes to make this physically possible.\n\nThe mood drops when Selene spots Pip, a halfling running a dart-and-balloon booth. They took classes together as kids, back when Selene's parents had her socialize with \"common\" children. Pip is already wearing a collar. Selene almost approaches as herself, then doesn't, because she can't actually help in this moment without blowing everything. She tries to slip Pip a gold piece. Pip insists she play the game. Selene wins. Tries to lose so Pip keeps the prize. Ends up holding a comically large stuffed horse.\n\nShe is rattled. She tells the party to stop wasting time and find the people who matter, because some real shit is about to go down.\n\nAt the pavilion entrance, the guard from before has been fired, both for falling for the bread and for eating too much of it. The new guard recognizes T'chuck from a comically bad sketch with vaguely Shrek-ish ears. They get waved in. The party walks into the pavilion. Michael cuts immediately to credits.",
+
+  "in_this_episode": {
+    "cast": [
+      { "name": "Michael DiMauro", "role": "Dungeon Master" },
+      { "name": "Jennifer Cheek", "role": "Selene Von Esper" },
+      { "name": "Mike Bachmann", "role": "Screetch Echo" },
+      { "name": "Tim Lanning", "role": "T'chuck" },
+      { "name": "Nika Howard", "role": "R'oarc" }
+    ],
+
+    "characters": [
+      { "name": "Meat Chunk", "note": "Echo Chamber thief and ex-wife-adjacent to Screetch. Gifts the warning bell to R'oarc with the promise that the Echo Chamber will come if it's rung." },
+      { "name": "Marty \"Old Man\" Breadbasket", "note": "Bread cart proprietor, recently an orphan (allegedly), possibly an adult, possibly cosmic. Crashes his cart at the perfect moment to get the party past the gate." },
+      { "name": "Brunda Kegbreaker", "note": "Stocky dwarven Womple Wine champion. Loses to R'oarc by passing out. Gains a best friend." },
+      { "name": "Pip", "note": "Halfling. Selene's childhood acquaintance from her enforced 'common children' classes. Now collared, running a dart booth. The emotional center of the episode." },
+      { "name": "The baker (unnamed)", "note": "Flour-covered protestor at the Slab. Elf wife and half-elf kids hiding in the woods. New resistance recruit, tasked with rounding up rowdy dudes for tomorrow." },
+      { "name": "Ratma", "note": "Resistance contact. Gets word about the new potential cell. Off-screen this episode." },
+      { "name": "Darius Von Esper", "note": "Selene's father. Off-screen but the wedding is at his table and the pavilion is his territory." },
+      { "name": "Old Man Wuk", "note": "Possibly connected to Old Man Breadbasket. Possibly part of a larger cosmic Old Man problem. The cast is theorizing." }
+    ],
+
+    "locations": [
+      { "name": "Farholde", "note": "One day from the collar registration deadline. Already collaring people early." },
+      { "name": "The Slab", "note": "Where the collaring stations are. Lines forming, protestors getting jabbed." },
+      { "name": "The wedding feast", "note": "District-wide festival with a public commoner area and a guarded fancy pavilion. Womple Wine, jugglers, bread cart accidents." },
+      { "name": "The Echo Chamber", "note": "Referenced via Meat Chunk and the bell promise. Available on call now." },
+      { "name": "The woods outside Farholde", "note": "Where the baker's elf wife and half-elf kids are hiding." }
+    ],
+
+    "callbacks": [
+      { "name": "The warning bell", "note": "Pays off the Echo Chamber arc. The party didn't have to steal it. The Echo Chamber stole it for them." },
+      { "name": "Collar registration deadline", "note": "Officially tomorrow. Practically already happening." },
+      { "name": "The Old Man cinematic universe", "note": "Wuk, now Breadbasket. The cast is openly theorizing about a cosmic pattern." },
+      { "name": "R'oarc's Lucky", "note": "Burned to stay alive in the drinking contest. Worth it." }
+    ]
+  },
+
+  "open_threads": [
+    "The party walks into the pavilion. Michael cuts before they see what's there.",
+    "There's still a midnight date scheduled later this same in-game day. Several of the cast forgot.",
+    "Whether Marty Breadbasket is just a guy is now a real campaign question.",
+    "The baker's rowdy dudes are theoretically gathering for tomorrow."
+  ]
+}
