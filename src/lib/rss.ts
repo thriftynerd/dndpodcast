@@ -2,7 +2,12 @@
 import { XMLParser } from 'fast-xml-parser';
 import { existsSync, readFileSync, writeFileSync, mkdirSync, statSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
-import { LINEUP_OVERRIDES, type LineupEntry } from '../data/lineups';
+import {
+  LINEUP_OVERRIDES,
+  LINEUP_RANGES,
+  MILESTONES,
+  type LineupEntry,
+} from '../data/lineups';
 
 const FEED_URL = 'https://feeds.acast.com/public/shows/greetings-adventurers';
 const CACHE_PATH = resolve(process.cwd(), '.cache/feed.xml');
@@ -328,13 +333,51 @@ function extractLineupFromDescription(description: string): LineupEntry[] {
   return found;
 }
 
-// Combine parser output + manual overrides. Override wins where present.
-// Override is keyed by slug; if there's an entry for this episode, it
-// fully replaces the parsed lineup (so you can fix wrong/missing entries
-// without fighting the parser).
-function resolveLineup(slug: string, parsedLineup: LineupEntry[]): LineupEntry[] {
+// Combine override + range-based default + milestones + parser fallback.
+//
+// Resolution order:
+//   1. LINEUP_OVERRIDES[slug] — full replacement, no milestones layered on
+//   2. LINEUP_RANGES match by (kind, episodeNumber) — milestones layered on top
+//   3. parsedLineup from description — last resort, no portraits available
+function resolveLineup(
+  slug: string,
+  kind: EpisodeKind,
+  episodeNumber: number | null,
+  parsedLineup: LineupEntry[],
+): LineupEntry[] {
+  // 1. Per-slug overrides win outright
   const override = LINEUP_OVERRIDES[slug];
   if (override) return override;
+
+  // 2. Range-based match by (kind, episodeNumber)
+  if (episodeNumber != null) {
+    const range = LINEUP_RANGES.find(
+      (r) =>
+        r.kind === kind &&
+        episodeNumber >= r.from &&
+        (r.to == null || episodeNumber <= r.to),
+    );
+    if (range) {
+      // Layer milestones on top
+      const milestones = MILESTONES[`${kind}-${episodeNumber}`];
+      if (milestones && milestones.length > 0) {
+        return range.lineup.map((entry) => {
+          if (!entry.character) return entry;
+          const patch = milestones.find((m) => m.character === entry.character);
+          if (!patch) return entry;
+          return {
+            ...entry,
+            ...(patch.firstAppearance ? { firstAppearance: true } : {}),
+            ...(patch.finalAppearance ? { finalAppearance: true } : {}),
+            ...(patch.note ? { note: patch.note } : {}),
+          };
+        });
+      }
+      return range.lineup;
+    }
+  }
+
+  // 3. Parser fallback
   return parsedLineup;
 }
 
@@ -387,7 +430,7 @@ export async function loadEpisodes(): Promise<Episode[]> {
     const slug = buildSlug(kind, episodeNumber, cleanedTitle);
 
     const parsedLineup = extractLineupFromDescription(description);
-    const lineup = resolveLineup(slug, parsedLineup);
+   const lineup = resolveLineup(slug, kind, episodeNumber, parsedLineup);
 
     return {
       guid,
