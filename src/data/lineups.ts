@@ -41,9 +41,24 @@ export const C1_FOUNDING: LineupEntry[] = [
   { player: 'Tim Lanning', character: 'Tum Darkblade', portrait: '/images/characters/tum-darkblade.webp' },
   { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
   { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
-  // Junpei deliberately has no portrait. The fallback to initials renders
-  // identically to any character we don't have art for. Don't change this.
   { player: 'Steven Strom', character: 'Junpei Iori' },
+];
+
+// Episodes 1–30: the original four-PC lineup, before Tum's death.
+export const C1_FOUNDING_A: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+  { player: 'Tim Lanning', character: 'Tum Darkblade', portrait: '/images/characters/tum-darkblade.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
+  { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
+  { player: 'Owen DiMauro', character: 'Aelar', portrait: '/images/characters/aelar.webp' },
+];
+
+// Episodes 1–30: the original four-PC lineup, before Tum's death.
+export const C1_FOUNDING_NS: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+  { player: 'Tim Lanning', character: 'Tum Darkblade', portrait: '/images/characters/tum-darkblade.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
+  { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
 ];
 
 // Episode 31: Tum is gone, Steven still around playing Junpei (his final episode).
@@ -56,18 +71,16 @@ export const C1_TRIO_PLUS_JUNPEI: LineupEntry[] = [
 ];
 
 // Episodes 32 onward: post-Steven era, four-person table.
-export const C1_POST_STEVEN: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+export const C1_QUARTET: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
     { player: 'Tim Lanning', character: 'Lord Titus Harper', portrait: '/images/characters/lord-titus-harper.webp' },
   { player: 'Jennifer Cheek', character: 'Aludra the Dwarf', portrait: '/images/characters/aludra-the-dwarf.webp' },
   { player: 'Mike Bachmann', character: 'Thom the Dragonborn', portrait: '/images/characters/thom-the-dragonborn.webp' },
 ];
 
 // Episodes 81+: Nika joins the show.
-// TODO: by this point Aludra → Aludra Wyrmsbane and Thom → Thom Vidalis (per
-// the build brief). Confirm exact transition points and any retconned names.
 export const C1_QUINTET: LineupEntry[] = [
-  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
   { player: 'Tim Lanning', character: 'Lord Titus Harper', portrait: '/images/characters/lord-titus-harper.webp' },
   { player: 'Jennifer Cheek', character: 'Aludra Wyrmsbane' , portrait: '/images/characters/aludra-wyrmsbane.webp' },
   { player: 'Mike Bachmann', character: 'Thom Vidalis' , portrait: '/images/characters/thom-vidalis.webp' },
@@ -80,6 +93,29 @@ export const C1_BOATSITTERS: LineupEntry[] = [
   { player: 'Jennifer Cheek', character: 'Temerity Barakas' },
   { player: 'Nika Howard', character: 'Rhavar' },
 ];
+
+export const C1_SEXTET: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Lord Titus Harper', portrait: '/images/characters/lord-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra Wyrmsbane' , portrait: '/images/characters/aludra-wyrmsbane.webp' },
+  { player: 'Mike Bachmann', character: 'Thom and Steve' , portrait: '/images/characters/thom-and-steve.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/early-jaela.webp' },
+];
+
+export const C1_SEXTET_NB: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Lord Titus Harper', portrait: '/images/characters/lord-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra Wyrmsbane' , portrait: '/images/characters/aludra-wyrmsbane.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/early-jaela.webp' },
+];
+
+export const C1_FIFTY: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Mike Bachmann', character: 'Thom and Steve' , portrait: '/images/characters/thom-and-steve.webp' },
+  { player: 'Sarah Tompkins', character: 'Wren' , portrait: '/images/characters/wren.webp' },
+  { player: 'Adam Bash', character: 'Watari' , portrait: '/images/characters/watari.webp' },
+];
+
 
 // C2 standard lineup. Uses the existing /images/c2/*.webp art.
 export const C2_STANDARD: LineupEntry[] = [
@@ -110,11 +146,29 @@ export const LINEUP_RANGES: LineupRange[] = [
   // C1 founding era — episodes 1 through 30 (Tum dies at the end of 30)
   { kind: 'c1', from: 1,  to: 30, lineup: C1_FOUNDING },
 
+  { kind: 'c1', from: 4,  to: 4, lineup: C1_FOUNDING_NS },
+
+  { kind: 'c1', from: 5,  to: 13, lineup: C1_FOUNDING },
+
+  { kind: 'c1', from: 14,  to: 14, lineup: C1_FOUNDING_A },
+
+  { kind: 'c1', from: 15,  to: 15, lineup: C1_FOUNDING },
+
+  { kind: 'c1', from: 17,  to: 17, lineup: C1_FOUNDING_NS },
+
+  { kind: 'c1', from: 18,  to: 30, lineup: C1_FOUNDING },
+
   // C1 ep 31 — Junpei's last appearance, Tum is gone
   { kind: 'c1', from: 31, to: 31, lineup: C1_TRIO_PLUS_JUNPEI },
 
   // C1 post-Steven — episodes 32 through 80, four-person table
-  { kind: 'c1', from: 32, to: 80, lineup: C1_POST_STEVEN },
+  { kind: 'c1', from: 32, to: 48, lineup: C1_QUARTET },
+
+  // C1 post-Steven — episodes 32 through 80, four-person table
+  { kind: 'c1', from: 49, to: 50, lineup: C1_FIFTY },
+
+  // C1 post-Steven — episodes 32 through 80, four-person table
+  { kind: 'c1', from: 51, to: 80, lineup: C1_QUARTET },
 
   // C1 quintet era — Nika joins around episode 81
   // TODO: confirm the exact episode where Nika first appears
@@ -134,7 +188,15 @@ export const LINEUP_RANGES: LineupRange[] = [
 
   // C1 quintet era — Nika joins around episode 81
   // TODO: confirm the exact episode where Nika first appears
-  { kind: 'c1', from: 117, to: 424, lineup: C1_QUINTET },
+  { kind: 'c1', from: 117, to: 123, lineup: C1_SEXTET },
+
+    // C1 quintet era — Nika joins around episode 81
+  // TODO: confirm the exact episode where Nika first appears
+  { kind: 'c1', from: 124, to: 125, lineup: C1_SEXTET_NB },
+
+  // C1 quintet era — Nika joins around episode 81
+  // TODO: confirm the exact episode where Nika first appears
+  { kind: 'c1', from: 126, to: 424, lineup: C1_SEXTET },
 
   // C2 — standard lineup for everything from episode 1 on
   { kind: 'c2', from: 1,          lineup: C2_STANDARD },
