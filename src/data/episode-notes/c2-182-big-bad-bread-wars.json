@@ -25,8 +25,8 @@
       { "name": "Brunda Kegbreaker", "note": "Stocky dwarven Womple Wine champion. Loses to R'oarc by passing out. Gains a best friend." },
       { "name": "Pip", "note": "Halfling. Selene's childhood acquaintance from her enforced 'common children' classes. Now collared, running a dart booth. The emotional center of the episode." },
       { "name": "The baker (unnamed)", "note": "Flour-covered protestor at the Slab. Elf wife and half-elf kids hiding in the woods. New resistance recruit, tasked with rounding up rowdy dudes for tomorrow." },
-      { "name": "Ratma", "note": "Resistance contact. Gets word about the new potential cell. Off-screen this episode." },
-      { "name": "Darius Von Esper", "note": "Selene's father. Off-screen but the wedding is at his table and the pavilion is his territory." },
+      { "id": "ratma", "note": "Gets word about the new resistance cell. Off-screen this episode." },
+      { "id": "darius", "note": "Off-screen but the wedding is at his table and the pavilion is his territory." },
       { "name": "Old Man Wuk", "note": "Possibly connected to Old Man Breadbasket. Possibly part of a larger cosmic Old Man problem. The cast is theorizing." }
     ],
 

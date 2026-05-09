@@ -7,6 +7,16 @@ interface Props {
   mentions: MentionItem[];
 }
 const { mentions } = Astro.props;
+
+// Short, punchy pill labels. The raw type stays in the data; this is purely
+// for display so "CHARACTER" doesn't overflow the pill.
+const TYPE_LABELS: Record<string, string> = {
+  character: 'NPC',
+  location: 'PLACE',
+  faction: 'FACTION',
+  event: 'EVENT',
+  callback: 'CALLBACK',
+};
 ---
 
 <aside class="ep-sidebar">
@@ -16,9 +26,19 @@ const { mentions } = Astro.props;
       <ul class="mention-list">
         {mentions.map((m) => (
           <li class="mention-item">
-            <span class={`mention-tag mention-${m.type}`}>{m.type}</span>
-            <a class="mention-name" href={m.href}>{m.name}</a>
-            <span class="mention-note">{m.note}</span>
+            {m.thumbnail ? (
+              <img class="mention-thumb" src={m.thumbnail} alt="" loading="lazy" />
+            ) : (
+              <span class={`mention-tag mention-${m.type}`}>{TYPE_LABELS[m.type] ?? m.type}</span>
+            )}
+            <div class="mention-text">
+              {m.href ? (
+                <a class="mention-name" href={m.href}>{m.name}</a>
+              ) : (
+                <span class="mention-name mention-name-static">{m.name}</span>
+              )}
+              {m.note && <span class="mention-note">{m.note}</span>}
+            </div>
           </li>
         ))}
       </ul>
@@ -48,17 +68,51 @@ const { mentions } = Astro.props;
   .side-body { font-size: var(--t-body-sm); color: var(--text-2); line-height: var(--lh-normal); }
 
   .mention-list { list-style: none; padding: 0; margin: 0; }
-  .mention-item { padding: 11px 0; border-top: 0.5px solid rgba(255,255,255,0.04); display: grid; grid-template-columns: 70px minmax(0, 1fr); gap: 12px; align-items: baseline; }
+
+  /* Flex row: leading element (thumb or pill) + text block. Auto-sizes
+     to fit pill content, so "CHARACTER" or "CALLBACK" can't overflow. */
+  .mention-item {
+    padding: 12px 0;
+    border-top: 0.5px solid rgba(255,255,255,0.04);
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
   .mention-item:first-child { border-top: none; padding-top: 4px; }
-  .mention-tag { font-size: var(--t-tiny); letter-spacing: var(--ls-eyebrow); font-weight: var(--fw-semibold); text-transform: uppercase; padding: 3px 8px; border-radius: 4px; text-align: center; }
+
+  .mention-thumb {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 0.5px solid var(--border);
+    flex-shrink: 0;
+    display: block;
+  }
+
+  .mention-tag {
+    font-size: var(--t-tiny);
+    letter-spacing: var(--ls-eyebrow);
+    font-weight: var(--fw-semibold);
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border-radius: 4px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 2px;
+  }
   .mention-character { background: rgba(151,196,89,0.12); color: var(--green); }
-  .mention-location { background: rgba(212,175,55,0.12); color: var(--gold); }
-  .mention-faction { background: rgba(211,90,90,0.12); color: #d35a5a; }
-  .mention-event { background: rgba(168,127,199,0.14); color: #c5a5d6; }
-  .mention-item { font-size: var(--t-small); }
-  .mention-name { font-size: var(--t-body-sm); color: var(--text); font-weight: var(--fw-medium); transition: color 0.2s; cursor: pointer; }
-  .mention-name:hover { color: var(--green); }
-  .mention-note { display: block; grid-column: 2; font-size: var(--t-tiny); color: var(--text-3); margin-top: 2px; }
+  .mention-location  { background: rgba(212,175,55,0.12); color: var(--gold); }
+  .mention-faction   { background: rgba(211,90,90,0.12);  color: #d35a5a; }
+  .mention-event     { background: rgba(168,127,199,0.14); color: #c5a5d6; }
+  .mention-callback  { background: rgba(95,184,214,0.12); color: var(--c2-cyan, #5fb8d6); }
+
+  .mention-text { display: flex; flex-direction: column; gap: 3px; min-width: 0; flex: 1; }
+  .mention-name { font-size: var(--t-body-sm); color: var(--text); font-weight: var(--fw-medium); transition: color 0.2s; text-decoration: none; }
+  a.mention-name { cursor: pointer; }
+  a.mention-name:hover { color: var(--green); }
+  .mention-note { font-size: var(--t-tiny); color: var(--text-3); line-height: 1.45; }
 
   .new-listener { background: linear-gradient(135deg, rgba(212,175,55,0.08), rgba(151,196,89,0.04)); border-color: rgba(212,175,55,0.25); }
   .new-listener-cta { display: inline-block; margin-top: 10px; font-size: var(--t-small); color: var(--gold); font-weight: var(--fw-semibold); text-decoration: none; }

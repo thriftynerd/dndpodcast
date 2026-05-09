@@ -95,6 +95,7 @@ export interface MentionItem {
   name: string;
   href: string;
   note: string;
+  thumbnail?: string;
 }
 
 export interface EpisodeNavLink {

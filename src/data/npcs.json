@@ -1,0 +1,12 @@
+{
+  "ratma": {
+    "name": "Ratma",
+    "thumbnail": "/images/npcs/ratma.jpg",
+    "tagline": "Resistance contact in Farholde"
+  },
+  "breadbasket": {
+    "name": "Marty 'Oldman' Breadbasket",
+    "thumbnail": "/images/npcs/breadbasket.jpg",
+    "tagline": "The warmest, crustiest bread in Farholde."
+  }
+}

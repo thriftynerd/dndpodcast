@@ -51,15 +51,34 @@ if (existsSync(transcriptPath)) {
   }
 }
 
-// ============== LINEUP → CAST CONVERSION ==============
-// Convert ep.lineup data into the shape EpisodeCast.astro expects.
-// The lineup is per-episode, so different episodes correctly show different
-// cast members based on who was actually playing that week.
-//
-// If no lineup data exists (no parser hit, no manual override), we render
-// nothing — better an honest gap than wrong attribution.
+// ============== EPISODE NOTES (editorial show notes + mentions) ==============
+// Optional per-episode JSON at src/data/episode-notes/[slug].json
+let episodeNotes: any = null;
+const notesPath = resolve(process.cwd(), `src/data/episode-notes/${ep.slug}.json`);
+if (existsSync(notesPath)) {
+  try {
+    episodeNotes = JSON.parse(readFileSync(notesPath, 'utf-8'));
+  } catch (e) {
+    console.warn(`[episode-notes] failed to parse ${notesPath}`, e);
+  }
+}
 
-// Map player names to fallback avatar CSS classes (used when no portrait set)
+// ============== NPC REGISTRY (recurring characters with thumbnails) ==============
+// Optional shared registry at src/data/npcs.json. Episode notes can either
+// reference an NPC by `id` (which pulls in the canonical name + thumbnail)
+// or just inline a `name` for one-off characters.
+type NpcEntry = { name: string; thumbnail?: string; tagline?: string };
+let npcRegistry: Record<string, NpcEntry> = {};
+const npcsPath = resolve(process.cwd(), 'src/data/npcs.json');
+if (existsSync(npcsPath)) {
+  try {
+    npcRegistry = JSON.parse(readFileSync(npcsPath, 'utf-8'));
+  } catch (e) {
+    console.warn('[npcs] failed to parse npc registry', e);
+  }
+}
+
+// ============== LINEUP → CAST CONVERSION ==============
 const AVATAR_CLASSES: Record<string, string> = {
   'Mike Bachmann': 'avatar-bach',
   'Michael Bachmann': 'avatar-bach',
@@ -72,7 +91,6 @@ const AVATAR_CLASSES: Record<string, string> = {
   'Vince Kenny': 'avatar-vince',
 };
 
-// "Mike Bachmann" → "MB", "Michael DiMauro" → "MD"
 function initialsFor(player: string): string {
   return player
     .split(/\s+/)
@@ -83,25 +101,20 @@ function initialsFor(player: string): string {
     .toUpperCase();
 }
 
-// Build the role label that displays under each cast member's name.
-// "Dungeon Master", "as Tum Darkblade", "as Tum Darkblade · final appearance"
 function buildRole(entry: LineupEntry): string {
   if (entry.role === 'dm') return 'Dungeon Master';
-
   const base = entry.character ? `as ${entry.character}` : '';
   const flags: string[] = [];
   if (entry.firstAppearance) flags.push('first appearance');
   if (entry.finalAppearance) flags.push('final appearance');
   if (entry.absent) flags.push('absent');
   if (entry.guest) flags.push('guest');
-
   if (flags.length > 0) {
     return `${base}${base ? ' · ' : ''}${flags.join(' · ')}`;
   }
   return base;
 }
 
-// Convert lineup → cast props. Skip absent players for now.
 const castFromLineup = (ep.lineup ?? [])
   .filter((entry) => !entry.absent)
   .map((entry) => ({
@@ -115,7 +128,12 @@ const castFromLineup = (ep.lineup ?? [])
 const hasLineup = castFromLineup.length > 0;
 
 // ============== METADATA ==============
-const showNotes = ep.description ? [ep.description] : [];
+const showNotes: string[] = episodeNotes?.show_notes
+  ? String(episodeNotes.show_notes)
+      .split(/\n\s*\n/)
+      .map((p: string) => p.trim())
+      .filter(Boolean)
+  : (ep.description ? [ep.description] : []);
 
 const campaignLabel =
   ep.kind === 'c1' ? 'Campaign One' :
@@ -124,7 +142,6 @@ const campaignLabel =
 const campaignHref = ep.kind === 'c1' ? '/campaign-1' : ep.kind === 'c2' ? '/campaign-2' : '/episodes';
 const breadcrumbCurrent = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : 'Bonus';
 
-// Pick the DM out of the lineup for the hero
 const dmEntry = (ep.lineup ?? []).find((e) => e.role === 'dm');
 const dmName = dmEntry?.player ?? 'Michael DiMauro';
 
@@ -139,7 +156,33 @@ const nextLink = next ? {
   title: next.title,
 } : undefined;
 
-const mentions: any[] = [];
+// ============== MENTIONS ==============
+// Build sidebar mention items. Characters can be either:
+//   { id: "ratma", note: "..." }  → pulls name + thumbnail from npcs.json
+//   { name: "Meat Chunk", note: "..." }  → inline, one-off, no thumbnail
+function resolveCharacterMention(c: { id?: string; name?: string; note?: string }) {
+  if (c.id && npcRegistry[c.id]) {
+    const reg = npcRegistry[c.id];
+    return {
+      type: 'character',
+      name: reg.name,
+      note: c.note,
+      thumbnail: reg.thumbnail,
+    };
+  }
+  return {
+    type: 'character',
+    name: c.name ?? '(unknown)',
+    note: c.note,
+  };
+}
+
+const ite = episodeNotes?.in_this_episode;
+const mentions: any[] = [
+  ...((ite?.characters ?? []).map(resolveCharacterMention)),
+  ...((ite?.locations  ?? []).map((l: any) => ({ type: 'location',  name: l.name, note: l.note }))),
+  ...((ite?.callbacks  ?? []).map((c: any) => ({ type: 'callback',  name: c.name, note: c.note }))),
+];
 ---
 
 <Layout title={`${ep.title} · ${campaignLabel}, Episode ${ep.episodeNumber ?? 'Bonus'}`}>
