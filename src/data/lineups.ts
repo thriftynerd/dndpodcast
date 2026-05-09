@@ -74,6 +74,13 @@ export const C1_QUINTET: LineupEntry[] = [
   { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/early-jaela.webp' },
 ];
 
+export const C1_BOATSITTERS: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
+  { player: 'Tim Lanning', character: 'Telir Thumble' },
+  { player: 'Jennifer Cheek', character: 'Temerity Barakas' },
+  { player: 'Nika Howard', character: 'Rhavar' },
+];
+
 // C2 standard lineup. Uses the existing /images/c2/*.webp art.
 export const C2_STANDARD: LineupEntry[] = [
   { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/michael-dimauro.webp' },
@@ -82,6 +89,8 @@ export const C2_STANDARD: LineupEntry[] = [
   { player: 'Mike Bachmann', character: 'Screetch Echo', portrait: '/images/c2/screetch.webp' },
   { player: 'Nika Howard', character: "R'Oarc", portrait: '/images/c2/roarc.webp' },
 ];
+
+
 
 // ============== RANGE-BASED DEFAULTS ==============
 //
@@ -109,7 +118,23 @@ export const LINEUP_RANGES: LineupRange[] = [
 
   // C1 quintet era — Nika joins around episode 81
   // TODO: confirm the exact episode where Nika first appears
-  { kind: 'c1', from: 81, to: 424, lineup: C1_QUINTET },
+  { kind: 'c1', from: 81, to: 89, lineup: C1_QUINTET },
+
+  // C1 quintet era — Nika joins around episode 81
+  // TODO: confirm the exact episode where Nika first appears
+  { kind: 'c1', from: 90, to: 91, lineup: C1_BOATSITTERS },
+
+   // C1 quintet era — Nika joins around episode 81
+  // TODO: confirm the exact episode where Nika first appears
+  { kind: 'c1', from: 92, to: 114, lineup: C1_QUINTET },
+
+  // C1 quintet era — Nika joins around episode 81
+  // TODO: confirm the exact episode where Nika first appears
+  { kind: 'c1', from: 115, to: 116, lineup: C1_BOATSITTERS },
+
+  // C1 quintet era — Nika joins around episode 81
+  // TODO: confirm the exact episode where Nika first appears
+  { kind: 'c1', from: 117, to: 424, lineup: C1_QUINTET },
 
   // C2 — standard lineup for everything from episode 1 on
   { kind: 'c2', from: 1,          lineup: C2_STANDARD },
