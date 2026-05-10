@@ -116,6 +116,100 @@ export const C1_FIFTY: LineupEntry[] = [
   { player: 'Adam Bash', character: 'Watari' , portrait: '/images/characters/watari.webp' },
 ];
 
+export const C1_QUARTET_LEX: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Lord Titus Harper', portrait: '/images/characters/lord-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra Wyrmsbane' , portrait: '/images/characters/aludra-wyrmsbane.webp' },
+  { player: 'Mike Bachmann', character: 'Thom and Steve' , portrait: '/images/characters/thom-and-steve.webp' },
+  { player: 'Nika Howard', character: 'Lex' , portrait: '/images/characters/lex.webp' },
+];
+
+export const C1_BEARCHARGER: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'King Titus Harper', portrait: '/images/characters/king-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Nyx' , portrait: '/images/characters/nyx.webp' },
+  { player: 'Mike Bachmann', character: 'Marendithas Bearcharger' , portrait: '/images/characters/bearcharger.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_BANANAS: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'King Titus Harper', portrait: '/images/characters/king-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Nyx' , portrait: '/images/characters/nyx.webp' },
+  { player: 'Mike Bachmann', character: 'Bananas Foster' , portrait: '/images/characters/bananas.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_JETT: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'King Titus Harper', portrait: '/images/characters/king-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Nyx' , portrait: '/images/characters/nyx.webp' },
+  { player: 'Mike Bachmann', character: 'Jett Razor' , portrait: '/images/characters/jett.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_AJHJ: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'King Titus Harper', portrait: '/images/characters/king-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Aludra Wyrmebane' , portrait: '/images/characters/aludra-wyrmsbane.webp' },
+  { player: 'Mike Bachmann', character: 'Jett Razor' , portrait: '/images/characters/jett.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_MONARCHY: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'King Titus Harper', portrait: '/images/characters/king-titus-harper.webp' },
+  { player: 'Jennifer Cheek', character: 'Queen Aludra Wyrmebane' , portrait: '/images/characters/queen-aludra-wyrmsbane.webp' },
+  { player: 'Mike Bachmann', character: 'Jett Razor' , portrait: '/images/characters/jett.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_CAMILLE: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Young Titus Harper', portrait: '/images/characters/young-titus-harper.webp' },
+  { player: 'Carly Shields', character: 'Camile Fordane' , portrait: '/images/characters/camile.webp' },
+];
+
+export const C1_TOBY: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Toby Treacletart', portrait: '/images/characters/toby.webp' },
+  { player: 'Jennifer Cheek', character: 'Queen Aludra Wyrmebane' , portrait: '/images/characters/queen-aludra-wyrmsbane.webp' },
+  { player: 'Mike Bachmann', character: 'Jett Razor' , portrait: '/images/characters/jett.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_STEVE: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Toby Treacletart', portrait: '/images/characters/toby.webp' },
+  { player: 'Jennifer Cheek', character: 'Queen Aludra Wyrmebane' , portrait: '/images/characters/queen-aludra-wyrmsbane.webp' },
+  { player: 'Mike Bachmann', character: 'Steve Melloncamp' , portrait: '/images/characters/gross-steve.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_MONSTERS: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Carly Shields', character: 'Beetle', portrait: '/images/characters/beetle.webp' },
+  { player: 'Jennifer Cheek', character: 'Baz' , portrait: '/images/characters/baz.webp' },
+  { player: 'Mike Bachmann', character: 'Tug' , portrait: '/images/characters/tug.webp' },
+  { player: 'Nika Howard', character: 'Kass' , portrait: '/images/characters/kass.webp' },
+];
+
+export const C1_ROWAN: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Toby Treacletart', portrait: '/images/characters/toby.webp' },
+  { player: 'Jennifer Cheek', character: 'Rowan' , portrait: '/images/characters/rowan.webp' },
+  { player: 'Mike Bachmann', character: 'Steve Melloncamp' , portrait: '/images/characters/gross-steve.webp' },
+  { player: 'Nika Howard', character: 'Jaela' , portrait: '/images/characters/goth-jaela.webp' },
+];
+
+export const C1_TOWER: LineupEntry[] = [
+  { player: 'Michael DiMauro', role: 'dm', portrait: '/images/characters/thrifty2.webp' },
+  { player: 'Tim Lanning', character: 'Toby Treacletart', portrait: '/images/characters/toby.webp' },
+  { player: 'Jennifer Cheek', character: 'Rowan' , portrait: '/images/characters/rowan.webp' },
+  { player: 'Mike Bachmann', character: 'Skud Derringer' , portrait: '/images/characters/skud.webp' },
+  { player: 'Nika Howard', character: 'Lahni Caplan' , portrait: '/images/characters/lahni.webp' },
+];
+
 
 // C2 standard lineup. Uses the existing /images/c2/*.webp art.
 export const C2_STANDARD: LineupEntry[] = [
@@ -168,9 +262,14 @@ export const LINEUP_RANGES: LineupRange[] = [
   { kind: 'c1', from: 49, to: 50, lineup: C1_FIFTY },
 
   // C1 post-Steven — episodes 32 through 80, four-person table
-  { kind: 'c1', from: 51, to: 80, lineup: C1_QUARTET },
+  { kind: 'c1', from: 51, to: 54, lineup: C1_QUARTET },
 
-  // C1 quintet era — Nika joins around episode 81
+  // C1 post-Steven — episodes 32 through 80, four-person table
+  { kind: 'c1', from: 55, to: 56, lineup: C1_QUARTET_LEX },
+
+  // C1 post-Steven — episodes 32 through 80, four-person table
+  { kind: 'c1', from: 57, to: 80, lineup: C1_QUARTET },
+
   // TODO: confirm the exact episode where Nika first appears
   { kind: 'c1', from: 81, to: 89, lineup: C1_QUINTET },
 
@@ -196,7 +295,35 @@ export const LINEUP_RANGES: LineupRange[] = [
 
   // C1 quintet era — Nika joins around episode 81
   // TODO: confirm the exact episode where Nika first appears
-  { kind: 'c1', from: 126, to: 424, lineup: C1_SEXTET },
+  { kind: 'c1', from: 126, to: 148, lineup: C1_SEXTET },
+
+  { kind: 'c1', from: 149, to: 155, lineup: C1_QUINTET },
+  
+  { kind: 'c1', from: 156, to: 158, lineup: C1_BEARCHARGER },
+
+  { kind: 'c1', from: 159, to: 160, lineup: C1_BANANAS },
+
+  { kind: 'c1', from: 161, to: 162, lineup: C1_JETT },
+
+  { kind: 'c1', from: 163, to: 186, lineup: C1_AJHJ },
+
+  { kind: 'c1', from: 187, to: 188, lineup: C1_CAMILLE },
+
+  { kind: 'c1', from: 189, to: 189, lineup: C1_AJHJ },
+
+  { kind: 'c1', from: 190, to: 192, lineup: C1_MONARCHY },
+
+  { kind: 'c1', from: 193, to: 200, lineup: C1_TOBY },
+
+  { kind: 'c1', from: 201, to: 208, lineup: C1_STEVE },
+
+   { kind: 'c1', from: 209, to: 211, lineup: C1_MONSTERS },
+
+   { kind: 'c1', from: 212, to: 234, lineup: C1_STEVE },
+
+   { kind: 'c1', from: 235, to: 252, lineup: C1_ROWAN },
+
+   { kind: 'c1', from: 253, to: 424, lineup: C1_TOWER },
 
   // C2 — standard lineup for everything from episode 1 on
   { kind: 'c2', from: 1,          lineup: C2_STANDARD },
